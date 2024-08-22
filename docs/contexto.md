@@ -2,11 +2,16 @@
 
 Texto descritivo introdutório apresentando a visão geral do projeto a ser desenvolvido considerando o contexto em que ele se insere, os objetivos gerais, a justificativa e o público-alvo do projeto.
 
+Com esse projeto buscamos analisar a relação entre a taxa Selic e o endividamento das famílias brasileiras por categoria de crédito, considerando também o impacto de fatores como a inflação e o Índice de Confiança do Consumidor. Devido a importancia do crédito no cotidiano das famílias e sua influência direta no bem-estar econômico. O objetivo geral deste trabalho é identificar padrões e correlações que possam fornecer dados sobre como a variação na Selic impacta diferentes categorias de endividamento familiar. Pensamos em seguir com ele pela crescente preocupação com o nível de endividamento das famílias brasileiras e suas consequências sobre a economia, como a inadimplência e a retração do consumo.
+
 ## Problema
 
 Nesta seção, você deve apresentar o problema que a sua investigação/experimentação busca resolver. Por exemplo, caso o _dataset_ selecionado, seja um _dataset_ que contenha uma série temporal com o preço de diversas ações da bolsa de valores, o problema pode estar relacionado a dificuldade em saber a melhor hora (hora certa??) de comprar ou então, de executar a venda de uma determinada ação.
 
 Descreva ainda o contexto em que essa aplicação será usada, se houver: empresa parceira, tecnologias etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
+
+ A principal questão que gostariamos de responde é "Como a variação da taxa Selic influencia o percentual de endividamento das famílias por categoria de crédito no Brasil?" A partir desta pergunta, surge a necessidade de compreender como diferentes categorias de crédito, como crédito pessoal, consignado e imobiliário, reagem às oscilações da Selic, especialmente em contextos de alta inflação e mudanças no Índice de Confiança do Consumidor. O problema abordado é relevante porque as famílias enfrentam desafios ao tentar equilibrar suas finanças em um ambiente de taxas de juros variáveis, o que pode resultar em um endividamento excessivo ou insustentável.
+Este projeto será desenvolvido a partir da análise de datasets que incluem dados da Selic, inflação, Índice de Confiança do Consumidor e dados de endividamento por categoria de crédito, com o foco é acadêmico e analítico. 
 
 > **Links Úteis**:
 > - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
@@ -16,6 +21,13 @@ Descreva ainda o contexto em que essa aplicação será usada, se houver: empres
 ## Questão de pesquisa
 
 A questão de pesquisa é a base de todo o trabalho que será desenvolvido. É ela que motiva a realização da pesquisa e deverá ser adequada ao problema identificado. Ao término de sua pesquisa/experimentação, o objetivo é que seja encontrada a resposta da questão de pesquisa previamente definida.
+
+Pensamos que diante do cenário econômico brasileiro, marcado por oscilações frequentes na taxa Selic e variações nos índices de inflação surge a necessidade de entender como esses fatores afetam o comportamento financeiro das famílias e sua qualidade de vida. Portanto, a questão central que norteia nossa pesquisa é:
+
+Como a variação da taxa Selic influencia o percentual de endividamento das famílias brasileiras por categoria de crédito, considerando também o impacto da inflação?
+
+Pensamos que esta questão é fundamental para desvendar as relações entre política monetária e o endividamento familiar. Ao final da pesquisa, gostariamos de responder a essa questão, contribuindo para uma compreensão mais ampla do impacto das flutuações na vida das pessoas. 
+
 
 > **Links Úteis**:
 > - [Questão de pesquisa](https://www.enago.com.br/academy/how-to-develop-good-research-question-types-examples/)
