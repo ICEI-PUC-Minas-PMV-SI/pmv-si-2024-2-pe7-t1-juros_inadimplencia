@@ -1,13 +1,16 @@
 # Introdução
 
-Texto descritivo introdutório apresentando a visão geral do projeto a ser desenvolvido considerando o contexto em que ele se insere, os objetivos gerais, a justificativa e o público-alvo do projeto.
+*Texto descritivo introdutório apresentando a visão geral do projeto a ser desenvolvido considerando o contexto em que ele se insere, os objetivos gerais, a justificativa e o público-alvo do projeto.*
 
-Com esse projeto buscamos analisar a relação entre a taxa Selic e o endividamento das famílias brasileiras por categoria de crédito, considerando também o impacto de fatores como a inflação e o Índice de Confiança do Consumidor. Devido a importancia do crédito no cotidiano das famílias e sua influência direta no bem-estar econômico. O objetivo geral deste trabalho é identificar padrões e correlações que possam fornecer dados sobre como a variação na Selic impacta diferentes categorias de endividamento familiar. Pensamos em seguir com ele pela crescente preocupação com o nível de endividamento das famílias brasileiras e suas consequências sobre a economia, como a inadimplência e a retração do consumo.
+Em uma sociedade captalista, uma grande preocupação dos órgãos reguladores é manter as relações de consumo e oferta de recursos de forma sadia, protegendo o sistema financeiro de cenários de grande inadimplência, que, de forma exagerada, pode contribuir para a bancarrota financeira não só de empresas, mas de nações. Além das empresas, as famílias também podem contrair dívidas além das suas capacidades de pagamento, e, por isso, entender qual é o perfil de endividamento pode contribuir para manter este sistema financeiro operando de forma saudável, evitando que as famílias atinjam níveis de endividamento irreparáveis.
+Com esse projeto, buscamos analisar se existe uma relação entre a taxa Selic e o endividamento das famílias brasileiras, separando por categoria de linha de crédito, considerando também o impacto de fatores como a inflação e o Índice de Confiança do Consumidor. 
+Devido a importancia do crédito no cotidiano das famílias, e sua influência direta na saúde financeira da população brasileira, é importante entender como o endividamento das famílias reage à políticas de facilitação de acesso ao crédito realizadas pelo Comitê de Política Monetária (COPOM), quando o mesmo reduz a taxa Selic, ou quando este mesmo comitê opta pela limitação de concessão de crédito, elevando esta taxa.
+O objetivo geral deste trabalho é identificar padrões e correlações que possam fornecer dados sobre como a variação na Selic impacta diferentes categorias do endividamento familiar. Entender estes padrões facilita o entendimento do nível de endividamento das famílias brasileiras e suas consequências sobre a economia, como a inadimplência e a retração do consumo.
 
 ## Problema
 
-Nesta seção, você deve apresentar o problema que a sua investigação/experimentação busca resolver. Por exemplo, caso o _dataset_ selecionado, seja um _dataset_ que contenha uma série temporal com o preço de diversas ações da bolsa de valores, o problema pode estar relacionado a dificuldade em saber a melhor hora (hora certa??) de comprar ou então, de executar a venda de uma determinada ação.
-Descreva ainda o contexto em que essa aplicação será usada, se houver: empresa parceira, tecnologias etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
+*Nesta seção, você deve apresentar o problema que a sua investigação/experimentação busca resolver. Por exemplo, caso o _dataset_ selecionado, seja um _dataset_ que contenha uma série temporal com o preço de diversas ações da bolsa de valores, o problema pode estar relacionado a dificuldade em saber a melhor hora (hora certa??) de comprar ou então, de executar a venda de uma determinada ação.*
+*Descreva ainda o contexto em que essa aplicação será usada, se houver: empresa parceira, tecnologias etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.*
 
  A principal questão que gostariamos de responde é "Como a variação da taxa Selic influencia o percentual de endividamento das famílias por categoria de crédito no Brasil?" 
  A partir desta pergunta, surge a necessidade de compreender como diferentes categorias de crédito, como crédito pessoal, consignado e imobiliário, reagem às oscilações da Selic, especialmente em contextos de alta inflação e mudanças no Índice de Confiança do Consumidor. O problema abordado é relevante porque as famílias enfrentam desafios ao tentar equilibrar suas finanças em um ambiente de taxas de juros variáveis, o que pode resultar em um endividamento excessivo ou insustentável.
@@ -20,7 +23,7 @@ Este projeto será desenvolvido a partir da análise de datasets que incluem dad
 
 ## Questão de pesquisa
 
-A questão de pesquisa é a base de todo o trabalho que será desenvolvido. É ela que motiva a realização da pesquisa e deverá ser adequada ao problema identificado. Ao término de sua pesquisa/experimentação, o objetivo é que seja encontrada a resposta da questão de pesquisa previamente definida.
+*A questão de pesquisa é a base de todo o trabalho que será desenvolvido. É ela que motiva a realização da pesquisa e deverá ser adequada ao problema identificado. Ao término de sua pesquisa/experimentação, o objetivo é que seja encontrada a resposta da questão de pesquisa previamente definida.*
 
 Pensamos que diante do cenário econômico brasileiro, marcado por oscilações frequentes na taxa Selic e variações nos índices de inflação surge a necessidade de entender como esses fatores afetam o comportamento financeiro das famílias e sua qualidade de vida. Portanto, a questão central que norteia nossa pesquisa é:
 
@@ -35,12 +38,11 @@ Pensamos que esta questão é fundamental para desvendar as relações entre pol
 
 ## Objetivos preliminares
 
-Aqui você deve descrever os objetivos preliminares do trabalho indicando que o objetivo geral é experimentar modelos de aprendizado de máquina adequados para solucionar o problema apresentado acima. 
+*Aqui você deve descrever os objetivos preliminares do trabalho indicando que o objetivo geral é experimentar modelos de aprendizado de máquina adequados para solucionar o problema apresentado acima.*
+*Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.*
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
-
-Por exemplo: um objetivo específico pode estar relacionado a predizer a tendência de alta, estabilidade ou queda de uma determinada ação em uma determinada janela do tempo ou então, predizer o valor exato de uma determinada ação.
-Lembre-se que, à medida que a pesquisa/experimentação evolui, os objetivos podem evoluir também, portanto, não se esqueça de fazer as atualizações necessárias.
+*Por exemplo: um objetivo específico pode estar relacionado a predizer a tendência de alta, estabilidade ou queda de uma determinada ação em uma determinada janela do tempo ou então, predizer o valor exato de uma determinada ação.*
+*Lembre-se que, à medida que a pesquisa/experimentação evolui, os objetivos podem evoluir também, portanto, não se esqueça de fazer as atualizações necessárias.*
  
 > **Links Úteis**:
 > - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
@@ -54,9 +56,8 @@ Descreva a importância ou a motivação para trabalhar com o conjunto de dados 
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que poderão se beneficiar com a sua investigação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.
-
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
+*Descreva quem serão as pessoas que poderão se beneficiar com a sua investigação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.*
+*Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.*
 
 ### Descrição Textual do Público-Alvo:
 
@@ -115,7 +116,7 @@ Adicione informações sobre o público-alvo por meio de uma descrição textual
 
 ## Estado da arte
 
-Nesta seção, deverão ser descritas outras abordagens identificadas na literatura que foram utilizadas para resolver problemas similares ao problema em questão. Para isso, faça uma pesquisa detalhada e identifique, no mínimo, 5 trabalhos que tenham utilizado dados em contexto similares e então: (a) detalhe e contextualize o problema, (b) descreva as principais características do _dataset_ utilizado, (c) detalhe quais abordagens/algoritmos foram utilizados (e seus parâmetros), (d) identifique as métricas de avaliação empregadas, e (e) fale sobre os resultados obtidos. 
+*Nesta seção, deverão ser descritas outras abordagens identificadas na literatura que foram utilizadas para resolver problemas similares ao problema em questão. Para isso, faça uma pesquisa detalhada e identifique, no mínimo, 5 trabalhos que tenham utilizado dados em contexto similares e então: (a) detalhe e contextualize o problema, (b) descreva as principais características do _dataset_ utilizado, (c) detalhe quais abordagens/algoritmos foram utilizados (e seus parâmetros), (d) identifique as métricas de avaliação empregadas, e (e) fale sobre os resultados obtidos.*
 
 > **Links Úteis**:
 > - [Google Scholar](https://scholar.google.com/)
@@ -125,18 +126,18 @@ Nesta seção, deverão ser descritas outras abordagens identificadas na literat
 
 # Descrição do _dataset_ selecionado
 
-Nesta seção, você deverá descrever detalhadamente o _dataset_ selecionado. Lembre-se de informar o link de acesso a ele, bem como, de descrever cada um dos seus atributos (a que se refere, tipo do atributo etc.), se existem atributos faltantes etc.
+*Nesta seção, você deverá descrever detalhadamente o _dataset_ selecionado. Lembre-se de informar o link de acesso a ele, bem como, de descrever cada um dos seus atributos (a que se refere, tipo do atributo etc.), se existem atributos faltantes etc.*
 
 # Canvas analítico
 
-Nesta seção, você deverá estruturar o seu Canvas Analítico. O Canvas Analítico tem o papel de registrar a organização das ideias e apresentar o modelo de negócio. O Canvas Analítico deverá ser preenchido integralmente mesmo que você não tenha "tantas certezas".
+*Nesta seção, você deverá estruturar o seu Canvas Analítico. O Canvas Analítico tem o papel de registrar a organização das ideias e apresentar o modelo de negócio. O Canvas Analítico deverá ser preenchido integralmente mesmo que você não tenha "tantas certezas".*
 
 > **Links Úteis**:
 > - [Modelo do Canvas Analítico](https://github.com/ICEI-PUC-Minas-PMV-SI/PesquisaExperimentacao-Template/blob/main/help/Software-Analtics-Canvas-v1.0.pdf)
 
 # Referências
 
-Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho utilizando o padrão ABNT.
+*Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho utilizando o padrão ABNT.*
 
 > **Links Úteis**:
 > - [Padrão ABNT PUC Minas](https://portal.pucminas.br/biblioteca/index_padrao.php?pagina=5886)
