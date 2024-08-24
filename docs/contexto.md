@@ -3,8 +3,11 @@
 *Texto descritivo introdutório apresentando a visão geral do projeto a ser desenvolvido considerando o contexto em que ele se insere, os objetivos gerais, a justificativa e o público-alvo do projeto.*
 
 Em uma sociedade captalista, uma grande preocupação dos órgãos reguladores é manter as relações de consumo e oferta de recursos de forma sadia, protegendo o sistema financeiro de cenários de grande inadimplência, que, de forma exagerada, pode contribuir para a bancarrota financeira não só de empresas, mas de nações. Além das empresas, as famílias também podem contrair dívidas além das suas capacidades de pagamento, e, por isso, entender qual é o perfil de endividamento pode contribuir para manter este sistema financeiro operando de forma saudável, evitando que as famílias atinjam níveis de endividamento irreparáveis.<br>
+
 Com esse projeto, buscamos analisar se existe uma relação entre a taxa Selic e o endividamento das famílias brasileiras, separando por categoria de linha de crédito, considerando também o impacto de fatores como a inflação e o Índice de Confiança do Consumidor.<br>
+
 Devido a importancia do crédito no cotidiano das famílias, e sua influência direta na saúde financeira da população brasileira, é importante entender como o endividamento das famílias reage à políticas de facilitação de acesso ao crédito realizadas pelo Comitê de Política Monetária (COPOM), quando o mesmo reduz a taxa Selic, ou quando este mesmo comitê opta pela limitação de concessão de crédito, elevando esta taxa.<br>
+
 O objetivo geral deste trabalho é identificar padrões e correlações que possam fornecer dados sobre como a variação na Selic impacta diferentes categorias do endividamento familiar. Entender estes padrões facilita o entendimento do nível de endividamento das famílias brasileiras e suas consequências sobre a economia, como a inadimplência e a retração do consumo.<br>
 
 ## Problema
@@ -12,9 +15,11 @@ O objetivo geral deste trabalho é identificar padrões e correlações que poss
 *Nesta seção, você deve apresentar o problema que a sua investigação/experimentação busca resolver. Por exemplo, caso o _dataset_ selecionado, seja um _dataset_ que contenha uma série temporal com o preço de diversas ações da bolsa de valores, o problema pode estar relacionado a dificuldade em saber a melhor hora (hora certa??) de comprar ou então, de executar a venda de uma determinada ação.*
 *Descreva ainda o contexto em que essa aplicação será usada, se houver: empresa parceira, tecnologias etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.*
 
- A principal questão que gostariamos de responde é "Como a variação da taxa Selic influencia o percentual de endividamento das famílias por categoria de crédito no Brasil?" 
- A partir desta pergunta, surge a necessidade de compreender como diferentes categorias de crédito, como crédito pessoal, consignado e imobiliário, reagem às oscilações da Selic, especialmente em contextos de alta inflação e mudanças no Índice de Confiança do Consumidor. O problema abordado é relevante porque as famílias enfrentam desafios ao tentar equilibrar suas finanças em um ambiente de taxas de juros variáveis, o que pode resultar em um endividamento excessivo ou insustentável.
-Este projeto será desenvolvido a partir da análise de datasets que incluem dados da Selic, inflação, Índice de Confiança do Consumidor e dados de endividamento por categoria de crédito, com o foco é acadêmico e analítico. 
+A principal questão que gostariamos de responde é "Como a variação da taxa Selic influencia o percentual de endividamento das famílias por categoria de crédito no Brasil?"
+
+A partir desta pergunta, surge a necessidade de compreender como diferentes categorias de crédito, como crédito pessoal, consignado e imobiliário, reagem às oscilações da Selic, especialmente em contextos de alta inflação e mudanças no Índice de Confiança do Consumidor. O problema abordado é relevante porque as famílias enfrentam desafios ao tentar equilibrar suas finanças em um ambiente de taxas de juros variáveis, o que pode resultar em um endividamento excessivo ou insustentável.
+
+Este projeto será desenvolvido a partir da análise de datasets que incluem dados da Selic, inflação, Índice de Confiança do Consumidor e dados de endividamento por categoria de crédito, com o foco acadêmico e analítico. 
 
 > **Links Úteis**:
 > - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
@@ -40,10 +45,14 @@ Pensamos que esta questão é fundamental para desvendar as relações entre pol
 
 *Aqui você deve descrever os objetivos preliminares do trabalho indicando que o objetivo geral é experimentar modelos de aprendizado de máquina adequados para solucionar o problema apresentado acima.*
 *Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.*
-
 *Por exemplo: um objetivo específico pode estar relacionado a predizer a tendência de alta, estabilidade ou queda de uma determinada ação em uma determinada janela do tempo ou então, predizer o valor exato de uma determinada ação.*
 *Lembre-se que, à medida que a pesquisa/experimentação evolui, os objetivos podem evoluir também, portanto, não se esqueça de fazer as atualizações necessárias.*
- 
+
+Como objetivos para esta pesquisa, buscamos:  
+- Projetar o endividamento das famílias com base na taxa Selic e a inflação, a partir de dados históricos
+- Com base nos dados de endividamento atuais, estimar qual deve ser o tipo de política financeira a ser adotada
+
+
 > **Links Úteis**:
 > - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
 
