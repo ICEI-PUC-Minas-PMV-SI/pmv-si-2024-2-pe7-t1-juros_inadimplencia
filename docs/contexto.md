@@ -58,6 +58,55 @@ Descreva quem serão as pessoas que poderão se beneficiar com a sua investigaç
 
 Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
 
+### Descrição Textual do Público-Alvo:
+
+**1. Estudantes e Professores de Economia e Finanças:**
+   - **Conhecimentos prévios:** Pessoas que estudam ou ensinam economia e finanças, com uma boa base teórica sobre como funcionam a taxa Selic, a inflação e o crédito.
+   - **Relação com a tecnologia:** Estudantes geralmente têm mais facilidade com novas tecnologias e ferramentas de análise de dados, enquanto professores podem usar métodos mais tradicionais.
+   - **Relações hierárquicas:** Estudantes estão em processo de aprendizado, enquanto professores guiam e orientam, além de desenvolverem conteúdos para as aulas.
+
+**2. Analistas e Gestores de Políticas Públicas:**
+   - **Conhecimentos prévios:** Profissionais que trabalham criando políticas econômicas e sociais, com um bom entendimento de como as decisões sobre a taxa Selic e outros indicadores econômicos afetam a vida das pessoas.
+   - **Relação com a tecnologia:** Eles têm um conhecimento moderado em tecnologia, usando principalmente relatórios e planilhas para tomar decisões.
+   - **Relações hierárquicas:** Costumam trabalhar em cargos intermediários ou superiores dentro do governo, auxiliando líderes na tomada de decisões que afetam o país.
+
+**3. Profissionais do Mercado Financeiro:**
+   - **Conhecimentos prévios:** Pessoas que trabalham com finanças, como gerentes de banco e analistas financeiros, que conhecem bem como a economia funciona e como as taxas de juros afetam os investimentos e o crédito.
+   - **Relação com a tecnologia:** Alto, já que usam ferramentas avançadas de análise de dados e modelos para prever o comportamento do mercado e tomar decisões.
+   - **Relações hierárquicas:** Geralmente ocupam posições de liderança em empresas financeiras e tomam decisões importantes sobre investimentos e riscos.
+
+### Diagrama de Personas:
+
+**1. Persona 1: Carlos, o Professor de Economia**
+   - **Idade:** 45 anos
+   - **Cargo:** Professor Universitário
+   - **Tecnologia:** Usa ferramentas como planilhas e software para análises, mas não é um expert em programação.
+   - **Necessidades:** Ferramentas que ajudem a explicar e entender como a economia do Brasil funciona.
+   - **Objetivos:** Ensinar seus alunos e criar materiais didáticos que sejam claros e úteis.
+
+**2. Persona 2: Fernanda, a Gestora de Políticas Públicas**
+   - **Idade:** 38 anos
+   - **Cargo:** Analista Sênior no Governo
+   - **Tecnologia:** Usa principalmente Excel e relatórios para analisar dados.
+   - **Necessidades:** Informações claras e diretas que ajudem a tomar decisões políticas.
+   - **Objetivos:** Desenvolver políticas que ajudem a reduzir o endividamento das famílias brasileiras.
+
+**3. Persona 3: João, o Analista Financeiro**
+   - **Idade:** 30 anos
+   - **Cargo:** Gestor de Riscos em um Banco
+   - **Tecnologia:** Trabalha com ferramentas modernas de análise de dados e previsões financeiras.
+   - **Necessidades:** Modelos que ajudem a prever o impacto das mudanças na Selic nos empréstimos e investimentos.
+   - **Objetivos:** Minimizar riscos e aumentar os lucros para o banco e seus clientes.
+
+### Mapa de Stakeholders:
+
+- **Principais Interessados:**
+  - **Estudantes e Professores de Economia e Finanças:** São diretamente impactados pelos resultados e métodos desenvolvidos, pois usarão esses dados para aprendizado e ensino.
+  - **Analistas e Gestores de Políticas Públicas:** Precisam das análises para criar políticas que impactam a economia do país.
+
+- **Secundários:**
+  - **Profissionais do Mercado Financeiro:** Usam os resultados para tomar decisões estratégicas, mas não são o foco principal da pesquisa.
+
 > **Links Úteis**:
 > - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
 > - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
