@@ -60,6 +60,10 @@ Como objetivos para esta pesquisa, buscamos:
 
 *Descreva a importância ou a motivação para trabalhar com o conjunto de dados escolhido. Indique as razões pelas quais você escolheu seus objetivos específicos, as razões para aprofundar o estudo do problema identificado e qual o impacto que tal problema provoca na sociedade. Lembre-se de quantificar (com dados reais e suas respectivas fontes) este impacto.*
 
+Escolhemos trabalhar com os dados de Selic, inflação porque acreditamos que esses fatores estão intrinsecamente conectados na qualidade de vida das famílias. A análise desses dados permite não apenas entender as dinâmicas econômicas, mas também oferece valiosas ideias para a formulação de políticas públicas mais eficazes, capazes de proteger a saúde financeira das famílias.<br>
+Dados do Banco Central do Brasil mostram que, em períodos de alta na taxa Selic, a tendência é que o custo do crédito aumente, o que pode impactar diretamente o nível de endividamento das famílias. Por outro lado, períodos de baixa na Selic podem incentivar o consumo, mas também elevar o risco de endividamento excessivo, especialmente em categorias de crédito de maior risco. Entender esses padrões é essencial para tentarmos prever os efeitos de futuras decisões financeiras.<br>
+Em resumo, a motivação para este trabalho é mostrar como o endividamento das famílias esta ligado a politicas economicas e como podemos mitigar para promover uma economia mais saudável e sustentável.<br>
+
 > **Links Úteis**:
 > - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 
