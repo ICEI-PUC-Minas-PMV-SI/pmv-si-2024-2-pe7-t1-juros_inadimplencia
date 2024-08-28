@@ -155,6 +155,13 @@ https://dados.gov.br/dados/conjuntos-dados/29038-endividamento-das-familias-com-
 
 Descrição: Este dataset apresenta uma série temporal mensal que mede a relação entre o valor atual das dívidas das famílias com o Sistema Financeiro Nacional e a renda acumulada das famílias nos últimos doze meses. Essa relação é expressa em percentual, permitindo acompanhar o peso das dívidas sobre a renda familiar ao longo do tempo.<br>
 Atributos:
+
+Periodo: date<br>
+Endividamento1/ - Total: Decimal (18,2)<br>
+Endividamento1/ - Sem financiamento imobiliário: Decimal (18,2)<br>
+Comprometimento de renda2/ - Dados dessazonalizados - Total: Decimal (18,2)<br>
+Comprometimento de renda2/ - Dados dessazonalizados - Sem financiamento imobiliário: Decimal (18,2)
+
 <br>
 Data: MAI/2011 a MAI/2024<br>
 Percentual de Endividamento: Percentual que representa a relação entre a dívida total das famílias e sua renda acumulada nos últimos doze meses .<br>
@@ -162,16 +169,16 @@ Este dataset não apresenta valores faltantes.<br>
 
 Índice de Confiança do Consumidor (ICC)
 <br>
-Link de acesso: 
+Link de acesso: <br>
 
-https://dados.gov.br/dados/conjuntos-dados/4393-indice-de-confianca-do-consumidor
+https://dados.gov.br/dados/conjuntos-dados/4393-indice-de-confianca-do-consumidor<br>
 
 https://www3.bcb.gov.br/sgspub/consultarmetadados/consultarMetadadosSeries.do?method=consultarMetadadosSeriesInternet&hdOidSerieSelecionada=4393
 <br>
 Descrição: O ICC é um indicador que acompanha as expectativas dos consumidores em relação à situação econômica atual e futura. Este dataset é crucial para entender como a confiança dos consumidores pode influenciar suas decisões de endividamento e consumo.<br>
 Atributos:
 <br>
-Campo: data Formato: Date
+Campo: data Formato: Date<br>
 Campo: valor Formato: Decimal(18,02)
 <br>
 Data: JUN/2011 a JUN/2024<br>
@@ -188,7 +195,26 @@ https://dados.gov.br/dados/conjuntos-dados/relatorios-de-inflacao-publicados
 <br>
 Descrição: O dataset de inflação inclui uma série temporal que mede as variações no Índice de Preços ao Consumidor Amplo (IPCA), utilizado para calcular a inflação no Brasil. A inflação afeta diretamente o poder de compra das famílias e, consequentemente, seu comportamento em relação ao crédito e ao endividamento.
 <br>
-Atributos:
+Atributos:<br>
+
+referencia: Date<br>
+ano: String<br>
+mes: String<br>
+ano_mes: String<br>
+ipca_variacao: Decimal (18,2)<br>
+ipca_acumulado_ano: Decimal (18,2)<br>
+ipca_acumulado_doze_meses: Decimal (18,2)<br>
+inpc_variacao: Decimal (18,2)<br>
+inpc_acumulado_ano: Decimal (18,2)<br>
+inpc_acumulado_doze_meses: Decimal (18,2)<br>
+ipa_variacao: Decimal (18,2)<br>
+ipa_acumulado_ano: Decimal (18,2)<br>
+ipc_fipe_variacao: Decimal (18,2)<br>
+ipc_fipe_acumulado_ano: Decimal (18,2)<br>
+incc_variacao: Decimal (18,2)<br>
+incc_acumulado_ano: Decimal (18,2)<br>
+salario_minimo: Decimal (18,2)<br>
+
 <br>
 Data: MAI/2011 a MAI/23<br>
 Atributos Faltantes: Este dataset não apresenta valores faltantes.<br>
