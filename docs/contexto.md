@@ -129,7 +129,29 @@ Em resumo, a motivação para este trabalho é mostrar como o endividamento das 
 
 ## Estado da arte
 
-*Nesta seção, deverão ser descritas outras abordagens identificadas na literatura que foram utilizadas para resolver problemas similares ao problema em questão. Para isso, faça uma pesquisa detalhada e identifique, no mínimo, 5 trabalhos que tenham utilizado dados em contexto similares e então: (a) detalhe e contextualize o problema, (b) descreva as principais características do _dataset_ utilizado, (c) detalhe quais abordagens/algoritmos foram utilizados (e seus parâmetros), (d) identifique as métricas de avaliação empregadas, e (e) fale sobre os resultados obtidos.*
+*Nesta seção, deverão ser descritas outras abordagens identificadas na literatura que foram utilizadas para resolver problemas similares ao problema em questão. Para isso, faça uma pesquisa detalhada e identifique, no mínimo, 5 trabalhos que tenham utilizado dados em contexto similares e então: (a) detalhe e contextualize o problema, (b) descreva as principais características do _dataset_ utilizado, (c) detalhe quais abordagens/algoritmos foram utilizados (e seus parâmetros), (d) identifique as métricas de avaliação empregadas, e (e) fale sobre os resultados obtidos.*  
+
+O aprendizado de máquina (*machine learning*) é uma técnica de inteligência artificial (IA) baseada em matemática e estatística que, através da utilização de algoritmos, é capaz de extrair informações de dados brutos e os representa por meio de um modelo matemático. Este modelo, por sua vez, é utilizado para fazer inferências – ou predições – a partir de novos conjuntos de dados, estimulando os sistemas de IA a solucionar problemas de forma autônoma, aprendendo sobre eles e propondo uma saída. (GOMES, 2019; ESCOVEDO, 2020).  
+
+Tendo em vista o escopo do presente trabalho, buscamos literatura nas áreas de ciência da computação e de ciências econômicas que embasem a utilização de aprendizado de máquina para a análise de dados macroeconômicos, como a taxa de juros e a inflação, permitindo a previsão de cenários a partir de dados históricos. Com base em algumas pesquisas realizadas, evidenciamos a utilização de métodos de aprendizado de máquina sendo utilizados na previsão desses cenários, como feito por Araújo e Gaglianone (2024) em relação aos índices de inflação no Brasil e por Souza Júnior (2021) na previsão da Estrutura a Termo da Taxa de Juros Brasileira*(a relação entre o retorno e o prazo de vencimento de instrumentos financeiros de renda fixa)*. A taxa de juros da economia brasileira também foi o objeto de análise por parte de Amaral et al. (2023) através da utilização de redes neurais recorrentes (RNA), que se trata de uma técnica de aprendizado máquina focada em identificar padrões em um banco de dados.  
+
+Nesse sentido, nota-se que já há um volume de pesquisas que discutem a previsão de dados macroeconômicos através da IA, e que boa parte dessa literatura é recente, tendo em vista que também é um tema relativamente novo no mercado, ressaltando que parte considerável dos algoritmos são usados para a previsão e não para entendimento de casualidade entre variáveis macroeconômicas, como é em grande parte o trabalho na econometria tradicional (FREITAS, 2019). Assim, por a economia ser um sistema complexo e interconectado, com uma infinidade de variáveis que influenciam umas às outras de maneiras não-lineares, pode ser melhor compreendido com a utilização de IA e do *Machine Learning*, permitindo previsões mais precisas e sofisticadas (BARBOSA FILHO, 2024).  
+
+**REFERÊNCIAS**  
+
+> - AMARAEL ET AL., **Previsão de variáveis econômicas com aprendizado de máquina: previsão com redes neurais.** Revista Observatorio De La Economia Latinoamericana. Curitiba, v.21, n.9, p. 11279-11299. 2023. Disponível em: file:///C:/Users/vinin/Downloads/OBSERVATORIO042.pdf. Consulta em 25 ago. 2024.  
+
+> - ARAÚJO, Gustavo Silva; GAGLIANONE, Wagner Piazza. **Métodos de Aprendizado de Máquina para Previsão de Inflação no Brasil.** BC Blog, 26/03/2024. Disponível em: https://www.bcb.gov.br/noticiablogbc/10/noticia. Consulta em 25 ago. 2024.  
+
+> - BARBOSA FILHO, Luiz Henrique. **IA e Previsão Macroeconômica usando Python.** Análise Macro. 04/03/2024. Disponível em: https://analisemacro.com.br/economia/macroeconometria/ia-e-previsao-macroeconomica-usando-python/. Consulta em 25 ago. 2024.  
+
+> - ESCOVEDO, Tatiana. **Machine Learning: Conceitos e Modelos — Parte I: Aprendizado Supervisionado.** 28/06/2020. Disponível em: https://tatianaesc.medium.com/machine-learning-conceitos-e-modelos-f0373bf4f445. Consulta em 25 ago. 2024.  
+
+> - FREITAS, Gabriel Belmino. **O Uso De Machine Learning Na Modelagem Da Previsão De Inflação: Revisão Bibliográfica.** Universidade de Brasília. 2019. Disponível em: https://bdm.unb.br/bitstream/10483/25328/1/2019_GabrielBelminoFreitas_tcc.pdf. Consulta em 25 ago. 2024.  
+
+> - GOMES, Pedro César Tebaldi. **Principais algoritmos de machine learning.** Data Geeks. 18/02/2019. Disponível em: https://www.datageeks.com.br/algoritmos-de-machine-learning/. Consulta em 25 ago. 2024.  
+
+> - SOUZA JÚNIOR, Pedro Ivo Ferreira de. **Estrutura a termo da taxa de juros no Brasil: Projeções utilizando aprendizado de máquina.** Universidade de Brasília. 2021. Disponível em: http://icts.unb.br/jspui/bitstream/10482/41996/1/2021_PedroIvoFerreiradeSouzaJunior.pdf. Consulta em 25 ago. 2024.  
 
 > **Links Úteis**:
 > - [Google Scholar](https://scholar.google.com/)
