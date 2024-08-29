@@ -164,7 +164,19 @@ Nesse sentido, nota-se que já há um volume de pesquisas que discutem a previs�
 *Nesta seção, você deverá descrever detalhadamente o _dataset_ selecionado. Lembre-se de informar o link de acesso a ele, bem como, de descrever cada um dos seus atributos (a que se refere, tipo do atributo etc.), se existem atributos faltantes etc.*<br>
 ### Dataset  
 
-Para este projeto, foram selecionados quatro datasets principais que, em conjunto, permitem uma análise abrangente da relação entre a taxa Selic e o endividamento das famílias brasileiras, considerando também o impacto da inflação e do Índice de Confiança do Consumidor. <br>
+Para este projeto, foram selecionados três datasets principais que, em conjunto, permitem uma análise abrangente da relação entre a taxa Selic e o endividamento das famílias brasileiras, considerando também o impacto da inflação e do Índice de Confiança do Consumidor. <br>
+Estatísticas Monetária e de Credito: Endividamento das Famílias
+
+com esse dataset podemos ter uma base direta para analisar o endividamento das famílias. Ele apresenta a relação entre o valor das dívidas e a renda das famílias, permitindo identificar como essa relação varia em função da taxa Selic.
+
+Índice de Confiança do Consumidor (ICC)
+
+O ICC nos ajuda a medir a percepção dos consumidores sobre a economia, que pode influenciar suas decisões de contrair novas dívidas ou liquidar as existentes. Um ICC alto pode indicar maior propensão ao endividamento, enquanto um ICC baixo pode indicar medo do endividamento.
+
+Inflação e variações do IPCA
+
+A inflação, medida pelo IPCA, afeta o poder de compra das famílias e, consequentemente, sua capacidade de pagar dívidas ou de assumir novas. Em períodos de alta inflação, a renda real das famílias diminui, o que pode aumentar o percentual de endividamento relativo à renda.
+
 
 ### Estatisticas Monetaria e de Credito: Endividamento das Famílias  
 
