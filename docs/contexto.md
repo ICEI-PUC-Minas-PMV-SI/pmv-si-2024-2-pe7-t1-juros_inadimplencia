@@ -227,23 +227,23 @@ O dataset de inflação inclui uma série temporal que mede as variações no Í
 
 ### Atributos:
 
-Campo: Referencia. Tipo: Date. Informa mes e ano de referencia (yyyy-MM)
-Campo: ano. Tipo: String. Informa o ano de referencia
-Campo: mes. Tipo: String. Informa o mes de referencia no formato 
-Campo: ano_mes. Tipo: Date.  Informa mes e ano de referencia(yyyyMM)
-Campo: ipca_variacao. Tipo: Decimal (18,2)
-Campo: ipca_acumulado_ano. Tipo: Decimal (18,2)
-Campo: ipca_acumulado_doze_meses. Tipo: Decimal (18,2)
-Campo: inpc_variacao. Tipo: Decimal (18,2)
-Campo: inpc_acumulado_ano. Tipo: Decimal (18,2)
-Campo: inpc_acumulado_doze_meses. Tipo: Decimal (18,2)
-Campo: ipa_variacao. Tipo: Decimal (18,2)
-Campo: ipa_acumulado_ano. Tipo: Decimal (18,2)
-Campo: ipc_fipe_variacao. Tipo: Decimal (18,2)
-Campo: ipc_fipe_acumulado_ano. Tipo: Decimal (18,2)
-Campo: incc_variacao. Tipo: Decimal (18,2)
-Campo: incc_acumulado_ano. Tipo: Decimal (18,2)
-Campo: salario_minimo. Tipo: Decimal (18,2). Informa o salario mínimo referente ao mês e ano dos dados. 
+Campo: Referencia. Tipo: Date. Informa mes e ano de referencia (yyyy-MM)  
+Campo: ano. Tipo: String. Informa o ano de referencia  
+Campo: mes. Tipo: String. Informa o mes de referencia no formato   
+Campo: ano_mes. Tipo: Date.  Informa mes e ano de referencia(yyyyMM)  
+Campo: ipca_variacao. Tipo: Decimal (18,2)  
+Campo: ipca_acumulado_ano. Tipo: Decimal (18,2)  
+Campo: ipca_acumulado_doze_meses. Tipo: Decimal (18,2)  
+Campo: inpc_variacao. Tipo: Decimal (18,2)  
+Campo: inpc_acumulado_ano. Tipo: Decimal (18,2)  
+Campo: inpc_acumulado_doze_meses. Tipo: Decimal (18,2)  
+Campo: ipa_variacao. Tipo: Decimal (18,2)  
+Campo: ipa_acumulado_ano. Tipo: Decimal (18,2)  
+Campo: ipc_fipe_variacao. Tipo: Decimal (18,2)  
+Campo: ipc_fipe_acumulado_ano. Tipo: Decimal (18,2)  
+Campo: incc_variacao. Tipo: Decimal (18,2)  
+Campo: incc_acumulado_ano. Tipo: Decimal (18,2)  
+Campo: salario_minimo. Tipo: Decimal (18,2). Informa o salario mínimo referente ao mês e ano dos dados.   
 
 ### Data: 
 MAI/2011 a MAI/23<br>
