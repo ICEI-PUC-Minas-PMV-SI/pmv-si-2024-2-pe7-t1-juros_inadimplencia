@@ -162,31 +162,31 @@ Nesse sentido, nota-se que já há um volume de pesquisas que discutem a previs�
 # Descrição do _dataset_ selecionado
 
 *Nesta seção, você deverá descrever detalhadamente o _dataset_ selecionado. Lembre-se de informar o link de acesso a ele, bem como, de descrever cada um dos seus atributos (a que se refere, tipo do atributo etc.), se existem atributos faltantes etc.*<br>
+## Dataset  
 
 Para este projeto, foram selecionados quatro datasets principais que, em conjunto, permitem uma análise abrangente da relação entre a taxa Selic e o endividamento das famílias brasileiras, considerando também o impacto da inflação e do Índice de Confiança do Consumidor. <br>
 
-Endividamento das Famílias
+### Estatisticas Monetaria e de Credito: Endividamento das Famílias  
 
-Links de acesso: 
+#Links de acesso ao Dataset: 
 
-https://www3.bcb.gov.br/sgspub/consultarmetadados/consultarMetadadosSeries.do?method=consultarMetadadosSeriesInternet&hdOidSerieSelecionada=29038
+https://www3.bcb.gov.br/sgspub/consultarmetadados/consultarMetadadosSeries.do?method=consultarMetadadosSeriesInternet&hdOidSerieSelecionada=29038  
 
-
-https://dados.gov.br/dados/conjuntos-dados/29038-endividamento-das-familias-com-o-sistema-financeiro-nacional-exceto-credito-habitacional-
+https://dados.gov.br/dados/conjuntos-dados/29038-endividamento-das-familias-com-o-sistema-financeiro-nacional-exceto-credito-habitacional-  
 <br>
 
-Descrição: Este dataset apresenta uma série temporal mensal que mede a relação entre o valor atual das dívidas das famílias com o Sistema Financeiro Nacional e a renda acumulada das famílias nos últimos doze meses. Essa relação é expressa em percentual, permitindo acompanhar o peso das dívidas sobre a renda familiar ao longo do tempo.<br>
-Atributos:
+#Descrição: Este dataset apresenta uma série temporal mensal que mede a relação entre o valor atual das dívidas das famílias com o Sistema Financeiro Nacional e a renda acumulada das famílias nos últimos doze meses. Essa relação é expressa em percentual, permitindo acompanhar o peso das dívidas sobre a renda familiar ao longo do tempo.<br>
+#Atributos:
 
-Periodo: date<br>
-Endividamento1/ - Total: Decimal (18,2)<br>
-Endividamento1/ - Sem financiamento imobiliário: Decimal (18,2)<br>
-Comprometimento de renda2/ - Dados dessazonalizados - Total: Decimal (18,2)<br>
-Comprometimento de renda2/ - Dados dessazonalizados - Sem financiamento imobiliário: Decimal (18,2)
+Campo: Periodo. Tipo: Date. Informa mes e ano de referencia<br>
+Campo: Endividamento1/ - Total. Tipo: Decimal (18,2). Porcentagem do comprometimento total das famílias <br>
+Campo: Endividamento1/ - Sem financiamento imobiliário. Tipo: Decimal (18,2) Porcentagem do comprometimento sem financiamento imobiliário <br>
+Campo: Comprometimento de renda2/ - Dados dessazonalizados - Total. Tipo: Decimal (18,2) Porcentagem do comprometimento dessazonalizados total <br>
+Campo: Comprometimento de renda2/ - Dados dessazonalizados - Sem financiamento imobiliário. Tipo: Decimal (18,2) Porcentagem do comprometimento dessazonalizados sem financiamento imobiliário 
 
 <br>
-Data: MAI/2011 a MAI/2024<br>
-Percentual de Endividamento: Percentual que representa a relação entre a dívida total das famílias e sua renda acumulada nos últimos doze meses .<br>
+#Data: MAI/2011 a MAI/2024<br>
+#Percentual de Endividamento: Percentual que representa a relação entre a dívida total das famílias e sua renda acumulada nos últimos doze meses .<br>
 Este dataset não apresenta valores faltantes.<br>
 
 Índice de Confiança do Consumidor (ICC)
