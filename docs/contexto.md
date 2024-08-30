@@ -60,7 +60,7 @@ Como objetivos para esta pesquisa, buscamos:
 
 *Descreva a importância ou a motivação para trabalhar com o conjunto de dados escolhido. Indique as razões pelas quais você escolheu seus objetivos específicos, as razões para aprofundar o estudo do problema identificado e qual o impacto que tal problema provoca na sociedade. Lembre-se de quantificar (com dados reais e suas respectivas fontes) este impacto.*
 
-Escolhemos trabalhar com os dados de Selic, inflação porque acreditamos que esses fatores estão intrinsecamente conectados na qualidade de vida das famílias. A análise desses dados permite não apenas entender as dinâmicas econômicas, mas também oferece valiosas ideias para a formulação de políticas públicas mais eficazes, capazes de proteger a saúde financeira das famílias.<br>  
+Escolhemos trabalhar com os dados de Selic, inflação e endividamento por linha de crédito, porque acreditamos que esses fatores estão intrinsecamente conectados na qualidade de vida das famílias. A análise desses dados permite não apenas entender as dinâmicas econômicas, mas também oferece valiosas ideias para a formulação de políticas públicas mais eficazes, capazes de proteger a saúde financeira das famílias.<br>  
 Dados do Banco Central do Brasil mostram que, em períodos de alta na taxa Selic, a tendência é que o custo do crédito aumente, o que pode impactar diretamente o nível de endividamento das famílias. Por outro lado, períodos de baixa na Selic podem incentivar o consumo, mas também elevar o risco de endividamento excessivo, especialmente em categorias de crédito de maior risco. Entender esses padrões é essencial para tentarmos prever os efeitos de futuras decisões financeiras.<br>  
 Em resumo, a motivação para este trabalho é mostrar como o endividamento das famílias esta ligado a politicas economicas e como podemos mitigar para promover uma economia mais saudável e sustentável.<br>  
 
@@ -161,20 +161,18 @@ Nesse sentido, nota-se que já há um volume de pesquisas que discutem a previs�
 
 # Descrição do _dataset_ selecionado
 
-*Nesta seção, você deverá descrever detalhadamente o _dataset_ selecionado. Lembre-se de informar o link de acesso a ele, bem como, de descrever cada um dos seus atributos (a que se refere, tipo do atributo etc.), se existem atributos faltantes etc.*<br>
+*Nesta seção, você deverá descrever detalhadamente o _dataset_ selecionado. Lembre-se de informar o link de acesso a ele, bem como, de descrever cada um dos seus atributos (a que se refere, tipo do atributo etc.), se existem atributos faltantes etc.*<br>  
 ### Dataset  
 
-Para este projeto, foram selecionados três datasets principais que, em conjunto, permitem uma análise abrangente da relação entre a taxa Selic e o endividamento das famílias brasileiras, considerando também o impacto da inflação e do Índice de Confiança do Consumidor. <br>
-Estatísticas Monetária e de Credito: Endividamento das Famílias
+Para este projeto, foram selecionados três datasets principais que, em conjunto, permitem uma análise abrangente da relação entre a taxa Selic e o endividamento das famílias brasileiras, considerando também o impacto da inflação e do Índice de Confiança do Consumidor. <br>  
 
-com esse dataset podemos ter uma base direta para analisar o endividamento das famílias. Ele apresenta a relação entre o valor das dívidas e a renda das famílias, permitindo identificar como essa relação varia em função da taxa Selic.
+**Estatísticas Monetária e de Credito: Endividamento das Famílias**
+Com esse dataset, podemos ter uma base direta para analisar o endividamento das famílias. Ele apresenta a relação entre o valor das dívidas e a renda das famílias, permitindo identificar como essa relação varia em função da taxa Selic.
 
-Índice de Confiança do Consumidor (ICC)
-
+**Índice de Confiança do Consumidor (ICC)**
 O ICC nos ajuda a medir a percepção dos consumidores sobre a economia, que pode influenciar suas decisões de contrair novas dívidas ou liquidar as existentes. Um ICC alto pode indicar maior propensão ao endividamento, enquanto um ICC baixo pode indicar medo do endividamento.
 
-Inflação e variações do IPCA
-
+**Inflação e variações do IPCA**
 A inflação, medida pelo IPCA, afeta o poder de compra das famílias e, consequentemente, sua capacidade de pagar dívidas ou de assumir novas. Em períodos de alta inflação, a renda real das famílias diminui, o que pode aumentar o percentual de endividamento relativo à renda.
 
 
@@ -197,7 +195,7 @@ Campo: Periodo. Tipo: Date. Informa mes e ano de referencia<br>
 Campo: Endividamento1/ - Total. Tipo: Decimal (18,2). Porcentagem do comprometimento total das famílias <br>
 Campo: Endividamento1/ - Sem financiamento imobiliário. Tipo: Decimal (18,2) Porcentagem do comprometimento sem financiamento imobiliário <br>
 Campo: Comprometimento de renda2/ - Dados dessazonalizados - Total. Tipo: Decimal (18,2) Porcentagem do comprometimento dessazonalizados total <br>
-Campo: Comprometimento de renda2/ - Dados dessazonalizados - Sem financiamento imobiliário. Tipo: Decimal (18,2) Porcentagem do comprometimento dessazonalizados sem financiamento imobiliário  
+Campo: Comprometimento de renda2/ - Dados dessazonalizados - Sem financiamento imobiliário. Tipo: Decimal (18,2) Porcentagem do comprometimento dessazonalizados sem financiamento imobiliário<br>  
 
 ### Data: 
 MAI/2011 a MAI/2024<br>
@@ -219,7 +217,7 @@ O ICC é um indicador importante para a economia, pois ajuda a antecipar os rumo
 ### Atributos:
 <br>
 Campo: Data. Tipo: Date. Informa mes e ano de referencia<br>
-Campo: valor Formato: Decimal(18,02). Valor referente ao ICC que varia de 0 a 200
+Campo: valor Formato: Decimal(18,02). Valor referente ao ICC que varia de 0 a 200<br>
 
 ### Data: 
 JUN/2011 a JUN/2024<br>
@@ -239,27 +237,27 @@ O dataset de inflação inclui uma série temporal que mede as variações no Í
 
 ### Atributos:
 
-Campo: Referencia. Tipo: Date. Informa mes e ano de referencia (yyyy-MM)  
-Campo: ano. Tipo: String. Informa o ano de referencia  
-Campo: mes. Tipo: String. Informa o mes de referencia no formato   
-Campo: ano_mes. Tipo: Date.  Informa mes e ano de referencia(yyyyMM)  
-Campo: ipca_variacao. Tipo: Decimal (18,2)  
-Campo: ipca_acumulado_ano. Tipo: Decimal (18,2)  
-Campo: ipca_acumulado_doze_meses. Tipo: Decimal (18,2)  
-Campo: inpc_variacao. Tipo: Decimal (18,2)  
-Campo: inpc_acumulado_ano. Tipo: Decimal (18,2)  
-Campo: inpc_acumulado_doze_meses. Tipo: Decimal (18,2)  
-Campo: ipa_variacao. Tipo: Decimal (18,2)  
-Campo: ipa_acumulado_ano. Tipo: Decimal (18,2)  
-Campo: ipc_fipe_variacao. Tipo: Decimal (18,2)  
-Campo: ipc_fipe_acumulado_ano. Tipo: Decimal (18,2)  
-Campo: incc_variacao. Tipo: Decimal (18,2)  
-Campo: incc_acumulado_ano. Tipo: Decimal (18,2)  
-Campo: salario_minimo. Tipo: Decimal (18,2). Informa o salario mínimo referente ao mês e ano dos dados.   
+Campo: Referencia. Tipo: Date. Informa mes e ano de referencia (yyyy-MM)<br>
+Campo: ano. Tipo: String. Informa o ano de referencia  <br>
+Campo: mes. Tipo: String. Informa o mes de referencia no formato<br>
+Campo: ano_mes. Tipo: Date.  Informa mes e ano de referencia(yyyyMM)<br>
+Campo: ipca_variacao. Tipo: Decimal (18,2)<br>
+Campo: ipca_acumulado_ano. Tipo: Decimal (18,2)<br>
+Campo: ipca_acumulado_doze_meses. Tipo: Decimal (18,2)<br>
+Campo: inpc_variacao. Tipo: Decimal (18,2)<br>
+Campo: inpc_acumulado_ano. Tipo: Decimal (18,2)<br>
+Campo: inpc_acumulado_doze_meses. Tipo: Decimal (18,2)<br>
+Campo: ipa_variacao. Tipo: Decimal (18,2)<br>
+Campo: ipa_acumulado_ano. Tipo: Decimal (18,2)<br>
+Campo: ipc_fipe_variacao. Tipo: Decimal (18,2)<br>
+Campo: ipc_fipe_acumulado_ano. Tipo: Decimal (18,2)<br>
+Campo: incc_variacao. Tipo: Decimal (18,2)<br>
+Campo: incc_acumulado_ano. Tipo: Decimal (18,2)<br>
+Campo: salario_minimo. Tipo: Decimal (18,2). Informa o salario mínimo referente ao mês e ano dos dados.<br>
 
 ### Data: 
 MAI/2011 a MAI/23<br>
-Atributos Faltantes: Este dataset não apresenta valores faltantes.<br>
+Atributos Faltantes: Este dataset não apresenta valores faltantes.<br>  
 
 # Canvas analítico
 
