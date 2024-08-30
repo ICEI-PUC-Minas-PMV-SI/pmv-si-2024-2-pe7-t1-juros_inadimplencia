@@ -72,54 +72,11 @@ Em resumo, a motivação para este trabalho é mostrar como o endividamento das 
 *Descreva quem serão as pessoas que poderão se beneficiar com a sua investigação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.*
 *Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.*
 
-### Descrição Textual do Público-Alvo:
+A investigação sobre a relação entre a taxa Selic e o endividamento das famílias brasileiras tem potencial para beneficiar diversos grupos. Um dos principais beneficiados são os economistas e profissionais que atuam em órgãos reguladores e instituições financeiras. Esses especialistas, que possuem um profundo conhecimento em economia e finanças, utilizam tecnologias avançadas para analisar dados e prever tendências econômicas. Eles são fundamentais na formulação de políticas públicas e financeiras. Ao entender melhor como a Selic impacta o endividamento familiar, esses profissionais estarão melhor equipados para tomar decisões que garantam a estabilidade econômica e evitem crises financeiras.
 
-**1. Estudantes e Professores de Economia e Finanças:**
-   - **Conhecimentos prévios:** Pessoas que estudam ou ensinam economia e finanças, com uma boa base teórica sobre como funcionam a taxa Selic, a inflação e o crédito.
-   - **Relação com a tecnologia:** Estudantes geralmente têm mais facilidade com novas tecnologias e ferramentas de análise de dados, enquanto professores podem usar métodos mais tradicionais.
-   - **Relações hierárquicas:** Estudantes estão em processo de aprendizado, enquanto professores guiam e orientam, além de desenvolverem conteúdos para as aulas.
+Além disso, acadêmicos e pesquisadores nas áreas de economia e ciência da computação também se beneficiarão dessa pesquisa. Esses indivíduos, que estão explorando o uso de técnicas de aprendizado de máquina para a análise de dados macroeconômicos, encontram nesta investigação uma oportunidade de aprofundar seus estudos. Com uma sólida base teórica, mas ainda em processo de aplicação prática dessas novas tecnologias, esses acadêmicos ocupam posições como professores, pesquisadores e estudantes de pós-graduação. A pesquisa não só contribuirá para o avanço de suas carreiras, como também impulsionará o desenvolvimento de novos métodos de previsão econômica que podem transformar a forma como entendemos a economia.
 
-**2. Analistas e Gestores de Políticas Públicas:**
-   - **Conhecimentos prévios:** Profissionais que trabalham criando políticas econômicas e sociais, com um bom entendimento de como as decisões sobre a taxa Selic e outros indicadores econômicos afetam a vida das pessoas.
-   - **Relação com a tecnologia:** Eles têm um conhecimento moderado em tecnologia, usando principalmente relatórios e planilhas para tomar decisões.
-   - **Relações hierárquicas:** Costumam trabalhar em cargos intermediários ou superiores dentro do governo, auxiliando líderes na tomada de decisões que afetam o país.
-
-**3. Profissionais do Mercado Financeiro:**
-   - **Conhecimentos prévios:** Pessoas que trabalham com finanças, como gerentes de banco e analistas financeiros, que conhecem bem como a economia funciona e como as taxas de juros afetam os investimentos e o crédito.
-   - **Relação com a tecnologia:** Alto, já que usam ferramentas avançadas de análise de dados e modelos para prever o comportamento do mercado e tomar decisões.
-   - **Relações hierárquicas:** Geralmente ocupam posições de liderança em empresas financeiras e tomam decisões importantes sobre investimentos e riscos.
-
-### Diagrama de Personas:
-
-**1. Persona 1: Carlos, o Professor de Economia**
-   - **Idade:** 45 anos
-   - **Cargo:** Professor Universitário
-   - **Tecnologia:** Usa ferramentas como planilhas e software para análises, mas não é um expert em programação.
-   - **Necessidades:** Ferramentas que ajudem a explicar e entender como a economia do Brasil funciona.
-   - **Objetivos:** Ensinar seus alunos e criar materiais didáticos que sejam claros e úteis.
-
-**2. Persona 2: Fernanda, a Gestora de Políticas Públicas**
-   - **Idade:** 38 anos
-   - **Cargo:** Analista Sênior no Governo
-   - **Tecnologia:** Usa principalmente Excel e relatórios para analisar dados.
-   - **Necessidades:** Informações claras e diretas que ajudem a tomar decisões políticas.
-   - **Objetivos:** Desenvolver políticas que ajudem a reduzir o endividamento das famílias brasileiras.
-
-**3. Persona 3: João, o Analista Financeiro**
-   - **Idade:** 30 anos
-   - **Cargo:** Gestor de Riscos em um Banco
-   - **Tecnologia:** Trabalha com ferramentas modernas de análise de dados e previsões financeiras.
-   - **Necessidades:** Modelos que ajudem a prever o impacto das mudanças na Selic nos empréstimos e investimentos.
-   - **Objetivos:** Minimizar riscos e aumentar os lucros para o banco e seus clientes.
-
-### Mapa de Stakeholders:
-
-- **Principais Interessados:**
-  - **Estudantes e Professores de Economia e Finanças:** São diretamente impactados pelos resultados e métodos desenvolvidos, pois usarão esses dados para aprendizado e ensino.
-  - **Analistas e Gestores de Políticas Públicas:** Precisam das análises para criar políticas que impactam a economia do país.
-
-- **Secundários:**
-  - **Profissionais do Mercado Financeiro:** Usam os resultados para tomar decisões estratégicas, mas não são o foco principal da pesquisa.
+Por ultimo e não menos importante, as famílias brasileiras, embora de forma indireta, são as beneficiadas principais desta pesquisa. Pois compreender como a variação da Selic influencia o endividamento pode capacitá-las a tomar decisões financeiras mais informadas, evitando o risco de endividamento excessivo. Essas famílias, muitas vezes com conhecimentos limitados em economia, podem não estar diretamente envolvidas no estudo, mas os resultados têm o potencial de resultar em políticas públicas que promovam sua saúde financeira. Dessa forma, a pesquisa pode contribuir significativamente para a qualidade de vida dessas famílias, ajudando a construir uma economia mais estável e sustentável para todos.
 
 > **Links Úteis**:
 > - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
