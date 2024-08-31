@@ -30,7 +30,7 @@ Este projeto será desenvolvido a partir da análise de datasets que incluem dad
 
 *A questão de pesquisa é a base de todo o trabalho que será desenvolvido. É ela que motiva a realização da pesquisa e deverá ser adequada ao problema identificado. Ao término de sua pesquisa/experimentação, o objetivo é que seja encontrada a resposta da questão de pesquisa previamente definida.*
 
-Pensamos que diante do cenário econômico brasileiro, marcado por oscilações frequentes na taxa Selic e variações nos índices de inflação surge a necessidade de entender como esses fatores afetam o comportamento financeiro das famílias e sua qualidade de vida. Portanto, a questão central que norteia nossa pesquisa é:
+Diante do cenário econômico brasileiro, marcado por oscilações frequentes na taxa Selic e variações nos índices de inflação surge a necessidade de entender como esses fatores afetam o comportamento financeiro das famílias e sua qualidade de vida. Portanto, a questão central que norteia nossa pesquisa é:
 
 Como a variação da taxa Selic influencia o percentual de endividamento das famílias brasileiras por categoria de crédito, considerando também o impacto da inflação?
 
@@ -194,23 +194,24 @@ O dataset de inflação inclui uma série temporal que mede as variações no Í
 
 ### Atributos:
 
-Campo: Referencia. Tipo: Date. Informa mes e ano de referencia (yyyy-MM)<br>
-Campo: ano. Tipo: String. Informa o ano de referencia  <br>
-Campo: mes. Tipo: String. Informa o mes de referencia no formato<br>
+Campo: Referencia. Tipo: Date. Informa mês e ano de referencia (yyyy-MM)<br>
+Campo: ano. Tipo: String. Informa o ano de referencia no formato (yyyy)<br>
+Campo: mes. Tipo: String. Informa o mes de referencia no formato (m)<br>
 Campo: ano_mes. Tipo: Date.  Informa mes e ano de referencia(yyyyMM)<br>
-Campo: ipca_variacao. Tipo: Decimal (18,2)<br>
-Campo: ipca_acumulado_ano. Tipo: Decimal (18,2)<br>
-Campo: ipca_acumulado_doze_meses. Tipo: Decimal (18,2)<br>
-Campo: inpc_variacao. Tipo: Decimal (18,2)<br>
-Campo: inpc_acumulado_ano. Tipo: Decimal (18,2)<br>
-Campo: inpc_acumulado_doze_meses. Tipo: Decimal (18,2)<br>
-Campo: ipa_variacao. Tipo: Decimal (18,2)<br>
-Campo: ipa_acumulado_ano. Tipo: Decimal (18,2)<br>
-Campo: ipc_fipe_variacao. Tipo: Decimal (18,2)<br>
-Campo: ipc_fipe_acumulado_ano. Tipo: Decimal (18,2)<br>
-Campo: incc_variacao. Tipo: Decimal (18,2)<br>
-Campo: incc_acumulado_ano. Tipo: Decimal (18,2)<br>
+Campo: ipca_variacao. Tipo: Decimal (18,2) Informa a variação do IPCA no mês de referência<br>
+Campo: ipca_acumulado_ano. Tipo: Decimal (18,2) Informa a variação do IPCA acumulado para o ano<br>
+Campo: ipca_acumulado_doze_meses. Tipo: Decimal (18,2) Informa a variação do IPCA acumulado nos últimos 12 meses<br>
+Campo: inpc_variacao. Tipo: Decimal (18,2) Informa a variação do INPC no mês de referência<br>
+Campo: inpc_acumulado_ano. Tipo: Decimal (18,2) Informa a variação do INPC acumulado para o ano<br>
+Campo: inpc_acumulado_doze_meses. Tipo: Decimal (18,2) Informa a variação do INPC acumulado nos últimos 12 meses<br>
+Campo: ipa_variacao. Tipo: Decimal (18,2) Informa a variação do IPA no mês de referência<br>
+Campo: ipa_acumulado_ano. Tipo: Decimal (18,2) Informa a variação do IPA acumulado para o ano<br>
+Campo: ipc_fipe_variacao. Tipo: Decimal (18,2) Informa a variação do IPC Fipe no mês de referência<br>
+Campo: ipc_fipe_acumulado_ano. Tipo: Decimal (18,2) Informa a variação do IPC Fipe acumulado para o ano<br>
+Campo: incc_variacao. Tipo: Decimal (18,2) Informa a variação do INCC Fipe no mês de referência<br>
+Campo: incc_acumulado_ano. Tipo: Decimal (18,2) Informa a variação do INCC Fipe acumulado para o ano<br>
 Campo: salario_minimo. Tipo: Decimal (18,2). Informa o salario mínimo referente ao mês e ano dos dados.<br>
+Campo: consolidado_ano. Tipo: booleano (TRUE FALSE). Informa se a linha contém valores referentes ao último mês do ano.<br>
 
 ### Data: 
 MAI/2011 a MAI/23<br>
@@ -226,6 +227,20 @@ Atributos Faltantes: Este dataset não apresenta valores faltantes.<br>
 # Referências
 
 *Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho utilizando o padrão ABNT.*
+
+> - AMARAEL ET AL., **Previsão de variáveis econômicas com aprendizado de máquina: previsão com redes neurais.** Revista Observatorio De La Economia Latinoamericana. Curitiba, v.21, n.9, p. 11279-11299. 2023. Disponível em: file:///C:/Users/vinin/Downloads/OBSERVATORIO042.pdf. Consulta em 25 ago. 2024.  
+
+> - ARAÚJO, Gustavo Silva; GAGLIANONE, Wagner Piazza. **Métodos de Aprendizado de Máquina para Previsão de Inflação no Brasil.** BC Blog, 26/03/2024. Disponível em: https://www.bcb.gov.br/noticiablogbc/10/noticia. Consulta em 25 ago. 2024.  
+
+> - BARBOSA FILHO, Luiz Henrique. **IA e Previsão Macroeconômica usando Python.** Análise Macro. 04/03/2024. Disponível em: https://analisemacro.com.br/economia/macroeconometria/ia-e-previsao-macroeconomica-usando-python/. Consulta em 25 ago. 2024.  
+
+> - ESCOVEDO, Tatiana. **Machine Learning: Conceitos e Modelos — Parte I: Aprendizado Supervisionado.** 28/06/2020. Disponível em: https://tatianaesc.medium.com/machine-learning-conceitos-e-modelos-f0373bf4f445. Consulta em 25 ago. 2024.  
+
+> - FREITAS, Gabriel Belmino. **O Uso De Machine Learning Na Modelagem Da Previsão De Inflação: Revisão Bibliográfica.** Universidade de Brasília. 2019. Disponível em: https://bdm.unb.br/bitstream/10483/25328/1/2019_GabrielBelminoFreitas_tcc.pdf. Consulta em 25 ago. 2024.  
+
+> - GOMES, Pedro César Tebaldi. **Principais algoritmos de machine learning.** Data Geeks. 18/02/2019. Disponível em: https://www.datageeks.com.br/algoritmos-de-machine-learning/. Consulta em 25 ago. 2024.  
+
+> - SOUZA JÚNIOR, Pedro Ivo Ferreira de. **Estrutura a termo da taxa de juros no Brasil: Projeções utilizando aprendizado de máquina.** Universidade de Brasília. 2021. Disponível em: http://icts.unb.br/jspui/bitstream/10482/41996/1/2021_PedroIvoFerreiradeSouzaJunior.pdf. Consulta em 25 ago. 2024.  
 
 > **Links Úteis**:
 > - [Padrão ABNT PUC Minas](https://portal.pucminas.br/biblioteca/index_padrao.php?pagina=5886)
