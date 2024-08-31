@@ -217,6 +217,22 @@ Campo: consolidado_ano. Tipo: booleano (TRUE FALSE). Informa se a linha contém 
 MAI/2011 a MAI/23<br>
 Atributos Faltantes: Este dataset não apresenta valores faltantes.<br>  
 
+### Selic Anualizada
+
+### Link de acesso: 
+[https://dadosabertos.bcb.gov.br/dataset/29263-sgs](https://dadosabertos.bcb.gov.br/dataset/1178-taxa-de-juros---selic-anualizada-base-252)
+
+### Descrição: 
+O dataset inclui informações sobre a taxa selic anualizada, para todos os dias da série histórica.
+
+### Atributos:
+Campo: data. Tipo: Date (dd/mm/yyyy). Informa dia, mês e ano de referência. <br>
+Campo: valor. Tipo: Decimal (10,40). Informa a Selic anualizada definida na última reunião do COPOM anterior a data de referência. <br>
+
+### Data:
+04/06/1986 a 20/08/2024<br>
+Atributos Faltantes: Este dataset não apresenta valores faltantes<br>
+
 # Canvas analítico
 
 *Nesta seção, você deverá estruturar o seu Canvas Analítico. O Canvas Analítico tem o papel de registrar a organização das ideias e apresentar o modelo de negócio. O Canvas Analítico deverá ser preenchido integralmente mesmo que você não tenha "tantas certezas".*
