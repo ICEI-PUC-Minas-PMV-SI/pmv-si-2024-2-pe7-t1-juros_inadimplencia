@@ -135,18 +135,18 @@ A inflação, medida pelo IPCA, afeta o poder de compra das famílias e, consequ
 
 ### Estatisticas Monetaria e de Credito: Endividamento das Famílias  
 
-### Links de acesso ao Dataset: 
+#### Links de acesso ao Dataset: 
 
 https://www3.bcb.gov.br/sgspub/consultarmetadados/consultarMetadadosSeries.do?method=consultarMetadadosSeriesInternet&hdOidSerieSelecionada=29038  
 
 https://dados.gov.br/dados/conjuntos-dados/29038-endividamento-das-familias-com-o-sistema-financeiro-nacional-exceto-credito-habitacional-  
 <br>
 
-### Descrição: 
+#### Descrição: 
 
 Este dataset apresenta uma série temporal mensal que mede a relação entre o valor atual das dívidas das famílias com o Sistema Financeiro Nacional e a renda acumulada das famílias nos últimos doze meses. Essa relação é expressa em percentual, permitindo acompanhar o peso das dívidas sobre a renda familiar ao longo do tempo.<br>
 
-### Atributos:
+#### Atributos:
 
 Campo: Periodo. Tipo: Date. Informa mes e ano de referencia<br>
 Campo: Endividamento1/ - Total. Tipo: Decimal (18,2). Porcentagem do comprometimento total das famílias <br>
@@ -154,45 +154,47 @@ Campo: Endividamento1/ - Sem financiamento imobiliário. Tipo: Decimal (18,2) Po
 Campo: Comprometimento de renda2/ - Dados dessazonalizados - Total. Tipo: Decimal (18,2) Porcentagem do comprometimento dessazonalizados total <br>
 Campo: Comprometimento de renda2/ - Dados dessazonalizados - Sem financiamento imobiliário. Tipo: Decimal (18,2) Porcentagem do comprometimento dessazonalizados sem financiamento imobiliário<br>  
 
-### Data: 
+#### Data: 
 MAI/2011 a MAI/2024<br>
 Este dataset não apresenta valores faltantes.<br>
 
 ### Índice de Confiança do Consumidor (ICC)
 
-### Link de acesso: 
+#### Link de acesso: 
 
 https://dados.gov.br/dados/conjuntos-dados/4393-indice-de-confianca-do-consumidor<br>
 
 https://www3.bcb.gov.br/sgspub/consultarmetadados/consultarMetadadosSeries.do?method=consultarMetadadosSeriesInternet&hdOidSerieSelecionada=4393  
 <br>
-### Descrição: 
+
+#### Descrição: 
 O ICC é um indicador que acompanha as expectativas dos consumidores em relação à situação econômica atual e futura. Este dataset é crucial para entender como a confiança dos consumidores pode influenciar suas decisões de endividamento e consumo.  
 O valor do índice de confiança do consumidor (ICC) indica o nível de confiança dos consumidores em relação à sua capacidade de compra e à situação do país. Um valor mais alto significa que os consumidores estão mais dispostos a consumir, enquanto um valor mais baixo indica que eles têm menos vontade de aquecer a economia. 
 O ICC é calculado com base em uma escala que varia de 0 a 200 pontos, sendo que 0 representa pessimismo total e 200 otimismo total. 
 O ICC é um indicador importante para a economia, pois ajuda a antecipar os rumos da economia a curto prazo. Para uma melhor compreensão dos índices, é importante acompanhar o desempenho de meses anteriores. 
-### Atributos:
+
+#### Atributos:
 <br>
 Campo: Data. Tipo: Date. Informa mes e ano de referencia<br>
 Campo: valor Formato: Decimal(18,02). Valor referente ao ICC que varia de 0 a 200<br>
 
-### Data: 
+#### Data: 
 JUN/2011 a JUN/2024<br>
 Este dataset não apresenta valores faltantes.<br>
 
 ### Inflação
 
-### Link de acesso: 
+#### Link de acesso: 
 
 https://www.kaggle.com/datasets/fidelissauro/inflacao-brasil?resource=download
 
 https://dados.gov.br/dados/conjuntos-dados/relatorios-de-inflacao-publicados
 <br>
 
-### Descrição: 
+#### Descrição: 
 O dataset de inflação inclui uma série temporal que mede as variações no Índice de Preços ao Consumidor Amplo (IPCA), utilizado para calcular a inflação no Brasil. A inflação afeta diretamente o poder de compra das famílias e, consequentemente, seu comportamento em relação ao crédito e ao endividamento.
 
-### Atributos:
+#### Atributos:
 
 Campo: Referencia. Tipo: Date. Informa mês e ano de referencia (yyyy-MM)<br>
 Campo: ano. Tipo: String. Informa o ano de referencia no formato (yyyy)<br>
@@ -213,23 +215,23 @@ Campo: incc_acumulado_ano. Tipo: Decimal (18,2) Informa a variação do INCC Fip
 Campo: salario_minimo. Tipo: Decimal (18,2). Informa o salario mínimo referente ao mês e ano dos dados.<br>
 Campo: consolidado_ano. Tipo: booleano (TRUE FALSE). Informa se a linha contém valores referentes ao último mês do ano.<br>
 
-### Data: 
+#### Data: 
 MAI/2011 a MAI/23<br>
 Atributos Faltantes: Este dataset não apresenta valores faltantes.<br>  
 
 ### Selic Anualizada
 
-### Link de acesso: 
+#### Link de acesso: 
 [https://dadosabertos.bcb.gov.br/dataset/29263-sgs](https://dadosabertos.bcb.gov.br/dataset/1178-taxa-de-juros---selic-anualizada-base-252)
 
-### Descrição: 
+#### Descrição: 
 O dataset inclui informações sobre a taxa selic anualizada, para todos os dias da série histórica.
 
-### Atributos:
+#### Atributos:
 Campo: data. Tipo: Date (dd/mm/yyyy). Informa dia, mês e ano de referência. <br>
 Campo: valor. Tipo: Decimal (10,40). Informa a Selic anualizada definida na última reunião do COPOM anterior a data de referência. <br>
 
-### Data:
+#### Data:
 04/06/1986 a 20/08/2024<br>
 Atributos Faltantes: Este dataset não apresenta valores faltantes<br>
 
