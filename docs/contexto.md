@@ -237,7 +237,11 @@ Atributos Faltantes: Este dataset não apresenta valores faltantes<br>
 
 # Canvas analítico
 
-*Nesta seção, você deverá estruturar o seu Canvas Analítico. O Canvas Analítico tem o papel de registrar a organização das ideias e apresentar o modelo de negócio. O Canvas Analítico deverá ser preenchido integralmente mesmo que você não tenha "tantas certezas".*
+*Nesta seção, você deverá estruturar o seu Canvas Analítico. O Canvas Analítico tem o papel de registrar a organização das ideias e apresentar o modelo de negócio. O Canvas Analítico deverá ser preenchido integralmente mesmo que você não tenha "tantas certezas".*  
+
+![Software Analytics Canvas 1](/docs/img/Software_Analytics_Canvas1.png)  
+![Software Analytics Canvas 2](/docs/img/Software_Analytics_Canvas2.png)
+
 
 > **Links Úteis**:
 > - [Modelo do Canvas Analítico](https://github.com/ICEI-PUC-Minas-PMV-SI/PesquisaExperimentacao-Template/blob/main/help/Software-Analtics-Canvas-v1.0.pdf)
