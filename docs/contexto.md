@@ -183,7 +183,7 @@ Atributos Faltantes: Este dataset não apresenta valores faltantes<br>
 
 **REFERÊNCIAS**
 
-> - AMARAEL ET AL., **Previsão de variáveis econômicas com aprendizado de máquina: previsão com redes neurais.** Revista Observatorio De La Economia Latinoamericana. Curitiba, v.21, n.9, p. 11279-11299. 2023. Disponível em: file:///C:/Users/vinin/Downloads/OBSERVATORIO042.pdf. Consulta em 25 ago. 2024.  
+> - AMARAL ET AL., **Previsão de variáveis econômicas com aprendizado de máquina: previsão com redes neurais**. Revista Observatorio De La Economia Latinoamericana. Curitiba, v.21, n.9, p. 11279-11299. 2023. Disponível em: https://ojs.observatoriolatinoamericano.com/ojs/index.php/olel/article/view/1394/861. Consulta em 25 ago. 2024.
 
 > - ARAÚJO, Gustavo Silva; GAGLIANONE, Wagner Piazza. **Métodos de Aprendizado de Máquina para Previsão de Inflação no Brasil.** BC Blog, 26/03/2024. Disponível em: https://www.bcb.gov.br/noticiablogbc/10/noticia. Consulta em 25 ago. 2024.  
 
