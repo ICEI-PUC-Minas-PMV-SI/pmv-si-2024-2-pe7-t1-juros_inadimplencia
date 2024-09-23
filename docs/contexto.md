@@ -187,8 +187,9 @@ Atributos Faltantes: Este dataset não apresenta valores faltantes<br>
 
 # Canvas analítico 
 
-![Software Analytics Canvas 1](/docs/img/Software_Analytics_Canvas1.png)  
-![Software Analytics Canvas 2](/docs/img/Software_Analytics_Canvas2.png)
+![image](https://github.com/user-attachments/assets/295aa010-7bb8-40fc-968c-77291399a7cd)
+![image](https://github.com/user-attachments/assets/5e77686e-f358-4df8-9aae-653860d1f862)
+
 
 
 **REFERÊNCIAS**
