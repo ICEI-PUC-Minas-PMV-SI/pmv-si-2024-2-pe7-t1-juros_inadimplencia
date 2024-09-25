@@ -34,7 +34,27 @@ Historiograma
 ![image](https://github.com/user-attachments/assets/259c86dd-31bb-4f39-be15-ee9df929475d)
 
 
+#IPCA e ICC
 
+Buscamos identificar a correlação entre os atributos IPCA e ICC para verificar se existe alguma influência da inflação no Índice de Confiança do Consumidor.
+
+Foram utilizados dados do período de maio de 2011 a maio de 2023, considerando a variação mensal da inflação e o valor do ICC de cada mês.
+
+Foi utilizado o Google Planilhas para organizar os dados mensais adquiridos dos conjuntos de dados previamente definidos e apliquei a fórmula de correlação para obter o coeficiente de correlação:
+
+=CORREL(B2:B148;C2:C148)
+
+O coeficiente de correlação encontrado foi de -0,03329.
+
+Essa correlação negativa indica uma leve tendência inversa, ou seja, quando o IPCA aumenta, o ICC tende a diminuir. No entanto, a força dessa relação é extremamente fraca, com o valor muito próximo de zero, sugerindo que não existe uma correlação significativa entre o ICC e o IPCA nos dados analisados.
+
+Há uma fraca influência do IPCA sobre o ICC, indicando que outros fatores podem estar impactando o ICC de forma mais significativa.
+
+Em resumo, a relação entre o IPCA e o ICC é muito fraca, o que sugere que a inflação não está fortemente relacionada às variações do ICC.
+
+Grafico de Dispersão
+
+![Image](https://github.com/user-attachments/assets/3bfddc8d-5d03-4f35-8ae3-ea71574ec67e)
 
 ## Descrição dos achados
 
