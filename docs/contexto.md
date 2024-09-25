@@ -13,7 +13,9 @@ O objetivo geral deste trabalho é identificar padrões e correlações que poss
 
 A principal questão que gostariamos de responde é "Com base na taxa Selic, é possível estimar o percentual de endividamento das famílias por categoria de crédito no Brasil?"
 
-A partir desta pergunta, surge a necessidade de compreender como diferentes categorias de crédito, como crédito pessoal, consignado e imobiliário, reagem às oscilações da Selic, especialmente em contextos de alta inflação e mudanças no Índice de Confiança do Consumidor. O problema abordado é relevante porque as famílias enfrentam desafios ao tentar equilibrar suas finanças em um ambiente de taxas de juros variáveis, o que pode resultar em um endividamento excessivo ou insustentável.
+A pergunta sobre a possibilidade de estimar o percentual de endividamento familiar por categoria de crédito a partir da taxa Selic revela a necessidade de uma análise mais profunda sobre a sensibilidade de cada tipo de crédito às variações da taxa básica de juros. Em um cenário de alta inflação e incertezas econômicas, compreender como o crédito pessoal, consignado e imobiliário respondem às oscilações da Selic é crucial para as famílias, que buscam equilibrar seus orçamentos e evitar o endividamento excessivo.
+
+O problema abordado é relevante porque as famílias enfrentam desafios ao tentar equilibrar suas finanças em um ambiente de taxas de juros variáveis, o que pode resultar em um endividamento excessivo ou insustentável.
 
 Este projeto será desenvolvido a partir da análise de datasets que incluem dados da Selic, inflação, Índice de Confiança do Consumidor e dados de endividamento por categoria de crédito, com o foco acadêmico e analítico. 
 
