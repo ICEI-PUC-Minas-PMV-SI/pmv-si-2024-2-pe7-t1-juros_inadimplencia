@@ -34,7 +34,7 @@ Historiograma
 ![image](https://github.com/user-attachments/assets/259c86dd-31bb-4f39-be15-ee9df929475d)
 
 
-#IPCA e ICC
+# IPCA e ICC
 
 Buscamos identificar a correlação entre os atributos IPCA e ICC para verificar se existe alguma influência da inflação no Índice de Confiança do Consumidor.
 
