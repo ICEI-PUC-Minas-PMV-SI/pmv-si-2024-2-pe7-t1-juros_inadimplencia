@@ -40,6 +40,14 @@ Evolução
 
 ![Evolução](https://github.com/user-attachments/assets/a906cfcb-753d-4fa7-b10f-404b51c13e43)
 
+# SELIC, IPCA e INPC
+
+Com esta análise, buscamos identificar se havia uma relação entre as taxas SELIC e os valores de IPCA e INPC, que são índices que medem a inflação de preços ao consumidor amplo e de inflação de preços de produtos consumidos pelas famílias com renda entre 1 e 5 salários mínimos.  
+Para esta análise, iremos utilizar os dados de fevereiro de 2010 a março de 2023, uma vez que é o intervalo de dados descritos nos datasets utilizados para esta análise. Para o modelo em questão, utilizar este intervalo de datas irá reforçar as informações aqui descritas.  
+Com base nesta análise, observada nos gráficos a seguir, podemos estabelecer uma relação direta entre a SELIC definida no período avaliado, sendo que, conforme as análises, a SELIC tende a subir quando temos períodos de aumento na inflação.  
+Uma observação importante, é que em alguns momentos, esta tendência não se confirmoude forma mais evidente, sendo entre novembro de 2012 a julho de 2013 e entre junho de 2022 e o fim da série avaliada (março de 2023). Como sabemos, a SELIC é definida em reuniões do COPOM, realizadas a cada 45 dias, e leva em consideração diversos fatores econômicos e políticos, além de outros aspectos que possam alterar as relações de consumo do país. Sendo assim, durante estes períodos, algum fato relevante aconteceu para que houvesse este movimento observado.  
+
+A análise descrita nessa sessão foi realizada através do Power BI. O tratamento dos dados foi realizado para adequação das datas, uma vez que os dados informados da SELIC por exemplo, consideram todos os dias desde 04/06/1986. Além disso, filtros de datas foram utilizados, para desconsiderar os intervalos não computados dos datasets.  
 
 # IPCA e ICC
 
