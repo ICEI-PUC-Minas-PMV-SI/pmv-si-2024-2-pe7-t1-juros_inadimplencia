@@ -90,6 +90,26 @@ Esse resultado indica que a relação entre o endividamento total e a taxa Selic
 Histograma
 ![image](https://github.com/user-attachments/assets/344f3231-244b-4a93-b186-6fc8d8e36bc1)
 
+## Taxa Selic e Endividamento das famílias
+
+A análise indica que a uma correlação positiva , pois quando uma variável aumenta , a outra aumenta.
+ o coeficienta encontrado foi de 0,15 pela análise dos dados da planilha aplicando a fórmula de correlação.
+Sendo que a elevaçaõ das taxas de juros impacta diretamente no endividamento das famílias, quando está mais alta limita o poder de compra, o acesso ao crédito e consequentemente eleva o endividamento das famílias.
+É uma análise complexa, pois envolve vários fatores como: investimentos internos e externos, indice de confiança no atual governo, politicas para estimulo da economia, entre outros.
+Dados extraídos entre março de 2011 a maio de 2024.
+
+![image](https://github.com/user-attachments/assets/d7cdb98c-1c39-43f5-84de-b9dad86a159f)
+
+![image](https://github.com/user-attachments/assets/066d7094-772c-4273-b1b3-e59ed4dd4f8b)
+
+![image](https://github.com/user-attachments/assets/8cb5a87d-4730-46a8-8cc0-5b92d4f154ac)
+
+
+
+
+
+
+
 
 
 ## Descrição dos achados
