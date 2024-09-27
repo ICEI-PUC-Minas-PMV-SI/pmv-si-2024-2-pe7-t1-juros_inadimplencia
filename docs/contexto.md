@@ -189,7 +189,8 @@ Atributos Faltantes: Este dataset não apresenta valores faltantes<br>
 
 # Canvas analítico 
 
-![image](https://github.com/user-attachments/assets/295aa010-7bb8-40fc-968c-77291399a7cd)
+![image](https://github.com/user-attachments/assets/e0ced4d1-44ee-4364-bf0f-faaaf12beb55)
+
 ![image](https://github.com/user-attachments/assets/5e77686e-f358-4df8-9aae-653860d1f862)
 
 
