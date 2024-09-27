@@ -47,6 +47,8 @@ Para esta análise, iremos utilizar os dados de fevereiro de 2010 a março de 20
 Com base nesta análise, observada nos gráficos a seguir, podemos estabelecer uma relação direta entre a SELIC definida no período avaliado, sendo que, conforme as análises, a SELIC tende a subir quando temos períodos de aumento na inflação.  
 Uma observação importante, é que em alguns momentos, esta tendência não se confirmoude forma mais evidente, sendo entre novembro de 2012 a julho de 2013 e entre junho de 2022 e o fim da série avaliada (março de 2023). Como sabemos, a SELIC é definida em reuniões do COPOM, realizadas a cada 45 dias, e leva em consideração diversos fatores econômicos e políticos, além de outros aspectos que possam alterar as relações de consumo do país. Sendo assim, durante estes períodos, algum fato relevante aconteceu para que houvesse este movimento observado.  
 
+![Selic vs IPCA e INPC](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/docs/img/Selic%20X%20IPCA%20e%20INPC.png)
+
 A análise descrita nessa sessão foi realizada através do Power BI. O tratamento dos dados foi realizado para adequação das datas, uma vez que os dados informados da SELIC por exemplo, consideram todos os dias desde 04/06/1986. Além disso, filtros de datas foram utilizados, para desconsiderar os intervalos não computados dos datasets.  
 
 # IPCA e ICC
