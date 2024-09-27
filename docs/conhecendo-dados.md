@@ -18,19 +18,27 @@ selic e o indice de confiança do consumidor mostrou uma relação moderada, com
 sentido em um contexto econômico onde o aumento dos juros desestimula o consumo e o crédito, afetando 
 a perceplçao dos consumidores sobre a economia. 
 
-Começando pelo mapa de calor e histograma(Codigo)
+Começando pelo mapa de calor e histograma(Codigo completo na pasta SRC)
 
-![image](https://github.com/user-attachments/assets/79f89cb7-6b22-4e0b-82aa-6658fc313ccb)
+![image](https://github.com/user-attachments/assets/4eb7a339-31ef-4307-bbe5-c2ebb5478e45)
+![image](https://github.com/user-attachments/assets/7f8406e5-713e-45a0-a225-de79b9033e4e)
+
 
 
 Mapa de calor
 
-![image](https://github.com/user-attachments/assets/e7ffa186-5858-4699-a83a-8238db6a8b40)
+![Mapa de Calor](https://github.com/user-attachments/assets/dc7e9b75-4fa4-4cac-bcf0-376b530106f2)
+
 
 
 Histograma
 
-![image](https://github.com/user-attachments/assets/dcc7cf71-9c0d-4b0e-b0ee-28543c3c298e)
+![Histogramas](https://github.com/user-attachments/assets/88ec9591-5337-4025-a54f-8911230db464)
+
+
+Evolução 
+
+![Evolução](https://github.com/user-attachments/assets/a906cfcb-753d-4fa7-b10f-404b51c13e43)
 
 
 # IPCA e ICC
@@ -78,9 +86,9 @@ Histograma
 
 A partir da análise descrita e exploratória realizada, descreva todos os achados considerados relevantes para o contexto em que o trabalho se insere. Por exemplo: com relação à centralidade dos dados algo chamou a atenção? Foi possível identificar correlação entre os atributos? Que tipo de correlação (forte, fraca, moderada)? 
 
-Com essa análise, foi possível identificar padrões claros de como a política monetária impacta diretamente 
-a percepção dos consumidores e o comportamento de crédito das famílias. Os gráficos e cálculos fornecem uma
- base para que possamos aprofundar as investigações sobre a relação entre as variáveis, especialmente em períodos de crise e dificuldade .
+A análise descritiva dos dados revela padrões interessantes. A taxa SELIC, por exemplo, tem um impacto significativo no endividamento, enquanto a inflação afeta de forma mais branda a confiança do consumidor. 
+A combinação de medidas estatísticas e gráficos permitiu uma compreensão mais profunda dos dados e foi possível identificar padrões claros de como a política monetária impacta diretamente a percepção dos consumidores
+e o comportamento de crédito das famílias. Os gráficos e cálculos fornecem uma base sólida para aprofundar as investigações sobre a relação entre as variáveis, especialmente em períodos de crise.
 
 ## Ferramentas utilizadas
 
