@@ -68,9 +68,9 @@ Foi realizada a organização dos dados através do Google Planilhas e o cálcul
 
 Esse resultado indica que a relação entre o endividamento total e a taxa Selic é fraca. Isso sugere que, embora possa haver alguma influência da taxa Selic sobre o endividamento, essa influência não é forte e outros fatores provavelmente desempenham um papel mais significativo.
 
-![image](https://github.com/user-attachments/assets/344f3231-244b-4a93-b186-6fc8d8e36bc1)
 
 Histograma
+![image](https://github.com/user-attachments/assets/344f3231-244b-4a93-b186-6fc8d8e36bc1)
 
 
 
