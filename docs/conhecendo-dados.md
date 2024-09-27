@@ -10,7 +10,7 @@ Inclua nesta seção, gráficos, tabelas e demais artefatos que você considere 
 
 Iniciamos com a base de dados selecionada que contém informações, sobre a taxa selic, a inflação e
 o endividamento das familias. Tentamos compreender a estrutura dos dados e suas inter-relações, focando 
-na correlação desses dados junto aos gráficos para ver se podemos reconhecer padroões.
+na correlação desses dados junto aos gráficos para ver se podemos reconhecer padrões.
 
 A análise de correlação foi realizada para entender melhor a relação das variáveis. A correlação entre a taxa
 selic e o indice de confiança do consumidor mostrou uma relação moderada, com um coeficiente de aproximadamente
@@ -18,7 +18,7 @@ selic e o indice de confiança do consumidor mostrou uma relação moderada, com
 sentido em um contexto econômico onde o aumento dos juros desestimula o consumo e o crédito, afetando 
 a perceplçao dos consumidores sobre a economia. 
 
-Começando pelo mapa de calor e historiograma(Codigo)
+Começando pelo mapa de calor e histograma(Codigo)
 
 ![image](https://github.com/user-attachments/assets/e5f08a84-aca8-468c-a926-dca7a5a18b7b)
 
