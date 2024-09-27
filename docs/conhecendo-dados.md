@@ -20,18 +20,17 @@ a perceplçao dos consumidores sobre a economia.
 
 Começando pelo mapa de calor e histograma(Codigo)
 
-![image](https://github.com/user-attachments/assets/e5f08a84-aca8-468c-a926-dca7a5a18b7b)
-
+![image](https://github.com/user-attachments/assets/79f89cb7-6b22-4e0b-82aa-6658fc313ccb)
 
 
 Mapa de calor
 
-![image](https://github.com/user-attachments/assets/1b69d447-be47-4900-8173-17b0e17a2e9a)
+![image](https://github.com/user-attachments/assets/e7ffa186-5858-4699-a83a-8238db6a8b40)
 
 
 Histograma
 
-![image](https://github.com/user-attachments/assets/259c86dd-31bb-4f39-be15-ee9df929475d)
+![image](https://github.com/user-attachments/assets/dcc7cf71-9c0d-4b0e-b0ee-28543c3c298e)
 
 
 # IPCA e ICC
