@@ -201,7 +201,7 @@ Atributos Faltantes: Este dataset não apresenta valores faltantes<br>
 
 > - ARAÚJO, Gustavo Silva; GAGLIANONE, Wagner Piazza. **Métodos de Aprendizado de Máquina para Previsão de Inflação no Brasil.** BC Blog, 26/03/2024. Disponível em: https://www.bcb.gov.br/noticiablogbc/10/noticia. Consulta em 25 ago. 2024.  
 
-> - BANCO CENTRAL DO BRASIL ** Endividamento das famílias com o Sistema Financeiro Nacional exceto crédito habitacional em relação à renda acumulada dos últimos 12 meses (RNDBF).** Disponível em: https://dados.gov.br/dados/conjuntos-dados/29038-endividamento-das-familias-com-o-sistema-financeiro-nacional-exceto-credito-habitacional-. Consulta em 27 set. 2024.  
+> - BANCO CENTRAL DO BRASIL **Endividamento das famílias com o Sistema Financeiro Nacional exceto crédito habitacional em relação à renda acumulada dos últimos 12 meses (RNDBF).** Disponível em: https://dados.gov.br/dados/conjuntos-dados/29038-endividamento-das-familias-com-o-sistema-financeiro-nacional-exceto-credito-habitacional-. Consulta em 27 set. 2024.  
 
 > - BARBOSA FILHO, Luiz Henrique. **IA e Previsão Macroeconômica usando Python.** Análise Macro. 04/03/2024. Disponível em: https://analisemacro.com.br/economia/macroeconometria/ia-e-previsao-macroeconomica-usando-python/. Consulta em 25 ago. 2024.  
 
