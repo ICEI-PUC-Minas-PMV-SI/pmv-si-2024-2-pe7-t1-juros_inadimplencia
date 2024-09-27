@@ -29,7 +29,7 @@ Mapa de calor
 ![image](https://github.com/user-attachments/assets/1b69d447-be47-4900-8173-17b0e17a2e9a)
 
 
-Historiograma
+Histograma
 
 ![image](https://github.com/user-attachments/assets/259c86dd-31bb-4f39-be15-ee9df929475d)
 
@@ -68,6 +68,10 @@ Em alguns períodos, parece que quando a taxa Selic cai, o endividamento tende a
 Foi realizada a organização dos dados através do Google Planilhas e o cálculo de correlação ( =CORREL(B2:B160;C2:C160) ) e o resultado encontrado foi de 0,1451650055.
 
 Esse resultado indica que a relação entre o endividamento total e a taxa Selic é fraca. Isso sugere que, embora possa haver alguma influência da taxa Selic sobre o endividamento, essa influência não é forte e outros fatores provavelmente desempenham um papel mais significativo.
+
+![image](https://github.com/user-attachments/assets/344f3231-244b-4a93-b186-6fc8d8e36bc1)
+
+Histograma
 
 
 
