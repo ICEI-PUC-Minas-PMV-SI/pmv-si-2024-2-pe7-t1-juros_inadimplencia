@@ -38,7 +38,7 @@ Como objetivos para esta pesquisa, buscamos:
 
 ## Justificativa
 
-Escolhemos trabalhar com os dados de Selic, inflação e endividamento por linha de crédito, porque acreditamos que esses fatores estão intrinsecamente conectados na qualidade de vida das famílias. A análise desses dados permite não apenas entender as dinâmicas econômicas, mas também oferece valiosas ideias para a formulação de políticas públicas mais eficazes, capazes de proteger a saúde financeira das famílias, pois a inadimplência afeta diretamente a capacidade das famílias de consumir, fazer novos investimentos para movimentar a economia. No Brasil as taxas de juros são elevadas tornando o crédito mais caro provocando risco de inadimplência.
+Escolhemos trabalhar com os dados de Selic, inflação e endividamento por linha de crédito, porque acreditamos que esses fatores estão intrinsecamente conectados na qualidade de vida das famílias. A análise desses dados permite não apenas entender as dinâmicas econômicas, mas também oferece valiosas ideias para a formulação de políticas públicas mais eficazes, capazes de proteger a saúde financeira das famílias, pois a inadimplência afeta diretamente a capacidade das famílias de consumir, fazer novos investimentos para movimentar a economia. No Brasil as taxas de juros são elevadas tornando o crédito mais caro provocando risco de inadimplência. Seguiremos nesse trabalho com a definição do Banco Central de endividamento: a relação entre o valor atual das dívidas das famílias com o Sistema Financeiro Nacional e a renda das famílias acumulada nos últimos doze meses (BANCO CENTRAL DO BRASIL, 2024).
 
 Dados do Banco Central do Brasil mostram que, em períodos de alta na taxa Selic, a tendência é que o custo do crédito aumente, o que pode impactar diretamente o nível de endividamento das famílias. Por outro lado, períodos de baixa na Selic podem incentivar o consumo, mas também elevar o risco de endividamento excessivo, especialmente em categorias de crédito de maior risco. Com um cenário de 40% das famílias inadimplentes e taxas de juros extremanmente elevadas é necessário entender como as políticas de crédito e a regulamentação das taxas podem aliviar as contas nos lares dos brasileiros.
 
@@ -200,6 +200,8 @@ Atributos Faltantes: Este dataset não apresenta valores faltantes<br>
 > - AMARAL ET AL., **Previsão de variáveis econômicas com aprendizado de máquina: previsão com redes neurais**. Revista Observatorio De La Economia Latinoamericana. Curitiba, v.21, n.9, p. 11279-11299. 2023. Disponível em: https://ojs.observatoriolatinoamericano.com/ojs/index.php/olel/article/view/1394/861. Consulta em 25 ago. 2024.
 
 > - ARAÚJO, Gustavo Silva; GAGLIANONE, Wagner Piazza. **Métodos de Aprendizado de Máquina para Previsão de Inflação no Brasil.** BC Blog, 26/03/2024. Disponível em: https://www.bcb.gov.br/noticiablogbc/10/noticia. Consulta em 25 ago. 2024.  
+
+> - BANCO CENTRAL DO BRASIL ** Endividamento das famílias com o Sistema Financeiro Nacional exceto crédito habitacional em relação à renda acumulada dos últimos 12 meses (RNDBF).** Disponível em: https://dados.gov.br/dados/conjuntos-dados/29038-endividamento-das-familias-com-o-sistema-financeiro-nacional-exceto-credito-habitacional-. Consulta em 27 set. 2024.  
 
 > - BARBOSA FILHO, Luiz Henrique. **IA e Previsão Macroeconômica usando Python.** Análise Macro. 04/03/2024. Disponível em: https://analisemacro.com.br/economia/macroeconometria/ia-e-previsao-macroeconomica-usando-python/. Consulta em 25 ago. 2024.  
 
