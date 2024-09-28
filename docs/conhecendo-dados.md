@@ -78,7 +78,7 @@ Grafico de Dispersão
 
 Analisando e comparando as informações dos dados de Endividamento e da taxa Selic entre março de 2011 e maio de 2024.
 
-Nota-se que o endividamento total apresenta uma tendência de aumento gradual ao longo do tempo, principalmente a partir de 2021, aumento que se deu provavelmente por mudanças econômicas, políticas e até mesmo a pandemia. Já a taxa Selic, apesar das variações durante o período, sofreu uma grande queda de 2016 à 2020 e assim como o endividamento um grande aumento de 2021 pra cá.
+Nota-se que o endividamento total apresenta uma tendência de aumento gradual ao longo do tempo, principalmente a partir de 2021, aumento que se deu provavelmente por mudanças econômicas, políticas e até mesmo a pandemia. Já a taxa Selic, apesar das variações durante o período, sofreu uma grande queda de 2016 à 2020, enquanto foi acompanhada por um grande aumento do endividamento a partir de 2021.
 
 Em alguns períodos, parece que quando a taxa Selic cai, o endividamento tende a aumentar, isso pode indicar que quando as taxas de juros estão mais baixas, acaba incentivando o aumento do endividamento possivelmente com custo de empréstimos e financiamentos estando mais acessíveis.
 
@@ -114,11 +114,10 @@ Dados extraídos entre março de 2011 a maio de 2024.
 
 ## Descrição dos achados
 
-A partir da análise descrita e exploratória realizada, descreva todos os achados considerados relevantes para o contexto em que o trabalho se insere. Por exemplo: com relação à centralidade dos dados algo chamou a atenção? Foi possível identificar correlação entre os atributos? Que tipo de correlação (forte, fraca, moderada)? 
-
 A análise descritiva dos dados revela padrões interessantes. A taxa SELIC, por exemplo, tem um impacto significativo no endividamento, enquanto a inflação afeta de forma mais branda a confiança do consumidor. 
-A combinação de medidas estatísticas e gráficos permitiu uma compreensão mais profunda dos dados e foi possível identificar padrões claros de como a política monetária impacta diretamente a percepção dos consumidores
-e o comportamento de crédito das famílias. Os gráficos e cálculos fornecem uma base sólida para aprofundar as investigações sobre a relação entre as variáveis, especialmente em períodos de crise.
+
+A combinação de medidas estatísticas e gráficos permitiu uma compreensão mais profunda dos dados e foi possível identificar padrões claros de como a política monetária impacta diretamente a percepção dos consumidores e o comportamento de crédito das famílias. Os gráficos e cálculos fornecem uma base sólida para aprofundar as investigações sobre a relação entre as variáveis, especialmente em períodos de crise. Assim, conclui-se que a relação entre o endividamento geral das famílias e a variação da SELIC na série temporal trabalhada exige a adição de novas variáveis para a geração de um modelo que gere resultados robustos na previsão do nível de endividamento. Além disso, a percepção das famílias sobre o cenário futuro da inflação pode servir como indicador da variável a ser melhor trabalhada como diferencial na construção do modelo.
+
 
 ## Ferramentas utilizadas
 
