@@ -55,7 +55,7 @@ Como parte da comprovação de construção dos modelos, um vídeo de demonstra�
 ## Descrição dos modelos
 
 
-Neste momento, vou descrever os algoritmos de aprendizado de máquina que escolhemos para a construção dos modelos de predição: Regressão Linear e Random Forest. 
+Vou descrever os algoritmos de aprendizado de máquina que escolhemos para a construção dos modelos de predição. Foram eles a Regressão Linear e o Random Forest. 
 Ambos os algoritmos foram selecionados devido às suas características distintas e aos benefícios que oferecem para entender e prever o comportamento dos dados em 
 relação ao endividamento das famílias.
 
@@ -65,34 +65,33 @@ Essas escolhas foram justificadas pela observação dos erros e da variabilidade
 
 Regressão Linear
 
-A Regressão Linear é um dos algoritmos mais amplamente utilizados para tarefas de predição. Ela parte do princípio de que existe uma relação linear entre as variáveis 
-independentes e a variável dependente. Neste caso, utilizamos variáveis como a taxa Selic, o índice de confiança do consumidor e a inflação para prever o nível de 
-endividamento familiar.
-
-A principal vantagem da Regressão Linear é sua simplicidade e interpretabilidade, permitindo uma análise direta sobre o impacto de cada variável independente. 
-No entanto, sua limitação mais relevante é a suposição de uma relação linear entre as variáveis, o que pode não fornecer os melhores resultados em análises mais 
-complexas.
-
+A regressão linear é um método estatístico usado para modelar a relação entre uma variável dependente e uma ou mais variáveis independentes. O objetivo é ajustar uma linha reta que minimiza a soma dos quadrados das diferenças entre os valores observados e os valores previstos. Também observamos que ele possui apenas o parâmetro de coeficiente de inclinação da linha.
 A Regressão Linear foi escolhida devido à sua capacidade de fornecer uma linha de base para comparação com outros modelos mais complexos. 
 Ela ajuda a identificar se uma simples relação linear é suficiente para explicar os dados. Neste primeiro teste, optamos por uma Regressão Linear simples como
 ponto de partida.
 
-![RegressaoLinear](https://github.com/user-attachments/assets/cef0306a-c524-4c98-b654-e90d54417fb4)
+![RegressaoLinear](https://github.com/user-attachments/assets/57316d07-b0ec-479f-b299-f45c6494c935)
 
-Algoritimo correspondente na pasta SRC.
+
+Algoritimo correspondente a imagem está na pasta SRC. Com o nome Regressao_Linear_LucasLima_Geraldo.
 
 Random Forest
 
-O Random Forest é um modelo de aprendizado de máquina baseado em árvores de decisão. Ele funciona criando múltiplas árvores de decisão aleatórias a partir dos 
-dados e combinando suas previsões para obter uma predição.
+O Random Forest é um algoritmo de aprendizado de máquina baseado em conjuntos que constrói múltiplas árvores de decisão durante o treinamento e apresenta a média das previsões individuais das árvores para melhorar a precisão. Uma das vantagens é sua robustez em relação a outliers e sua capacidade de lidar bem com grandes conjuntos de dados por outro lado, pode ser complicado ter poder computacional suficiente para processar os dados e sua interpretação pode ser mais complicada.
+Com os parâmetros livres alteramos os:
 
-A principal vantagem do Random Forest é sua capacidade de capturar relações complexas entre variáveis, o que torna o modelo eficaz para dados que não seguem 
-uma estrutura linear. Uma das desvantagens é que o modelo pode ser bastante custoso e mais difícil de interpretar em comparação à Regressão Linear. 
-Escolhemos o Random Forest como um modelo para analisar relações não-lineares entre as variáveis independentes e o nível de endividamento.
+n_estimators. Que é o número de árvores na floresta.
 
-![RandomForest](https://github.com/user-attachments/assets/5fdc57d2-2985-40ac-a6b4-037dc2ba98cf)
+max_depth. que é a profundidade máxima de cada árvore.
 
-Algoritimo correspondente na pasta SRC.
+min_samples_split que é o número mínimo de amostras necessárias para dividir um nó interno.
+
+Escolhemos o Random Forest como um modelo para analisar relações não-lineares entre as variáveis independentes alem de experimentarmos diferentes valores para n_estimators e max_depth para encontrar o melhor ajuste, buscando tentar prever o nível de endividamento.
+
+![RandomForest](https://github.com/user-attachments/assets/fce3e796-4927-409c-b3c0-b939d73017cf)
+
+
+Algoritimo correspondente a imagem está na pasta SRC. Com o nome Random_Forest_LucasLima_Geraldo.
 
 # Avaliação dos modelos criados
 
@@ -113,3 +112,28 @@ Em pesquisa e experimentação em sistemas de informação, um pipeline de pesqu
 Todas as tarefas realizadas nesta etapa deverão ser registradas em formato de texto junto com suas explicações de forma a apresentar  os códigos desenvolvidos e também, o código deverá ser incluído, na íntegra, na pasta "src".
 
 Além disso, deverá ser entregue um vídeo onde deverão ser descritas todas as etapas realizadas. O vídeo, que não tem limite de tempo, deverá ser apresentado por **todos os integrantes da equipe**, de forma que, cada integrante tenha oportunidade de apresentar o que desenvolveu e as  percepções obtidas.
+
+## Avaliação dos modelos criados
+
+Aqui resolvi compilar os itens solicitados na parte da avaliação dos modelos. Começando pelas métricas onde usamos a Mean Squared Error a MSE. Ela mede a média dos quadrados dos erros, que são as diferenças entre os valores previstos e os valores observados. Escolhemos o MSE pois é uma métrica comum para problemas de regressão e é fácil de interpretar. Além da MSE escolhemos o R^2 Score. Ele representa a proporção da variância da variável dependente que é explicada pelas variáveis independentes no modelo. O R^2 também foi escolhido pois ele fornece uma medida de quão bem os valores previstos se ajustam aos dados reais.
+
+Agora vamos falar sobre os resultados obtidos. A Regressão Linear forneceu uma linha de base simples, mas completa para a análise dos dados. A MSE foi de de 13.91 indica que a média dos erros ao quadrado das previsões do modelo foi relativamente alta, mostrando que as previsões não estavam muito próximas dos valores reais. Além disso, o R^2 Score negativo de -0.06 nos diz que o modelo não foi capaz de capturar a variação nos dados de forma eficaz, o que significa que as previsões feitas pela regressão linear são menos confiáveis. Isto pode ser atribuído à simplicidade do modelo, que assume uma relação linear entre as variáveis, não capturando as complexidades e não linearidades presentes nos dados .
+
+![image](https://github.com/user-attachments/assets/4f55d4fe-1134-407f-b425-fa1418bbaed4)
+
+
+Já no modelo de Random Forest em comparação à Regressão Linear. A MSE de 7.07, menor do que a da Regressão Linear, indica que o modelo de Random Forest fez previsões mais próximas dos valores reais. No entanto, o R^2 Score de -0.22 ainda sugere que tenha sido mais eficiente em explicar as variações dos dados. 
+
+![image](https://github.com/user-attachments/assets/369cb0c0-dca6-4a96-9765-ad3327742d1f)
+
+
+Ambos os modelos mostram a necessidade de uma análise mais profunda e possivelmente a integração de dos e metodos adicionais para demostrar melhor as variações nos dados de endividamento familiar. A Regressão Linear, apesar de ser uma boa linha de base, não é suficiente para este conjunto de dados, enquanto o Random Forest, mesmo sendo mais eficaz, ainda precisa ser ajustado para um desempenho superior.
+
+Estas análises e interpretações apesar de não retornarem o resultado desejavamos foram essenciais para entendermos as limitações dos modelos e dados utilizados e apontam para futuras melhorias e ajustes, visando previsões mais precisas e confiáveis.
+
+Finalizando com a nossa pipeline iniciamos os trabalhos reunindo os dados históricos sobre o valor da selic representada na base de dados como (Selic_Valor), a inflação acumulada representada na base de dados como (Inflação_Acumulada) e a confiança do consumidor representada na base de dados como (Confiança_Valor).
+Na preparação dos dados realizamos a limpeza e formatação dos dados, convertendo datas, alterando a virgula por ponto e separando e normalisando os dados selecionados.
+Para a contrução do modelo implementamos os algoritmos de Regressão Linear e Random Forest, ajustando os hiperparâmetros e treinando os modelos.
+Com ela veio a avaliação do modelo e utilizamos métricas como MSE e R^2 Score para avaliar o desempenho dos modelos.
+Sobre os resultados criamos gráficos para comparar dados reais e previstos a fim de tentar prever o endividamento das familias. 
+Para finalizar com a interpretação e as discuções onde analisamos os resultados no contexto dos objetivos do estudo e realmente foi muito engrandecedor conseguir avançar, aprender e concluir essa pesquisa. Deixo os agradecimentos aos colegas de grupo e a professora Luciana. 
