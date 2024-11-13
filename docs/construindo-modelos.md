@@ -62,7 +62,7 @@ Em cada modelo, testamos diferentes configurações de parâmetros. Para a Regre
 No caso do Random Forest, experimentamos valores crescentes de n_estimators e diferentes profundidades máximas para garantir um equilíbrio entre precisão e performance. 
 Essas escolhas foram justificadas pela observação dos erros e da variabilidade dos dados.
 
-Regressão Linear
+# Regressão Linear
 
 A regressão linear é um método estatístico usado para modelar a relação entre uma variável dependente e uma ou mais variáveis independentes. O objetivo é ajustar uma linha reta que minimiza a soma dos quadrados das diferenças entre os valores observados e os valores previstos. Também observamos que ele possui apenas o parâmetro de coeficiente de inclinação da linha.
 A Regressão Linear foi escolhida devido à sua capacidade de fornecer uma linha de base para comparação com outros modelos mais complexos. 
@@ -74,7 +74,7 @@ ponto de partida.
 
 Algoritimo correspondente a imagem está na pasta SRC. Com o nome Regressao_Linear_LucasLima_Geraldo.
 
-Random Forest
+# Random Forest
 
 O Random Forest é um algoritmo de aprendizado de máquina baseado em conjuntos que constrói múltiplas árvores de decisão durante o treinamento e apresenta a média das previsões individuais das árvores para melhorar a precisão. Uma das vantagens é sua robustez em relação a outliers e sua capacidade de lidar bem com grandes conjuntos de dados por outro lado, pode ser complicado ter poder computacional suficiente para processar os dados e sua interpretação pode ser mais complicada.
 Com os parâmetros livres alteramos os:
@@ -92,7 +92,7 @@ Escolhemos o Random Forest como um modelo para analisar relações não-lineares
 
 Algoritimo correspondente à imagem está na pasta SRC. Com o nome Random_Forest_LucasLima_Geraldo.
 
-Prophet
+# Prophet
 
 A análise de séries temporais é um método de estudar como uma variável muda ao longo do tempo, ajudando a identificar padrões, tendências, ciclos, sazonalidade e outliers em seus dados. Esse método também é utilizado para prever valores futuros de sua variável com base em dados históricos. 
 
