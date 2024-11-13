@@ -207,8 +207,12 @@ Atributos Faltantes: Este dataset não apresenta valores faltantes<br>
 
 > - ESCOVEDO, Tatiana. **Machine Learning: Conceitos e Modelos — Parte I: Aprendizado Supervisionado.** 28/06/2020. Disponível em: https://tatianaesc.medium.com/machine-learning-conceitos-e-modelos-f0373bf4f445. Consulta em 25 ago. 2024.  
 
+> - FACEBOOK. **Forecasting at scale**. Disponível em: https://facebook.github.io/prophet/. Acesso em 12 nov. 2024.
+
 > - FREITAS, Gabriel Belmino. **O Uso De Machine Learning Na Modelagem Da Previsão De Inflação: Revisão Bibliográfica.** Universidade de Brasília. 2019. Disponível em: https://bdm.unb.br/bitstream/10483/25328/1/2019_GabrielBelminoFreitas_tcc.pdf. Consulta em 25 ago. 2024.  
 
-> - GOMES, Pedro César Tebaldi. **Principais algoritmos de machine learning.** Data Geeks. 18/02/2019. Disponível em: https://www.datageeks.com.br/algoritmos-de-machine-learning/. Consulta em 25 ago. 2024.  
+> - GOMES, Pedro César Tebaldi. **Principais algoritmos de machine learning.** Data Geeks. 18/02/2019. Disponível em: https://www.datageeks.com.br/algoritmos-de-machine-learning/. Consulta em 25 ago. 2024.
+
+> - SAMMARRAIE, Ali Al. **Qual a diferença entre séries temporais e análise de regressão?** Disponível em: https://www.linkedin.com/advice/3/what-difference-between-time-series-regression-xve8e?lang=pt&originalSubdomain=pt. Consulta em 12 nov. 2024. 
 
 > - SOUZA JÚNIOR, Pedro Ivo Ferreira de. **Estrutura a termo da taxa de juros no Brasil: Projeções utilizando aprendizado de máquina.** Universidade de Brasília. 2021. Disponível em: http://icts.unb.br/jspui/bitstream/10482/41996/1/2021_PedroIvoFerreiradeSouzaJunior.pdf. Consulta em 25 ago. 2024.  
