@@ -93,6 +93,14 @@ Escolhemos o Random Forest como um modelo para analisar relações não-lineares
 
 Algoritimo correspondente a imagem está na pasta SRC. Com o nome Random_Forest_LucasLima_Geraldo.
 
+Prophet
+
+![image](https://github.com/user-attachments/assets/8eabf1a3-e8aa-46bd-8ea2-91d1116a8405)
+
+![Componentes Sazonais da Previsão](https://github.com/user-attachments/assets/56ae4c33-77db-4c2e-8ccf-717e999a2da4)
+
+
+
 # Avaliação dos modelos criados
 
 ## Métricas utilizadas
