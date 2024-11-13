@@ -95,12 +95,12 @@ Algoritimo correspondente a imagem está na pasta SRC. Com o nome Random_Forest_
 
 Prophet
 
-![image](https://github.com/user-attachments/assets/ea2fa299-fd53-4375-bc24-3f4d54fee25d)
+![image](https://github.com/user-attachments/assets/55163095-119b-47e7-a504-fd3cd291fe02)
 
 
 
+![image](https://github.com/user-attachments/assets/b584ca58-5e80-43bb-96da-7f8cc24169d7)
 
-![image](https://github.com/user-attachments/assets/38c0ab82-657e-4033-ac29-5094f95a8e58)
 
 
 
