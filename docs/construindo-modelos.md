@@ -55,9 +55,8 @@ Como parte da comprovação de construção dos modelos, um vídeo de demonstra�
 ## Descrição dos modelos
 
 
-Vou descrever os algoritmos de aprendizado de máquina que escolhemos para a construção dos modelos de predição. Foram eles a Regressão Linear e o Random Forest. 
-Ambos os algoritmos foram selecionados devido às suas características distintas e aos benefícios que oferecem para entender e prever o comportamento dos dados em 
-relação ao endividamento das famílias.
+Vou descrever os algoritmos de aprendizado de máquina que escolhemos para a construção dos modelos de predição. Foram eles: Regressão Linear, Random Forest e análise de séries temporais (Prophet). 
+Os algoritmos foram selecionados devido às suas características distintas e aos benefícios que oferecem para entender e prever o comportamento dos dados em relação ao endividamento das famílias.
 
 Em cada modelo, testamos diferentes configurações de parâmetros. Para a Regressão Linear, focamos em uma abordagem direta, sem regularização adicional. 
 No caso do Random Forest, experimentamos valores crescentes de n_estimators e diferentes profundidades máximas para garantir um equilíbrio entre precisão e performance. 
@@ -91,9 +90,16 @@ Escolhemos o Random Forest como um modelo para analisar relações não-lineares
 ![RandomForest](https://github.com/user-attachments/assets/fce3e796-4927-409c-b3c0-b939d73017cf)
 
 
-Algoritimo correspondente a imagem está na pasta SRC. Com o nome Random_Forest_LucasLima_Geraldo.
+Algoritimo correspondente à imagem está na pasta SRC. Com o nome Random_Forest_LucasLima_Geraldo.
 
 Prophet
+
+A análise de séries temporais é um método de estudar como uma variável muda ao longo do tempo, ajudando a identificar padrões, tendências, ciclos, sazonalidade e outliers em seus dados. Esse método também é utilizado para prever valores futuros de sua variável com base em dados históricos. 
+
+Essa técnica se diferencia da análise de regressão em três pontos: 1) enquanto as séries temporais se concentram em como uma única variável muda ao longo do tempo, a regressão se concentra em como múltiplas variáveis interagem entre si; 2) análise de séries temporais presume que os dados são dependentes no tempo e têm autocorrelação, enquanto a análise de regressão assume que os dados são independentes e não têm multicolinearidade; 3) por fim, enquanto, os dados de séries temporais são organizados em ordem cronológica, os dados de regressão não são necessariamente ordenados. (SAMMARRAIE, 2024).
+
+O Prophet é um algoritmo desenvolvido pelo Facebook que trabalha com previsão de séries temporais. É baseado em um modelo aditivo em que tendências não-lineares são ajustadas com sazonalidade mensal, diária e anual, além dos efeitos dos feriados. (FACEBOOK, 2023). 
+
 
 ![image](https://github.com/user-attachments/assets/55163095-119b-47e7-a504-fd3cd291fe02)
 
