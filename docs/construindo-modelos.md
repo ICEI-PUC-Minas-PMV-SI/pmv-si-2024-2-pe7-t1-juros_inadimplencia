@@ -95,9 +95,14 @@ Algoritimo correspondente a imagem está na pasta SRC. Com o nome Random_Forest_
 
 Prophet
 
-![image](https://github.com/user-attachments/assets/8eabf1a3-e8aa-46bd-8ea2-91d1116a8405)
+![image](https://github.com/user-attachments/assets/ea2fa299-fd53-4375-bc24-3f4d54fee25d)
 
-![Componentes Sazonais da Previsão](https://github.com/user-attachments/assets/56ae4c33-77db-4c2e-8ccf-717e999a2da4)
+
+
+
+![image](https://github.com/user-attachments/assets/38c0ab82-657e-4033-ac29-5094f95a8e58)
+
+
 
 
 
