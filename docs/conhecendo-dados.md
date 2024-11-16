@@ -8,13 +8,13 @@ Inclua nesta seção, gráficos, tabelas e demais artefatos que você considere 
 
 # Selic e Confiança 
 
-Iniciamos com a base de dados selecionada que contém informações, sobre a taxa selic, a inflação e
-o endividamento das familias. Tentamos compreender a estrutura dos dados e suas inter-relações, focando 
+O início será com a base de dados selecionada que contém informações, sobre a taxa SELIC, a inflação e
+o endividamento das famílias. Serão verificados a estrutura dos dados e suas inter-relações, focando 
 na correlação desses dados junto aos gráficos para ver se podemos reconhecer padrões.
 
 A análise de correlação foi realizada para entender melhor a relação das variáveis. A correlação entre a taxa
 selic e o indice de confiança do consumidor mostrou uma relação moderada, com um coeficiente de aproximadamente
--0,5 . Isso significa que, à medida que a selic aumenta a confiança do consumidor tende a diminuir, o que faz 
+-0,5 . Isso significa que, à medida que a SELIC aumenta a confiança do consumidor tende a diminuir, o que faz 
 sentido em um contexto econômico onde o aumento dos juros desestimula o consumo e o crédito, afetando 
 a perceplçao dos consumidores sobre a economia. 
 
@@ -42,10 +42,10 @@ Evolução
 
 # SELIC, IPCA e INPC
 
-Com esta análise, buscamos identificar se havia uma relação entre as taxas SELIC e os valores de IPCA e INPC, que são índices que medem a inflação de preços ao consumidor amplo e de inflação de preços de produtos consumidos pelas famílias com renda entre 1 e 5 salários mínimos.  
+Com esta análise, buscou-se identificar se havia uma relação entre as taxas SELIC e os valores de IPCA e INPC, que são índices que medem a inflação de preços ao consumidor amplo e de inflação de preços de produtos consumidos pelas famílias com renda entre 1 e 5 salários mínimos.  
 Para esta análise, iremos utilizar os dados de fevereiro de 2010 a março de 2023, uma vez que é o intervalo de dados descritos nos datasets utilizados para esta análise. Para o modelo em questão, utilizar este intervalo de datas irá reforçar as informações aqui descritas.  
-Com base nesta análise, observada nos gráficos a seguir, podemos estabelecer uma relação direta entre a SELIC definida no período avaliado, sendo que, conforme as análises, a SELIC tende a subir quando temos períodos de aumento na inflação.  
-Uma observação importante, é que em alguns momentos, esta tendência não se confirmoude forma mais evidente, sendo entre novembro de 2012 a julho de 2013 e entre junho de 2022 e o fim da série avaliada (março de 2023). Como sabemos, a SELIC é definida em reuniões do COPOM, realizadas a cada 45 dias, e leva em consideração diversos fatores econômicos e políticos, além de outros aspectos que possam alterar as relações de consumo do país. Sendo assim, durante estes períodos, algum fato relevante aconteceu para que houvesse este movimento observado.  
+Com base nesta análise, observada nos gráficos a seguir, pode-se estabelecer uma relação direta entre a SELIC definida no período avaliado, sendo que, conforme as análises, a SELIC tende a subir quando temos períodos de aumento na inflação.  
+Uma observação importante, é que em alguns momentos, esta tendência não se confirmou de forma mais evidente, sendo entre novembro de 2012 a julho de 2013 e entre junho de 2022 e o fim da série avaliada (março de 2023). Como sabemos, a SELIC é definida em reuniões do COPOM, realizadas a cada 45 dias, e leva em consideração diversos fatores econômicos e políticos, além de outros aspectos que possam alterar as relações de consumo do país. Sendo assim, durante estes períodos, algum fato relevante aconteceu para que houvesse este movimento observado.  
 
 ![Selic vs IPCA e INPC](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/docs/img/Selic%20X%20IPCA%20e%20INPC.png)
 
@@ -53,7 +53,7 @@ A análise descrita nessa sessão foi realizada através do Power BI. O tratamen
 
 # IPCA e ICC
 
-Buscamos identificar a correlação entre os atributos IPCA e ICC para verificar se existe alguma influência da inflação no Índice de Confiança do Consumidor.
+Buscou-se identificar a correlação entre os atributos IPCA e ICC para verificar se existe alguma influência da inflação no Índice de Confiança do Consumidor.
 
 Foram utilizados dados do período de maio de 2011 a maio de 2023, considerando a variação mensal da inflação e o valor do ICC de cada mês.
 
@@ -74,17 +74,17 @@ Grafico de Dispersão
 ![Image](https://github.com/user-attachments/assets/3bfddc8d-5d03-4f35-8ae3-ea71574ec67e)
 
 
-## Selic e Endividamento Total
+## SELIC e Endividamento Total
 
-Analisando e comparando as informações dos dados de Endividamento e da taxa Selic entre março de 2011 e maio de 2024.
+Analisando e comparando as informações dos dados de Endividamento e da taxa SELIC entre março de 2011 e maio de 2024.
 
-Nota-se que o endividamento total apresenta uma tendência de aumento gradual ao longo do tempo, principalmente a partir de 2021, aumento que se deu provavelmente por mudanças econômicas, políticas e até mesmo a pandemia. Já a taxa Selic, apesar das variações durante o período, sofreu uma grande queda de 2016 à 2020, enquanto foi acompanhada por um grande aumento do endividamento a partir de 2021.
+Nota-se que o endividamento total apresenta uma tendência de aumento gradual ao longo do tempo, principalmente a partir de 2021, aumento que se deu provavelmente por mudanças econômicas, políticas e até mesmo a pandemia. Já a taxa SELIC, apesar das variações durante o período, sofreu uma grande queda de 2016 à 2020, enquanto foi acompanhada por um grande aumento do endividamento a partir de 2021.
 
-Em alguns períodos, parece que quando a taxa Selic cai, o endividamento tende a aumentar, isso pode indicar que quando as taxas de juros estão mais baixas, acaba incentivando o aumento do endividamento possivelmente com custo de empréstimos e financiamentos estando mais acessíveis.
+Em alguns períodos, parece que quando a taxa SELIC cai, o endividamento tende a aumentar, isso pode indicar que quando as taxas de juros estão mais baixas, acaba incentivando o aumento do endividamento possivelmente com custo de empréstimos e financiamentos estando mais acessíveis.
 
 Foi realizada a organização dos dados através do Google Planilhas e o cálculo de correlação ( =CORREL(B2:B160;C2:C160) ) e o resultado encontrado foi de 0,1451650055.
 
-Esse resultado indica que a relação entre o endividamento total e a taxa Selic é fraca. Isso sugere que, embora possa haver alguma influência da taxa Selic sobre o endividamento, essa influência não é forte e outros fatores provavelmente desempenham um papel mais significativo.
+Esse resultado indica que a relação entre o endividamento total e a taxa SELIC é fraca. Isso sugere que, embora possa haver alguma influência da taxa SELIC sobre o endividamento, essa influência não é forte e outros fatores provavelmente desempenham um papel mais significativo.
 
 
 Histograma
@@ -93,8 +93,8 @@ Histograma
 ## Taxa Selic e Endividamento das famílias
 
 A análise indica que a uma correlação positiva , pois quando uma variável aumenta , a outra aumenta.
- o coeficienta encontrado foi de 0,15 pela análise dos dados da planilha aplicando a fórmula de correlação.
-Sendo que a elevaçaõ das taxas de juros impacta diretamente no endividamento das famílias, quando está mais alta limita o poder de compra, o acesso ao crédito e consequentemente eleva o endividamento das famílias.
+O coeficienta encontrado foi de 0,15 pela análise dos dados da planilha aplicando a fórmula de correlação.
+Sendo que a elevação das taxas de juros impacta diretamente no endividamento das famílias, quando está mais alta limita o poder de compra, o acesso ao crédito e consequentemente eleva o endividamento das famílias.
 É uma análise complexa, pois envolve vários fatores como: investimentos internos e externos, indice de confiança no atual governo, politicas para estimulo da economia, entre outros.
 Dados extraídos entre março de 2011 a maio de 2024.
 
@@ -103,13 +103,6 @@ Dados extraídos entre março de 2011 a maio de 2024.
 ![image](https://github.com/user-attachments/assets/066d7094-772c-4273-b1b3-e59ed4dd4f8b)
 
 ![image](https://github.com/user-attachments/assets/8cb5a87d-4730-46a8-8cc0-5b92d4f154ac)
-
-
-
-
-
-
-
 
 
 ## Descrição dos achados
