@@ -29,7 +29,7 @@ Avalie quais etapas são importantes para o contexto dos dados que você está t
 ## Preparação dos dados
 
 Quanto à limpeza dos dados e remoção de outliers, as bases selecionadas não apresentavam dados faltantes nem a necessidade de remoção de outliers.
-Já na Transformação de Dados, verifiquei a escala das variáveis, especialmente para a Regressão Linear, pois os algoritmos de aprendizado se beneficiam de dados em
+Já na Transformação de Dados, foi verificado a escala das variáveis, especialmente para a Regressão Linear, pois os algoritmos de aprendizado se beneficiam de dados em
 uma mesma escala. Decidi manter as variáveis na escala original devido ao uso de Random Forest, que não é sensível a escalas, e para permitir uma interpretação direta 
 dos coeficientes na Regressão Linear. A coluna Período, que representa o tempo, foi convertida para o tipo datetime para garantir a manipulação e ordenação corretas dos 
 dados, uma vez que ela representa uma variável temporal importante para o modelo.
@@ -58,7 +58,7 @@ Como parte da comprovação de construção dos modelos, um vídeo de demonstra�
 A descrição dos algoritmos de aprendizado de máquina escolhidos para a construção dos modelos de predição são: Regressão Linear, Random Forest e análise de séries temporais (Prophet). 
 Os algoritmos foram selecionados devido às suas características distintas e aos benefícios que oferecem para entender e prever o comportamento dos dados em relação ao endividamento das famílias.
 
-Em cada modelo, testamos diferentes configurações de parâmetros. Para a Regressão Linear, focamos em uma abordagem direta, sem regularização adicional. 
+Em cada modelo, foram testados diferentes configurações de parâmetros. Para a Regressão Linear que foi direcionado em uma abordagem direta, sem regularização adicional. 
 No caso do Random Forest, experimentamos valores crescentes de n_estimators e diferentes profundidades máximas para garantir um equilíbrio entre precisão e performance. 
 Essas escolhas foram justificadas pela observação dos erros e da variabilidade dos dados.
 
@@ -150,7 +150,7 @@ Ambos os modelos mostram a necessidade de uma análise mais profunda e possivelm
 
 Estas análises e interpretações apesar de não retornarem o resultado desejado foram essenciais para entendermos as limitações dos modelos e dados utilizados e apontam para futuras melhorias e ajustes, visando previsões mais precisas e confiáveis.
 
-Finalizando com a nossa pipeline ccomeçou os trabalhos reunindo os dados históricos sobre o valor da selic representada na base de dados como (Selic_Valor), a inflação acumulada representada na base de dados como (Inflação_Acumulada) e a confiança do consumidor representada na base de dados como (Confiança_Valor).
+Finalizando com a nossa pipeline começou os trabalhos reunindo os dados históricos sobre o valor da selic representada na base de dados como (Selic_Valor), a inflação acumulada representada na base de dados como (Inflação_Acumulada) e a confiança do consumidor representada na base de dados como (Confiança_Valor).
 Na preparação dos dados realizou a limpeza e formatação dos dados, convertendo datas, alterando a virgula por ponto e separando e normalisando os dados selecionados.
 Para a contrução do modelo implementou os algoritmos de Regressão Linear e Random Forest, ajustando os hiperparâmetros e treinando os modelos.
 Com ela veio a avaliação do modelo e foi utilizado métricas como MSE e R^2 Score para avaliar o desempenho dos modelos.
