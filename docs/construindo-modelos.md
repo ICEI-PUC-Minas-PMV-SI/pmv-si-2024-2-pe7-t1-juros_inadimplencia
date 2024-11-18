@@ -101,15 +101,13 @@ Essa técnica se diferencia da análise de regressão em três pontos: 1) enquan
 O Prophet é um algoritmo desenvolvido pelo Facebook que trabalha com previsão de séries temporais. É baseado em um modelo aditivo em que tendências não-lineares são ajustadas com sazonalidade mensal, diária e anual, além dos efeitos dos feriados. (FACEBOOK, 2023). 
 
 
-![image](https://github.com/user-attachments/assets/55163095-119b-47e7-a504-fd3cd291fe02)
+![image](https://github.com/user-attachments/assets/69821874-a52c-4e46-a299-381dd93244eb)
 
 
 
 ![image](https://github.com/user-attachments/assets/b584ca58-5e80-43bb-96da-7f8cc24169d7)
 
-
-
-
+Algoritimo correspondente à imagem está na pasta SRC. Com o nome Prophet_LucasSantos_Vinicius.
 
 
 # Avaliação dos modelos criados
