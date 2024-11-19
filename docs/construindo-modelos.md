@@ -26,6 +26,8 @@ Algumas das etapas podem estar relacionadas à:
 
 Avalie quais etapas são importantes para o contexto dos dados que você está trabalhando, pois a qualidade dos dados e a eficácia do pré-processamento desempenham um papel fundamental no sucesso de modelo(s) de aprendizado de máquina. É importante entender o contexto do problema e ajustar as etapas de preparação de dados de acordo com as necessidades específicas de cada projeto.
 
+
+
 ## Preparação dos dados
 
 Quanto à limpeza dos dados e remoção de outliers, as bases selecionadas não apresentavam dados faltantes nem a necessidade de remoção de outliers.
@@ -42,7 +44,9 @@ preparação de dados foram fundamentais para garantir que os modelos tivessem u
 dos modelos de predição. A preparação dos dados busca assegurar que o aprendizado dos algoritmos capture padrões importantes, maximizando o desempenho e a validade das 
 previsões feitas para o endividamento das famílias.
 
+![IMG 1](https://github.com/user-attachments/assets/cf9f418b-ec28-4473-a875-01738e19df1a)
 
+Base utilizada para Regressão Linear e Random Forest.(Arquivo presente na pasta SRC)
 
 # Descrição dos modelos
 
@@ -62,9 +66,15 @@ Em cada modelo, foram testados diferentes configurações de parâmetros. Para a
 No caso do Random Forest, experimentamos valores crescentes de n_estimators e diferentes profundidades máximas para garantir um equilíbrio entre precisão e performance. 
 Essas escolhas foram justificadas pela observação dos erros e da variabilidade dos dados.
 
+# Experimento 1
+
 # Regressão Linear
 
 A regressão linear é um método estatístico usado para modelar a relação entre uma variável dependente e uma ou mais variáveis independentes. O objetivo é ajustar uma linha reta que minimiza a soma dos quadrados das diferenças entre os valores observados e os valores previstos. Também foi observado que ele possui apenas o parâmetro de coeficiente de inclinação da linha.
+
+![image](https://github.com/user-attachments/assets/d762a977-3d38-40d7-be28-f27a600876ad)
+![image](https://github.com/user-attachments/assets/3af2fc80-efa0-440e-820a-d0238bb04457)
+
 A Regressão Linear foi escolhida devido à sua capacidade de fornecer uma linha de base para comparação com outros modelos mais complexos. 
 Ela ajuda a identificar se uma simples relação linear é suficiente para explicar os dados. Neste primeiro teste, optamos por uma Regressão Linear simples como
 ponto de partida.
@@ -79,11 +89,16 @@ Algoritimo correspondente a imagem está na pasta SRC. Com o nome Regressao_Line
 O Random Forest é um algoritmo de aprendizado de máquina baseado em conjuntos que constrói múltiplas árvores de decisão durante o treinamento e apresenta a média das previsões individuais das árvores para melhorar a precisão. Uma das vantagens é sua robustez em relação a outliers e sua capacidade de lidar bem com grandes conjuntos de dados por outro lado, pode ser complicado ter poder computacional suficiente para processar os dados e sua interpretação pode ser mais complicada.
 Com os parâmetros livres alteramos os:
 
+![image](https://github.com/user-attachments/assets/d01f3556-fe05-4b41-86d1-c23e914963ec)
+
 n_estimators. Que é o número de árvores na floresta.
 
 max_depth. que é a profundidade máxima de cada árvore.
 
 min_samples_split que é o número mínimo de amostras necessárias para dividir um nó interno.
+
+![image](https://github.com/user-attachments/assets/556c1605-8574-4416-8ab9-a434e6afef35)
+
 
 A escolha do Random Forest como um modelo para analisar relações não-lineares entre as variáveis independentes além de experimentarmos diferentes valores para n_estimators e max_depth para encontrar o melhor ajuste, buscando tentar prever o nível de endividamento.
 
@@ -153,4 +168,4 @@ Na preparação dos dados realizou a limpeza e formatação dos dados, converten
 Para a contrução do modelo implementou os algoritmos de Regressão Linear e Random Forest, ajustando os hiperparâmetros e treinando os modelos.
 Com ela veio a avaliação do modelo e foi utilizado métricas como MSE e R^2 Score para avaliar o desempenho dos modelos.
 Sobre os resultados criamos gráficos para comparar dados reais e previstos a fim de tentar prever o endividamento das familias. 
-Para finalizar com a interpretação e as discuções onde foi analisdado os resultados no contexto dos objetivos do estudo e realmente foi muito engrandecedor conseguir avançar, aprender e concluir essa pesquisa. Fica aqui os agradecimentos aos colegas de grupo pelo comprometimento na construção do projeto e a professora Luciana. 
+Para finalizar com a interpretação e as discuções onde foi analisadado os resultados no contexto dos objetivos do estudo e realmente foi muito engrandecedor conseguir avançar, aprender e concluir essa pesquisa. Fica aqui os agradecimentos aos colegas de grupo pelo comprometimento na construção do projeto e a professora Luciana. 
