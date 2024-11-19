@@ -1,6 +1,6 @@
 # Preparação dos dados
 
-Nesta etapa, deverão ser descritas todas as técnicas utilizadas para pré-processamento/tratamento dos dados.
+Nesta etapa, deverão ser descritas todas as técnicas utilizadas para pré-processamento/tratamento dos dados. As informações de tratamento de dados aqui descritas foram utilizadas para o tratamento dos dados que foram utilizados para todos os modelos apresentados, para que fosse possível comparar os resultados dos modelos, sem que houvesse influência da base de dados.
 
 Algumas das etapas podem estar relacionadas à:
 
