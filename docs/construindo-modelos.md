@@ -192,7 +192,7 @@ min_samples_split que é o número mínimo de amostras necessárias para dividir
 ![image](https://github.com/user-attachments/assets/556c1605-8574-4416-8ab9-a434e6afef35)
 
 
-A escolha do Random Forest como um modelo para analisar relações não-lineares entre as variáveis independentes além de experimentarmos diferentes valores para n_estimators e max_depth para encontrar o melhor ajuste, buscando tentar prever o nível de endividamento.
+A escolha do Random Forest como um modelo foi para analisar relações não-lineares entre as variáveis independentes, além de experimentarmos diferentes valores para n_estimators e max_depth para encontrar o melhor ajuste, buscando tentar prever o nível de endividamento.
 
 ![RandomForest](https://github.com/user-attachments/assets/fce3e796-4927-409c-b3c0-b939d73017cf)
 
