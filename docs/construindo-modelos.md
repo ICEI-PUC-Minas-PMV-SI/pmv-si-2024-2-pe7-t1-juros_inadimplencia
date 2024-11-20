@@ -66,7 +66,99 @@ Em cada modelo, foram testados diferentes configurações de parâmetros. Para a
 No caso do Random Forest, experimentamos valores crescentes de n_estimators e diferentes profundidades máximas para garantir um equilíbrio entre precisão e performance. 
 Essas escolhas foram justificadas pela observação dos erros e da variabilidade dos dados.
 
-# Experimento 1
+# Experimento #1
+
+## Regressão Linear Simples
+A análise realizada utilizou regressão linear simples para explorar a relação entre o percentual de endividamento no Sistema Financeiro Nacional (SFN) e as variáveis "Selic_Valor", "Confiança_Valor" e "Inflacao_Acumulada". O objetivo era investigar como a variação da taxa Selic influencia o endividamento, considerando também o impacto da inflação e do índice de confiança do consumidor.
+
+Para construir os modelos, foi utilizada a biblioteca `sklearn` para dividir os dados em conjuntos de treino e teste e ajustar um modelo linear. O trecho do código abaixo exemplifica o processo:
+
+```python
+#separar os dados das variáveis, dependente e independente
+x = dados[['Selic_Valor']] #variável dependente (Selic)
+y = dados[['Endividamento_SFN']] #variável independente (Endividamento)
+
+#dividir dados para treinamento e teste
+from sklearn.model_selection import train_test_split
+x_treino, x_teste, y_treino, y_teste, data_treino, data_teste = train_test_split(x, y, data, test_size = 0.2, random_state = 42)
+
+#criar o modelo de Regressão LInear Simples e Treinar o modelo
+from sklearn import linear_model
+modelo = linear_model.LinearRegression()
+modelo.fit(x_treino, y_treino)
+
+#métricas do Modelo
+from sklearn.metrics import mean_squared_error
+from sklearn.metrics import mean_absolute_error
+from sklearn.metrics import r2_score
+print(mean_absolute_error(y_teste, y_pred))
+print(mean_squared_error(y_teste, y_pred))
+print(r2_score(y_teste, y_pred))
+
+#coeficiente (inclinação da reta)
+coeficiente = modelo.coef_[0]
+print(coeficiente)
+```
+### Endividamento vs Selic
+
+```
+Mean Absolute Error 2.513171289925124
+Mean Squared Error: 8.717099884190315
+R2-Score: -0.049468720426556034
+Coeficiente: [0.12235752]
+```
+
+Os resultados para a variável "Selic_Valor" mostraram que o coeficiente da regressão foi 0,1224, indicando que, em média, um aumento de 1 ponto percentual na taxa Selic está associado a um aumento de 0,1224% no endividamento SFN. No entanto, o valor de R² foi -0,049, sugerindo que a Selic, sozinha, não explica a variação no endividamento.
+
+> [!NOTE]
+> Para ver o código deste modelo clique no link 👉 [endividamento_selic.py](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/src/endividamento_selic_alisson_bruno.py).
+
+<div align="center">
+  
+![Endividamento vs Selic - Regressão Linear Simples](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/docs/img/endividamento_selic.png)
+
+</div>
+
+### Endividamento vs Índice de Confiança do COnsumidor
+```
+Mean Absolute Error 1.9215478332539357
+Mean Squared Error: 7.593682007823295
+R2-Score: 0.08578175701187307
+Coeficiente: [0.05027029]
+```
+Para "Confiança_Valor", o coeficiente foi 0,0503, indicando que um aumento de 1 ponto no índice de confiança está associado a um aumento médio de 0,0503% no endividamento SFN. O R² foi 0,086, mostrando uma explicação um pouco melhor que a Selic, mas ainda muito limitada.
+
+> [!NOTE]
+> Para ver o código deste modelo clique no link 👉 [endividamento_confianca.py](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/src/endividamento_confianca_alisson_bruno.py).
+
+<div align="center">
+  
+![Endividamento vs ICC - Regressão Linear Simples](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/docs/img/endividamento_confianca.png)
+
+</div>
+
+### Endividamento vs Inflação Acumulada
+```
+Mean Absolute Error 2.475296029909461
+Mean Squared Error: 9.044113375438034
+R2-Score: -0.0888385148285209
+Coeficiente: [0.36940184]
+```
+Por último, "Inflacao_Acumulada" apresentou um coeficiente de 0,3694, sugerindo que cada aumento de 1% na inflação acumulada está associado a um aumento médio de 0,3694% no endividamento SFN. No entanto, o valor de R² foi -0,088, reforçando que a inflação, sozinha, também não é um bom preditor do endividamento.
+
+> [!NOTE]
+> Para ver o código deste modelo clique no link 👉 [endividamento_inflacao.py](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/src/endividamento_inflacao_alisson_bruno.py).
+
+<div align="center">
+  
+![Endividamento vs Inflação - Regressão Linear Simples](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/docs/img/endividamento_inflacao.png)
+
+</div>
+
+### Conclusão do experimento
+Em síntese, os modelos indicam que as variáveis analisadas possuem relações positivas, porém muito fracas, com o endividamento SFN. Valores baixos ou negativos de R² indicam que as variáveis isoladamente não explicam bem o comportamento do endividamento. Isso sugere que outros fatores, como renda familiar, disponibilidade de crédito e condições macroeconômicas, devem ser considerados.
+
+Portanto, embora a análise mostre uma influência limitada da Selic no endividamento, a resposta à questão da pesquisa requer um modelo mais robusto que inclua múltiplas variáveis simultaneamente. Isso permitirá entender melhor a relação entre a taxa Selic, a inflação e o endividamento das famílias.
 
 # Regressão Linear
 
