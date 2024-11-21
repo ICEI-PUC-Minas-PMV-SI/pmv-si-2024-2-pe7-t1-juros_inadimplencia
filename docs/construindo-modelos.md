@@ -176,9 +176,10 @@ ponto de partida.
 ![RegressaoLinear](https://github.com/user-attachments/assets/57316d07-b0ec-479f-b299-f45c6494c935)
 
 > [!NOTE]
-> Para ver o código deste modelo clique no link 👉 [Regressao_Linear_LucasLima_Geraldo .py](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/src/Regressao_Linear_LucasLima_Geraldo%20.py).
-
 <div align="center">
+> Para ver o código deste modelo clique no link 👉 [Regressao_Linear_LucasLima_Geraldo .py](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/src/Regressao_Linear_LucasLima_Geraldo%20.py).
+</div>
+
 
 
 # Random Forest
@@ -202,9 +203,10 @@ A escolha do Random Forest como um modelo foi para analisar relações não-line
 ![RandomForest](https://github.com/user-attachments/assets/fce3e796-4927-409c-b3c0-b939d73017cf)
 
 > [!NOTE]
+<div align="center">
 > Para ver o código deste modelo clique no link 👉 [Random_Forest_LucasLima_Geraldo.py](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/src/Random_Forest_LucasLima_Geraldo.py).
 
-<div align="center">
+</div>
 
 
 
@@ -223,12 +225,12 @@ O Prophet é um algoritmo desenvolvido pelo Facebook que trabalha com previsão 
 
 ![image](https://github.com/user-attachments/assets/b584ca58-5e80-43bb-96da-7f8cc24169d7)
 
-![RandomForest](https://github.com/user-attachments/assets/fce3e796-4927-409c-b3c0-b939d73017cf)
 
 > [!NOTE]
-> Para ver o código deste modelo clique no link 👉 [Prophet_LucasSantos_Vinicius.py](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/src/Prophet_LucasSantos_Vinicius.py).
-
 <div align="center">
+> Para ver o código deste modelo clique no link 👉 [Prophet_LucasSantos_Vinicius.py](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/src/Prophet_LucasSantos_Vinicius.py).
+</div>
+
 
 
 # Modelo Sarima 
