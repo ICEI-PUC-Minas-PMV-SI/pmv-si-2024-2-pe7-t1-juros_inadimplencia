@@ -216,6 +216,90 @@ O Prophet é um algoritmo desenvolvido pelo Facebook que trabalha com previsão 
 
 Algoritimo correspondente à imagem está na pasta SRC. Com o nome Prophet_LucasSantos_Vinicius.
 
+# Modelo Sarima 
+
+O modelo SARIMA (Seasonal AutoRegressive Integrated Moving Average) é um modelo derivado do modelo ARIMA, que são técnicas cujo objetivo são a análise e previsão de dados em séries temporais. Este é um modelo utilizado em análises econômicas, pois seu diferencial é justamente a previsão das séries temporais em conjuntos de dados. 
+
+A implantação do modelo requer alguns passos, e os mais importantes serão detalhados a seguir:
+
+## Carregamento e tratamento dos dados
+
+As bibliotecas Python importadas para execução de todos os passos:
+````
+from statsmodels.tsa.statespace.sarimax import SARIMAX
+from statsmodels.tsa.stattools import adfuller
+from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
+````
+Após o carregamento dos dados, alguns cuidados devem ser tomados, a fim de garantir que o modelo seja capaz de identificar as séries temporais adequadamente. No trecho a seguir, definimos a coluna "Periodo" como o índice, e o seu formato de data, para delimitação da sazonalidade a ser observada pelo modelo.
+````
+# Definir data como índice
+dados['Periodo'] = pd.to_datetime(dados['Periodo'], format='%m/%d/%Y')
+dados = dados.set_index('Periodo')
+````
+Também foi necessário realizar a remoção de colunas, para que o modelo pudesse isolar os indicadores e executar a previsão adequadamente:
+````
+# Removendo colunas para facilitar o entendimento do modelo
+dados_endiv = dados.drop(['Confianca_Valor', 'Selic_Valor', 'Inflacao_Acumulada'],axis=1)
+````
+
+## Delimitando os dados de treino e teste
+
+Nesta etapa, delimitamos os dados que seriam utilizados para o aprendizado do modelo, daqueles que seriam utilizados para validação das predições, para avaliação dos resultados entregues pelo modelo. Para este exercício, dividimos a base 
+````
+# Definição do treinamento e testes do modelo
+dados_treino = dados_endiv[dados_endiv.index < '2021-06-01']
+dados_teste = dados_endiv[dados_endiv.index >= '2021-06-01']
+````
+É importante também que seja verificada a estacionariedade dos dados. Este trecho de código faz este trabalho, salientando que o resultado deverá ser menor que 0.05 para que o modelo funcione corretamente:
+````
+# Verificar estacionariedade (resultado precisa ser menor que 0.05)
+result = adfuller(dados_endiv)
+print("p-valor:", result[1])
+````
+
+## Aplicando o modelo
+Este trecho de código é responsável pela aplicação do modelo Sarima no conjunto de dados. Vale ressaltar que os valores dentro das variáveis `order` e `seasonal_order` serão responsáveis pelos ajustes a serem realizados. Estas variáveis são definidas de acordo com as seguintes orientações:
+p: Ordem do componente autorregressivo (AR). 
+d: Ordem da diferenciação não sazonal. 
+q: Ordem do componente de médias móveis (MA). 
+P: Ordem do componente autorregressivo sazonal (SAR). 
+D: Ordem da diferenciação sazonal. 
+Q: Ordem do componente de médias móveis sazonais (SMA). 
+m: Período da sazonalidade (por exemplo, 12 para dados mensais com sazonalidade anual). 
+
+````
+modelo = SARIMAX(dados_treino, order=(0,1,1), seasonal_order=(0,1,1,12)) 
+resultado = modelo.fit()
+````
+Para o modelo, utilizamos os seguintes valores:
+- P = 0, D = 1, Q = 1: Sem padrão sazonal esperado
+
+- p = 0: Captura um efeito de dependência autorregressiva básica
+- d = 1: Para tornar a série estacionária, caso necessário
+- q = 1: Permite capturar flutuações curtas com média móvel
+- s = 12: Mantido como padrão, caso sazonalidade residual seja detectada
+
+## Predição do modelo
+O modelo é aplicado em dois momentos, o primeiro, para a previsão com base no treinamento executado pelo algoritmo e validação com base nos dados de testes:
+````
+# Predições do modelo
+predicao_teste = resultado.predict(start=dados_teste.index[0], end=dados_teste.index[-1])
+````
+E o segundo momento, onde é realizada uma previsão que vai além dos dados disponibilizados para treinamento e testes:
+````
+# Previsão para o modelo
+passos_futuros = 36 # Variável recebe a quantidade de meses que faremos a previsão dos indicadores futuros
+previsao = resultado.get_forecast(steps=passos_futuros)
+````
+
+## Impressão dos resultados
+Como resultado das predições, encontramos os seguintes resultados, já levados para um gráfico agrupando os dados de treino, teste, predições realizadas para validação e predições para períodos futuros à série de dados fornecida para o modelo:
+![image]()
+
+## Avaliação do modelo
+
+Avaliar um modelo de predição é uma questão complicada, uma vez que, principalmente em relação a indicadores econômicos, existem inúmeros fatores externos que podem influenciar em movimentos de alta ou baixa de tais números.
+Sarima é um modelo capaz de realizar tais predições, mas devemos nos atentar para o tratamento da base de dados antes
 
 # Avaliação dos modelos criados
 
