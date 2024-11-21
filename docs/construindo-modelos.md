@@ -66,7 +66,7 @@ Em cada modelo, foram testados diferentes configurações de parâmetros. Para a
 No caso do Random Forest, experimentamos valores crescentes de n_estimators e diferentes profundidades máximas para garantir um equilíbrio entre precisão e performance. 
 Essas escolhas foram justificadas pela observação dos erros e da variabilidade dos dados.
 
-# Experimento #1
+
 
 ## Regressão Linear Simples
 A análise realizada utilizou regressão linear simples para explorar a relação entre o percentual de endividamento no Sistema Financeiro Nacional (SFN) e as variáveis "Selic_Valor", "Confiança_Valor" e "Inflacao_Acumulada". O objetivo era investigar como a variação da taxa Selic influencia o endividamento, considerando também o impacto da inflação e do índice de confiança do consumidor.
@@ -159,6 +159,8 @@ Por último, "Inflacao_Acumulada" apresentou um coeficiente de 0,3694, sugerindo
 Em síntese, os modelos indicam que as variáveis analisadas possuem relações positivas, porém muito fracas, com o endividamento SFN. Valores baixos ou negativos de R² indicam que as variáveis isoladamente não explicam bem o comportamento do endividamento. Isso sugere que outros fatores, como renda familiar, disponibilidade de crédito e condições macroeconômicas, devem ser considerados.
 
 Portanto, embora a análise mostre uma influência limitada da Selic no endividamento, a resposta à questão da pesquisa requer um modelo mais robusto que inclua múltiplas variáveis simultaneamente. Isso permitirá entender melhor a relação entre a taxa Selic, a inflação e o endividamento das famílias.
+
+# Experimento #1
 
 # Regressão Linear
 
