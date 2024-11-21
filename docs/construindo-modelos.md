@@ -359,3 +359,9 @@ Já no modelo de Random Forest, a MSE de 7.07 foi menor, indicando previsões ma
 Criamos gráficos para comparar dados reais e previstos, a fim de tentar prever o endividamento das famílias. Esses gráficos ajudaram a ilustrar a performance dos modelos e a identificar possíveis áreas de melhoria. Analisamos os resultados no contexto dos objetivos do estudo, discutindo as limitações e pontos fortes de cada modelo. Esta etapa foi crucial para entender as limitações dos dados e dos modelos utilizados, além de apontar direções para futuras melhorias e ajustes.
 
 Foi muito engrandecedor conseguir avançar, aprender e concluir essa pesquisa. Espero que quem veja esse trabalho consiga aproveitar algo. Agradeço aos colegas de grupo pelo comprometimento na construção do projeto e à professora Luciana pelo suporte.
+
+# Vídeo Completo
+
+O vídeo contem toda a apresentação e explicação dos experimentos realizados. 
+
+Link: 
