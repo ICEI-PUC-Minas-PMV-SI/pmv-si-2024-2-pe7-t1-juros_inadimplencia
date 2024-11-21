@@ -175,8 +175,11 @@ ponto de partida.
 
 ![RegressaoLinear](https://github.com/user-attachments/assets/57316d07-b0ec-479f-b299-f45c6494c935)
 
+> [!NOTE]
+> Para ver o código deste modelo clique no link 👉 [Regressao_Linear_LucasLima_Geraldo .py](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/src/Regressao_Linear_LucasLima_Geraldo%20.py).
 
-Algoritimo correspondente a imagem está na pasta SRC. Com o nome Regressao_Linear_LucasLima_Geraldo.
+<div align="center">
+
 
 # Random Forest
 
@@ -198,8 +201,12 @@ A escolha do Random Forest como um modelo foi para analisar relações não-line
 
 ![RandomForest](https://github.com/user-attachments/assets/fce3e796-4927-409c-b3c0-b939d73017cf)
 
+> [!NOTE]
+> Para ver o código deste modelo clique no link 👉 [Random_Forest_LucasLima_Geraldo.py](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/src/Random_Forest_LucasLima_Geraldo.py).
 
-Algoritimo correspondente à imagem está na pasta SRC. Com o nome Random_Forest_LucasLima_Geraldo.
+<div align="center">
+
+
 
 # Prophet
 
@@ -216,7 +223,13 @@ O Prophet é um algoritmo desenvolvido pelo Facebook que trabalha com previsão 
 
 ![image](https://github.com/user-attachments/assets/b584ca58-5e80-43bb-96da-7f8cc24169d7)
 
-Algoritimo correspondente à imagem está na pasta SRC. Com o nome Prophet_LucasSantos_Vinicius.
+![RandomForest](https://github.com/user-attachments/assets/fce3e796-4927-409c-b3c0-b939d73017cf)
+
+> [!NOTE]
+> Para ver o código deste modelo clique no link 👉 [Prophet_LucasSantos_Vinicius.py](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/src/Prophet_LucasSantos_Vinicius.py).
+
+<div align="center">
+
 
 # Modelo Sarima 
 
