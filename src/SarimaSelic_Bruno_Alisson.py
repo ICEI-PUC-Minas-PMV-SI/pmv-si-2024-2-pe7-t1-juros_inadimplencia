@@ -32,8 +32,8 @@ plt.ylabel('Selic_Valor')
 plt.tight_layout()
 
 # Definição do treinamento e testes do modelo
-dados_treino = dados_selic[dados_selic.index < '2021-06-01']
-dados_teste = dados_selic[dados_selic.index >= '2021-06-01']
+dados_treino = dados_selic[dados_selic.index < '2019-06-01']
+dados_teste = dados_selic[dados_selic.index >= '2019-06-01']
 
 # Verificar estacionariedade (resultado precisa ser menor que 0.05)
 result = adfuller(dados_selic)
@@ -47,7 +47,7 @@ print("p-valor:", result[1])
 #    s = 12: Mantido como padrão, caso sazonalidade residual seja detectada
 #    P = 0, D = 0, Q = 0: Sem padrão sazonal esperado
 
-modelo = SARIMAX(dados_treino, order=(0,1,1), seasonal_order=(0,1,1,12)) 
+modelo = SARIMAX(dados_treino, order=(0,1,1), seasonal_order=(0,1,4,12)) 
 resultado = modelo.fit()
 
 # Impressão dos coeficientes
@@ -121,3 +121,11 @@ MSE = mean_squared_error(dados_teste,predicao_teste)
 
 RMSE = np.sqrt(MSE)
 print("RMSE = {:0.2f}".format(RMSE))
+
+from sklearn.metrics import mean_squared_error, r2_score
+
+mse_inflacao = mean_squared_error(dados_teste, predicao_teste)
+r2_inflacao = r2_score(dados_teste, predicao_teste)
+
+print(mse_inflacao)
+print(r2_inflacao)
