@@ -339,9 +339,23 @@ Ambos os modelos mostram a necessidade de uma análise mais profunda e possivelm
 
 Estas análises e interpretações apesar de não retornarem o resultado desejado foram essenciais para entendermos as limitações dos modelos e dados utilizados e apontam para futuras melhorias e ajustes, visando previsões mais precisas e confiáveis.
 
-Finalizando com a nossa pipeline começou os trabalhos reunindo os dados históricos sobre o valor da selic representada na base de dados como (Selic_Valor), a inflação acumulada representada na base de dados como (Inflação_Acumulada) e a confiança do consumidor representada na base de dados como (Confiança_Valor).
-Na preparação dos dados realizou a limpeza e formatação dos dados, convertendo datas, alterando a virgula por ponto e separando e normalisando os dados selecionados.
-Para a contrução do modelo implementou os algoritmos de Regressão Linear e Random Forest, ajustando os hiperparâmetros e treinando os modelos.
-Com ela veio a avaliação do modelo e foi utilizado métricas como MSE e R^2 Score para avaliar o desempenho dos modelos.
-Sobre os resultados criamos gráficos para comparar dados reais e previstos a fim de tentar prever o endividamento das familias. 
-Para finalizar com a interpretação e as discuções onde foi analisadado os resultados no contexto dos objetivos do estudo e realmente foi muito engrandecedor conseguir avançar, aprender e concluir essa pesquisa. Fica aqui os agradecimentos aos colegas de grupo pelo comprometimento na construção do projeto e a professora Luciana. 
+# Pipeline
+
+Finalizando com a nossa pipeline, resolvemos fazer toda a seguencia de ações que fizemos para concluir a pesquisa e quem sabe no futuro ajudar quem também trabalhar com os dados da Selic. 
+Começamos o trabalho reunindo os dados históricos sobre o valor da Selic, representada na base de dados como Selic_Valor, a inflação acumulada, representada como Inflação_Acumulada, e a confiança do consumidor, representada como Confiança_Valor e a parte temporal representada pelo periodo.
+
+Preparação dos Dados: Na preparação dos dados, realizamos a limpeza e formatação, convertendo datas, alterando a vírgula por ponto e separando e normalizando os dados selecionados. As variáveis foram mantidas na escala original para facilitar a interpretação direta, especialmente considerando o uso do Random Forest, que não é sensível a escalas.
+
+Manuseio de Dados Temporais: A coluna Período, que representa o tempo, foi convertida para o tipo datetime para garantir a manipulação e ordenação corretas dos dados. Ordenamos a coluna em ordem crescente para manter a sequência temporal e garantir uma visualização e análise consistentes ao longo do tempo.
+
+Separação dos Dados: Dividimos os dados em conjuntos de treino e teste na proporção de 70/30 para uma avaliação confiável dos modelos. O conjunto de treino foi usado para ajustar os modelos, enquanto o conjunto de teste ajudou a avaliar a performance em dados não vistos.
+
+Construção do Modelo: Implementamos os algoritmos de Regressão Linear e Random Forest. Para a Regressão Linear, focamos em uma abordagem direta, sem regularização adicional. No caso do Random Forest, experimentamos valores crescentes de n_estimators e diferentes profundidades máximas (max_depth) para garantir um equilíbrio entre precisão e performance. Os hiperparâmetros foram ajustados para otimizar o desempenho dos modelos.
+
+Avaliação do Modelo: Utilizamos métricas como MSE (Mean Squared Error) e R^2 Score para avaliar o desempenho dos modelos. A Regressão Linear forneceu uma linha de base simples, mas completa para a análise dos dados. A MSE foi de 13.91, indicando que a média dos erros ao quadrado das previsões do modelo foi relativamente alta. O R^2 Score negativo de -0.06 mostrou que o modelo não capturou a variação nos dados de forma eficaz.
+
+Já no modelo de Random Forest, a MSE de 7.07 foi menor, indicando previsões mais próximas dos valores reais. O R^2 Score de -0.22 ainda sugere que há margem para melhorias, mas o modelo foi mais eficaz em explicar as variações dos dados.
+
+Criamos gráficos para comparar dados reais e previstos, a fim de tentar prever o endividamento das famílias. Esses gráficos ajudaram a ilustrar a performance dos modelos e a identificar possíveis áreas de melhoria. Analisamos os resultados no contexto dos objetivos do estudo, discutindo as limitações e pontos fortes de cada modelo. Esta etapa foi crucial para entender as limitações dos dados e dos modelos utilizados, além de apontar direções para futuras melhorias e ajustes.
+
+Foi muito engrandecedor conseguir avançar, aprender e concluir essa pesquisa. Espero que quem veja esse trabalho consiga aproveitar algo. Agradeço aos colegas de grupo pelo comprometimento na construção do projeto e à professora Luciana pelo suporte.
