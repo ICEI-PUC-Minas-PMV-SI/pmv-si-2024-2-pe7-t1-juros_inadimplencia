@@ -277,8 +277,8 @@ dados_endiv = dados.drop(['Confianca_Valor', 'Selic_Valor', 'Inflacao_Acumulada'
 Nesta etapa, delimitamos os dados que seriam utilizados para o aprendizado do modelo, daqueles que seriam utilizados para validação das predições, para avaliação dos resultados entregues pelo modelo. Para este exercício, dividimos a base 
 ````
 # Definição do treinamento e testes do modelo
-dados_treino = dados_endiv[dados_endiv.index < '2021-06-01']
-dados_teste = dados_endiv[dados_endiv.index >= '2021-06-01']
+dados_treino = dados_endiv[dados_endiv.index < '2019-06-01']
+dados_teste = dados_endiv[dados_endiv.index >= '2019-06-01']
 ````
 É importante também que seja verificada a estacionariedade dos dados. Este trecho de código faz este trabalho, salientando que o resultado deverá ser menor que 0.05 para que o modelo funcione corretamente:
 ````
@@ -298,15 +298,15 @@ Q: Ordem do componente de médias móveis sazonais (SMA).
 m: Período da sazonalidade (por exemplo, 12 para dados mensais com sazonalidade anual). 
 
 ````
-modelo = SARIMAX(dados_treino, order=(0,1,1), seasonal_order=(0,1,1,12)) 
+modelo = SARIMAX(dados_treino, order=(0,1,6), seasonal_order=(0,1,10,12)) 
 resultado = modelo.fit()
 ````
 Para o modelo, utilizamos os seguintes valores:
-- P = 0, D = 1, Q = 1: Sem padrão sazonal esperado
+- P = 0, D = 1, Q = 6: Sem padrão sazonal esperado
 
 - p = 0: Captura um efeito de dependência autorregressiva básica
 - d = 1: Para tornar a série estacionária, caso necessário
-- q = 1: Permite capturar flutuações curtas com média móvel
+- q = 10: Permite capturar flutuações curtas com média móvel
 - s = 12: Mantido como padrão, caso sazonalidade residual seja detectada
 
 ## Predição do modelo
@@ -324,12 +324,20 @@ previsao = resultado.get_forecast(steps=passos_futuros)
 
 ## Impressão dos resultados
 Como resultado das predições, encontramos os seguintes resultados, já levados para um gráfico agrupando os dados de treino, teste, predições realizadas para validação e predições para períodos futuros à série de dados fornecida para o modelo:
-![image]()
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/docs/img/Treinamento%20Selic_Sarima.png)
 
 ## Avaliação do modelo
 
 Avaliar um modelo de predição é uma questão complicada, uma vez que, principalmente em relação a indicadores econômicos, existem inúmeros fatores externos que podem influenciar em movimentos de alta ou baixa de tais números.
-Sarima é um modelo capaz de realizar tais predições, mas devemos nos atentar para o tratamento da base de dados antes
+Sarima é um modelo capaz de realizar tais predições, mas devemos nos atentar para o tratamento da base de dados antes de aplicar o modelo. É preciso que os dados sejam organizados e que um índice de tempo seja definido, para que o modelo possa buscar por padrões de sazonalidade e realizar predições adequadamente.
+Alguns fatores externos podem influenciar o resultado dos indicadores no mundo real, o que torna difícil de uma predição próxima da realidade. 
+Como exemplo, o resultado apresentado no gráfico a seguir, demonstra que o modelo não foi capaz de se adaptar a uma situação específica, como uma pandemia. 
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/docs/img/Previs%C3%A3o%20Selic%2036m_Sarima.png)
+
+Por isso, é necessário que o analista de dados use a ferramenta para realizar as predições, mas também, utilize do conhecimento relacionado a área estudada e analizada pela série de dados.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/docs/img/Resultado%20Selic_Sarima.png)
 
 # Avaliação dos modelos criados
 
