@@ -132,7 +132,7 @@ Para "Confiança_Valor", o coeficiente foi 0,0503, indicando que um aumento de 1
 > Para ver o código deste modelo clique no link 👉 [endividamento_confianca.py](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/src/endividamento_confianca_alisson_bruno.py).
 
 <div align="center">
-  
+
 ![Endividamento vs ICC - Regressão Linear Simples](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/docs/img/endividamento_confianca.png)
 
 </div>
@@ -147,13 +147,14 @@ Coeficiente: [0.36940184]
 Por último, "Inflacao_Acumulada" apresentou um coeficiente de 0,3694, sugerindo que cada aumento de 1% na inflação acumulada está associado a um aumento médio de 0,3694% no endividamento SFN. No entanto, o valor de R² foi -0,088, reforçando que a inflação, sozinha, também não é um bom preditor do endividamento.
 
 > [!NOTE]
-> Para ver o código deste modelo clique no link 👉 [endividamento_inflacao.py](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/src/endividamento_inflacao_alisson_bruno.py).
+> Para ver o código deste modelo clique no link 👉 [endividamento_inflacao.py](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/src/endividamento_selic_alisson_bruno.py).
 
 <div align="center">
-  
+
 ![Endividamento vs Inflação - Regressão Linear Simples](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/docs/img/endividamento_inflacao.png)
 
 </div>
+
 
 ### Conclusão do experimento
 Em síntese, os modelos indicam que as variáveis analisadas possuem relações positivas, porém muito fracas, com o endividamento SFN. Valores baixos ou negativos de R² indicam que as variáveis isoladamente não explicam bem o comportamento do endividamento. Isso sugere que outros fatores, como renda familiar, disponibilidade de crédito e condições macroeconômicas, devem ser considerados.
@@ -176,9 +177,7 @@ ponto de partida.
 ![RegressaoLinear](https://github.com/user-attachments/assets/57316d07-b0ec-479f-b299-f45c6494c935)
 
 > [!NOTE]
-<div align="center">
 > Para ver o código deste modelo clique no link 👉 [Regressao_Linear_LucasLima_Geraldo .py](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/src/Regressao_Linear_LucasLima_Geraldo%20.py).
-</div>
 
 
 
@@ -203,10 +202,7 @@ A escolha do Random Forest como um modelo foi para analisar relações não-line
 ![RandomForest](https://github.com/user-attachments/assets/fce3e796-4927-409c-b3c0-b939d73017cf)
 
 > [!NOTE]
-<div align="center">
 > Para ver o código deste modelo clique no link 👉 [Random_Forest_LucasLima_Geraldo.py](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/src/Random_Forest_LucasLima_Geraldo.py).
-
-</div>
 
 
 
@@ -227,9 +223,8 @@ O Prophet é um algoritmo desenvolvido pelo Facebook que trabalha com previsão 
 
 
 > [!NOTE]
-<div align="center">
 > Para ver o código deste modelo clique no link 👉 [Prophet_LucasSantos_Vinicius.py](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/src/Prophet_LucasSantos_Vinicius.py).
-</div>
+
 
 
 
