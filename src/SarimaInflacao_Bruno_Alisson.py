@@ -47,7 +47,7 @@ print("p-valor:", result[1])
 #    s = 12: Mantido como padrão, caso sazonalidade residual seja detectada
 #    P = 0, D = 0, Q = 0: Sem padrão sazonal esperado
 
-modelo = SARIMAX(dados_treino, order=(0,1,1), seasonal_order=(0,1,4,12)) 
+modelo = SARIMAX(dados_treino, order=(0,1,6), seasonal_order=(0,1,10,12)) 
 resultado = modelo.fit()
 
 # Impressão dos coeficientes
