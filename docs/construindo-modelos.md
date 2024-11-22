@@ -66,7 +66,7 @@ Em cada modelo, foram testados diferentes configurações de parâmetros. Para a
 No caso do Random Forest, experimentamos valores crescentes de n_estimators e diferentes profundidades máximas para garantir um equilíbrio entre precisão e performance. 
 Essas escolhas foram justificadas pela observação dos erros e da variabilidade dos dados.
 
-
+# Experimento #1
 
 ## Regressão Linear Simples
 A análise realizada utilizou regressão linear simples para explorar a relação entre o percentual de endividamento no Sistema Financeiro Nacional (SFN) e as variáveis "Selic_Valor", "Confiança_Valor" e "Inflacao_Acumulada". O objetivo era investigar como a variação da taxa Selic influencia o endividamento, considerando também o impacto da inflação e do índice de confiança do consumidor.
@@ -161,7 +161,7 @@ Em síntese, os modelos indicam que as variáveis analisadas possuem relações 
 
 Portanto, embora a análise mostre uma influência limitada da Selic no endividamento, a resposta à questão da pesquisa requer um modelo mais robusto que inclua múltiplas variáveis simultaneamente. Isso permitirá entender melhor a relação entre a taxa Selic, a inflação e o endividamento das famílias.
 
-# Experimento #1
+# Experimento #2
 
 # Regressão Linear
 
@@ -222,6 +222,7 @@ Ambos os modelos mostram a necessidade de uma análise mais profunda e possivelm
 
 Estas análises e interpretações apesar de não retornarem o resultado desejado foram essenciais para entendermos as limitações dos modelos e dados utilizados e apontam para futuras melhorias e ajustes, visando previsões mais precisas e confiáveis.
 
+# Experimento #3
 
 # Prophet
 
@@ -243,7 +244,7 @@ O Prophet é um algoritmo desenvolvido pelo Facebook que trabalha com previsão 
 > Para ver o código deste modelo clique no link 👉 [Prophet_LucasSantos_Vinicius.py](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/src/Prophet_LucasSantos_Vinicius.py).
 
 
-
+# Experimento #4
 
 # Modelo Sarima 
 
