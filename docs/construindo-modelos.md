@@ -1,6 +1,6 @@
 # Preparação dos dados
 
-Na etapa de preparação de dados, começamos constatando que as bases selecionadas não apresentavam dados faltantes nem a necessidade de remoção de outliers. Prosseguindo com a transformação de Dados, foi verificado a escala das variáveis, especialmente para a Regressão Linear, pois os algoritmos de aprendizado se beneficiam de dados em uma mesma escala. Decidimos manter as variáveis na escala original devido ao uso de Random Forest, tendo em vista que este modelo não é sensível a escalas, e também para permitir uma interpretação direta dos coeficientes na Regressão Linear. A coluna Período, que representa o tempo, foi convertida para o tipo datetime para garantir a manipulação e ordenação corretas dos dados, uma vez que ela representa uma variável fundamental para o modelo.
+Na etapa de preparação de dados, começamos constatando que as bases selecionadas não apresentavam dados faltantes nem a necessidade de remoção de outliers. Prosseguindo com a transformação de Dados, analisamos a escala das variáveis, pois os algoritmos de aprendizado se beneficiam de dados em uma mesma escala - especialmente para a Regressão Linear, que foi um dos modelos escolhidos. Decidimos manter as variáveis na escala original devido ao uso de Random Forest, tendo em vista que este modelo não é sensível a escalas, e também para permitir uma interpretação direta dos coeficientes na Regressão Linear. A coluna Período, que representa o tempo, foi convertida para o tipo datetime para garantir a manipulação e ordenação corretas dos dados, uma vez que ela representa uma variável fundamental para todos os modelos.
 
 No Manuseio de Dados Temporais, foi essencial ordenar a coluna Período em ordem  crescente para manter a sequência temporal em visualização, possbilitando uma análise consistente ao longo do tempo. Essa ordenação permite observar melhor as tendências e relações ao longo do período trabalhado. Quanto à Separação de Dados, dividimos os dados em conjuntos de treino e teste usando uma proporção de 70/30 para uma avaliação confiável do modelo. O conjunto de treino foi utilizado para ajustar os modelos, enquanto o conjunto de teste ajudou a avaliar a performance dos mesmos em dados não vistos. Essas etapas de preparação de dados foram fundamentais para garantir que os modelos tivessem uma base confiável e representativa dos dados reais, aumentando a precisão e a generalização dos modelos de predição. Na preparação dos dados buscamos assegurar que o aprendizado dos algoritmos capturasse padrões importantes, maximizando o desempenho e a validade das previsões feitas para o endividamento das famílias.
 
@@ -13,8 +13,8 @@ Base utilizada para Regressão Linear, Random Forest e Prophet.(Arquivo presente
 Os modelos de predição baseados em algoritmos de aprendizado de máquina escolhidos foram: Regressão Linear, Random Forest e análise de séries temporais (Prophet). 
 Os algoritmos foram selecionados devido às suas características distintas e aos benefícios que ofereciam para entender e prever o comportamento dos dados em relação ao endividamento das famílias.
 
-Em cada modelo, foram testados diferentes configurações de parâmetros. Na Regressão Linear decidimos utilizar uma abordagem direta, sem regularização adicional. 
-No caso do Random Forest, experimentamos valores crescentes de n_estimators e diferentes profundidades máximas para garantir um equilíbrio entre precisão e performance. Já no Prophet, optamos por adicionar diferentes regressores (que se tratam de diversos índices macroeconômicos) para estimarmos a variação do endividamento das famílias no decorrer do tempo. Essas escolhas se justificam pela observação dos erros e pela variabilidade dos dados.
+Em cada modelo, foram testados diferentes configurações de parâmetros. Na Regressão Linear (Experimento #1) decidimos utilizar uma abordagem direta, sem regularização adicional. No caso do Random Forest (Experimento #2), experimentamos valores crescentes de n_estimators e diferentes profundidades máximas para garantir um equilíbrio entre precisão e performance. Já no Prophet (Experimento #3), optamos por adicionar diferentes regressores (que se tratam de diversos índices macroeconômicos) para estimarmos a variação do endividamento das famílias no decorrer do tempo. Essas escolhas se justificam pela observação dos erros e pela variabilidade dos dados.
+
 
 # Experimento #1
 
@@ -111,6 +111,7 @@ Em síntese, os modelos indicam que as variáveis analisadas possuem relações 
 
 Portanto, embora a análise mostre uma influência limitada da Selic no endividamento, a resposta à questão da pesquisa requer um modelo mais robusto que inclua múltiplas variáveis simultaneamente. Isso permitirá entender melhor a relação entre a taxa Selic, a inflação e o endividamento das famílias.
 
+
 # Experimento #2
 
 # Regressão Linear
@@ -128,8 +129,6 @@ ponto de partida.
 
 > [!NOTE]
 > Para ver o código deste modelo clique no link 👉 [Regressao_Linear_LucasLima_Geraldo .py](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/src/Regressao_Linear_LucasLima_Geraldo%20.py).
-
-
 
 # Random Forest
 
@@ -170,6 +169,7 @@ Na comparação entre os modelos de Random Forest e Regressão Linear, conclui-s
 
 Os dois modelos mostram a necessidade de uma análise mais profunda e de integração de métodos adicionais para demonstrar com mais clareza a variação do nível de endividamento familiar. A Regressão Linear, apesar de ser uma boa linha de base, não é suficiente para este conjunto de dados, enquanto o Random Forest, mesmo sendo mais eficaz, ainda precisa ser ajustado para um desempenho superior. Apesar das análises e interpretações não retornarem o resultado desejado, o conjunto de descobertas foi essencial para entendermos as limitações dos modelos e dados utilizados, apontando para futuras melhorias e ajustes e visando previsões mais precisas e confiáveis.
 
+
 # Experimento #3
 
 # Prophet
@@ -196,10 +196,9 @@ Modelo de Séries Temporais Prophet Baseado no Nível de Endividamento
 ![image](https://github.com/user-attachments/assets/d2f058d9-7838-4210-9d48-fd0322aa9c8a)
 
 
-
 # Implementação dos modelos
 
-A implementação do modelo foi feita através dos seguintes passos:
+A implementação foi feita através dos seguintes passos:
 1.	A instalação da biblioteca Prophet.
    ````
 # Importa as bibliotecas necessárias
@@ -290,17 +289,18 @@ print("R²:", r2)
 
 # Avaliação dos modelos criados
 
-Para avaliar os modelos de séries temporais usando o Prophet, a avaliação foi feita através do Erro Quadrático Médio (MSE em inglês) e do coeficiente de determinação (R²). Em primeiro lugar, os resultados da avaliação do modelo em que foram inseridos os regressores ao modelo: enquanto o MSE apresentou um resultado moderado no desempenho do modelo (0.6242514687584728), na avaliação através do R² os resultados obtidos foram mais satisfatórios (0.9593074801682949), indicando que o modelo explica quase totalmente a variabilidade dos dados.
+Para avaliar os modelos de séries temporais usando o Prophet, escolhemos as seguintes medidas: o Erro Quadrático Médio (MSE em inglês) e o coeficiente de determinação (R²). Em primeiro lugar, os resultados da avaliação do modelo em que foram inseridos os regressores ao modelo: enquanto o MSE apresentou um resultado moderado no desempenho do modelo (0.6242514687584728), na avaliação através do R² os resultados obtidos foram mais satisfatórios (0.9593074801682949), indicando que o modelo explica quase totalmente a variabilidade dos dados.
 ````
 MSE: 0.6242514687584728
 R²: 0.9593074801682949
 ````
-Já no modelo em que o Prophet usou apenas a variação do endividamento para prever a série temporal, os resultados tiveram resultados piores, indicando que o modelo anterior captou melhor os ajustes de cada variável. Enquanto o MSE apresentou 2.2756528607697546, índice acima acima do 1, ou seja, os erros foram elevados ao quadrado individualmente, indicando um resultado ruim para explicar a variabilidade dos dados finais. Além disso, o R² também apresentou um resultado pior que no outro modelo (0.8516590608090697), mesmo que ainda satisfatório por estar próximo do 1.
+Já no modelo em que o Prophet usou apenas a variação do endividamento para prever a série temporal, os resultados foram piores: O MSE apresentou 2.2756528607697546, índice acima acima do 1, ou seja, os erros foram elevados ao quadrado individualmente, indicando um desempenho ruim para explicar a variabilidade dos dados finais. Além disso, o R² também apresentou um resultado pior que no outro modelo (0.8516590608090697), mesmo que ainda satisfatório por estar próximo do 1.
+
 ````
 MSE: 2.2756528607697546
 R²: 0.8516590608090697
 ````
-
+Em suma, conclui-se que o modelo alimentado com regressores é mais robusto na sua capacidade de previsão, indicando que a utilização de variáveis independentes para a estimativa do nível de endividamento futuro pode servir de caminho na utilização do aprendizado de máquina para a análise do cenário macroeconômico.
 
 # Experimento #4
 
@@ -384,6 +384,7 @@ previsao = resultado.get_forecast(steps=passos_futuros)
 Como resultado das predições, encontramos os seguintes resultados, já levados para um gráfico agrupando os dados de treino, teste, predições realizadas para validação e predições para períodos futuros à série de dados fornecida para o modelo:
 ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/docs/img/Treinamento%20Selic_Sarima.png)
 
+
 ## Avaliação do modelo
 
 Avaliar um modelo de predição pode ser uma tarefa complexa, uma vez que, principalmente em relação a indicadores econômicos, existem inúmeros fatores externos que podem influenciar em movimentos de alta ou baixa de tais números. O Prophet e o Sarima são os modelos mais capazes de realizar tais predições, mas devemos nos atentar para o tratamento da base de dados antes de aplicar o modelo. É preciso que os dados sejam organizados e que um índice de tempo seja definido, para que o modelo possa buscar por padrões de sazonalidade e realizar predições adequadamente. Alguns fatores externos podem influenciar o resultado dos indicadores no mundo real, o que torna difícil uma predição condinzente com a realidade. Como exemplo, o resultado apresentado no gráfico a seguir, em que fica demononstrado que o modelo não foi capaz de se adaptar a uma situação inesperada com grande efeito sobre todo o cenário, como foi a pandemia da Covid-19. 
@@ -397,8 +398,7 @@ Por isso, é necessário que o analista de dados use a ferramenta para realizar 
 
 # Pipeline
 
-Finalizando com a nossa pipeline, resolvemos fazer toda a sequência de ações tomadas para concluir a pesquisa para ajudar quem pretende trabalhar com os dados macroeconômicos e aprendizado de máquina no futuro. 
-Começamos o trabalho reunindo os dados históricos sobre o valor da Selic, representada na base de dados como Selic_Valor, a inflação acumulada, representada como Inflação_Acumulada, e a confiança do consumidor, representada como Confiança_Valo. Além disso, organizamos a série histórica do período escolhido pegando os dados correspondentes ao dia primeiro de cada mês.
+Em suma, ao organizar a pipeline do nosso trabalho, resolvemos fazer toda a sequência de ações tomadas para concluir a pesquisa, com o fim de ajudar quem pretende trabalhar com dados macroeconômicos e aprendizado de máquina no futuro. Começamos o trabalho reunindo os dados históricos sobre o valor da Selic, representada na base de dados como Selic_Valor, a inflação acumulada, representada como Inflação_Acumulada, e a confiança do consumidor, representada como Confiança_Valo. Além disso, organizamos a série histórica do período escolhido pegando os dados correspondentes ao dia primeiro de cada mês.
 
 Preparação dos Dados: nessa etapa, realizamos a limpeza e formatação, convertendo datas, alterando a vírgula por ponto, separando e normalizando os dados selecionados. As variáveis foram mantidas na escala original para facilitar a interpretação direta, especialmente considerando o uso do Random Forest, que não é sensível a escalas.
 
@@ -415,9 +415,7 @@ Já no modelo de Random Forest, a MSE de 7.07 foi menor, indicando previsões ma
 Nos modelos de séries temporais baseado no algoritmo Prophet, a avaliação também se deu através do Erro Quadrático Médio (MSE em inglês) e do coeficiente de determinação (R²). Em primeiro lugar, os resultados da avaliação do modelo em que foram inseridos os regressores ao modelo: enquanto o MSE apresentou um resultado modesto no desempenho do modelo (0.6242514687584728, longe do 0, que indica que o desemepnho não foi satisfatório), na avaliação através do R² os resultados obtidos foram bem-sucedidos (0.96, próximo ao 1), indicando que o modelo explica quase totalmente a variabilidade dos dados.
 Já no modelo em que o Prophet usou apenas a variação do endividamento para prever a série temporal, tanto MSE quanto R² indicaram resultados piores do que no outro modelo, sinalizando que a adição de regressores para treinamento do modelo pode servir como subsídio para melhor entendimento da variação do endividamento das famílias no Brasil.
 
-Criamos gráficos para comparar dados reais e previstos, a fim de tentar prever o endividamento das famílias. Esses gráficos ajudaram a ilustrar a performance dos modelos e a identificar possíveis áreas de melhoria. Analisamos os resultados no contexto dos objetivos do estudo, discutindo as limitações e pontos fortes de cada modelo. Esta etapa foi crucial para entender as limitações dos dados e dos modelos utilizados, além de apontar direções para futuras melhorias e ajustes.
-
-Foi muito engrandecedor conseguir avançar, aprender e concluir essa pesquisa. Espero que quem veja esse trabalho consiga aproveitar algo. Agradeçemos à professora Luciana pelo suporte.
+Criamos gráficos para comparar dados reais e previstos, a fim de analisar o cenário de endividamento das famílias brasileiras. Esses gráficos ajudaram a ilustrar a performance dos modelos e a identificar possíveis áreas de melhoria. Analisamos os resultados no contexto dos objetivos do estudo, discutindo as limitações e pontos fortes de cada modelo. Esta etapa foi crucial para entender as vantagens e desvantagens dos algoritmos utilizados, além de apontar direções para futuras melhorias e ajustes.
 
 # Vídeo Completo
 
