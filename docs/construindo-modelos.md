@@ -32,25 +32,25 @@ Avalie quais etapas são importantes para o contexto dos dados que você está t
 
 Quanto à limpeza dos dados e remoção de outliers, as bases selecionadas não apresentavam dados faltantes nem a necessidade de remoção de outliers.
 Já na Transformação de Dados, foi verificado a escala das variáveis, especialmente para a Regressão Linear, pois os algoritmos de aprendizado se beneficiam de dados em
-uma mesma escala. Decidi manter as variáveis na escala original devido ao uso de Random Forest, que não é sensível a escalas, e para permitir uma interpretação direta 
+uma mesma escala. Decidimos manter as variáveis na escala original devido ao uso de Random Forest, tendo qme vista que este modelo não é sensível a escalas, e yambém para permitir uma interpretação direta 
 dos coeficientes na Regressão Linear. A coluna Período, que representa o tempo, foi convertida para o tipo datetime para garantir a manipulação e ordenação corretas dos 
 dados, uma vez que ela representa uma variável temporal importante para o modelo.
 
 No Manuseio de Dados Temporais, foi essencial ordenar a coluna Período em ordem 
-crescente para manter a sequência temporal e uma visualização e análise consistentes ao longo do tempo. Essa ordenação permite observar melhor as tendências e relações 
-ao longo dos períodos. Quanto à Separação de Dados, dividi os dados em conjuntos de treino e teste usando uma proporção de 70/30 para uma avaliação confiável do modelo. 
+crescente para manter a sequência temporal em visualização, possbilitando uma análise consistente ao longo do tempo. Essa ordenação permite observar melhor as tendências e relações 
+ao longo dos períodos. Quanto à Separação de Dados, dividimos os dados em conjuntos de treino e teste usando uma proporção de 70/30 para uma avaliação confiável do modelo. 
 O conjunto de treino foi utilizado para ajustar os modelos, enquanto o conjunto de teste ajudou a avaliar a performance dos mesmos em dados não vistos. Essas etapas de 
 preparação de dados foram fundamentais para garantir que os modelos tivessem uma base confiável e representativa dos dados reais, aumentando a precisão e a generalização
-dos modelos de predição. A preparação dos dados busca assegurar que o aprendizado dos algoritmos capture padrões importantes, maximizando o desempenho e a validade das 
+dos modelos de predição. Na preparação dos dados buscamos assegurar que o aprendizado dos algoritmos capturasse padrões importantes, maximizando o desempenho e a validade das 
 previsões feitas para o endividamento das famílias.
 
 ![IMG 1](https://github.com/user-attachments/assets/cf9f418b-ec28-4473-a875-01738e19df1a)
 
-Base utilizada para Regressão Linear e Random Forest.(Arquivo presente na pasta SRC)
+Base utilizada para Regressão Linear, Random Forest e Prophet.(Arquivo presente na pasta SRC)
 
 # Descrição dos modelos
 
-Nesta seção, conhecendo os dados e de posse dos dados preparados, é hora de descrever os algoritmos de aprendizado de máquina selecionados para a construção dos modelos propostos. Inclua informações abrangentes sobre cada algoritmo implementado, aborde conceitos fundamentais, princípios de funcionamento, vantagens/limitações e justifique a escolha de cada um dos algoritmos. 
+Nesta seção, conhecendo os dados e a maneira que foram preparados, vamos descrever os algoritmos de aprendizado de máquina selecionados para a construção dos modelos propostos. Inclua informações abrangentes sobre cada algoritmo implementado, aborde conceitos fundamentais, princípios de funcionamento, vantagens/limitações e justifique a escolha de cada um dos algoritmos. 
 
 Explore aspectos específicos, como o ajuste dos parâmetros livres de cada algoritmo. Lembre-se de experimentar parâmetros diferentes e principalmente, de justificar as escolhas realizadas.
 
@@ -59,17 +59,17 @@ Como parte da comprovação de construção dos modelos, um vídeo de demonstra�
 ## Descrição dos modelos
 
 
-A descrição dos algoritmos de aprendizado de máquina escolhidos para a construção dos modelos de predição são: Regressão Linear, Random Forest e análise de séries temporais (Prophet). 
-Os algoritmos foram selecionados devido às suas características distintas e aos benefícios que oferecem para entender e prever o comportamento dos dados em relação ao endividamento das famílias.
+Os modelos de predição cujos algoritmos baseados em aprendizado de máquina escolhidos foram: Regressão Linear, Random Forest e análise de séries temporais (Prophet). 
+Os algoritmos foram selecionados devido às suas características distintas e aos benefícios que ofereciam para entender e prever o comportamento dos dados em relação ao endividamento das famílias.
 
-Em cada modelo, foram testados diferentes configurações de parâmetros. Para a Regressão Linear que foi direcionado em uma abordagem direta, sem regularização adicional. 
-No caso do Random Forest, experimentamos valores crescentes de n_estimators e diferentes profundidades máximas para garantir um equilíbrio entre precisão e performance. 
-Essas escolhas foram justificadas pela observação dos erros e da variabilidade dos dados.
+Em cada modelo, foram testados diferentes configurações de parâmetros. Na Regressão Linear decidimos utilizar uma abordagem direta, sem regularização adicional. 
+No caso do Random Forest, experimentamos valores crescentes de n_estimators e diferentes profundidades máximas para garantir um equilíbrio entre precisão e performance. Já no Prophet, optamos por adicionar diferentes regressores (que se tratam de diversos índices macroeconômicos) para estimarmos a variação do endividamento das famílias no decorrer do tempo.
+Essas escolhas se justificam pela observação dos erros e pela variabilidade dos dados.
 
 # Experimento #1
 
 ## Regressão Linear Simples
-A análise realizada utilizou regressão linear simples para explorar a relação entre o percentual de endividamento no Sistema Financeiro Nacional (SFN) e as variáveis "Selic_Valor", "Confiança_Valor" e "Inflacao_Acumulada". O objetivo era investigar como a variação da taxa Selic influencia o endividamento, considerando também o impacto da inflação e do índice de confiança do consumidor.
+A análise realizada utilizou regressão linear simples para explorar a relação entre o percentual de endividamento das famílias baseado no Sistema Financeiro Nacional (SFN) e as variáveis "Selic_Valor", "Confiança_Valor" e "Inflacao_Acumulada". O objetivo era investigar como a variação da taxa Selic influencia o endividamento, considerando também o impacto da inflação e do índice de confiança do consumidor.
 
 Para construir os modelos, foi utilizada a biblioteca `sklearn` para dividir os dados em conjuntos de treino e teste e ajustar um modelo linear. O trecho do código abaixo exemplifica o processo:
 
@@ -157,7 +157,7 @@ Por último, "Inflacao_Acumulada" apresentou um coeficiente de 0,3694, sugerindo
 
 
 ### Conclusão do experimento
-Em síntese, os modelos indicam que as variáveis analisadas possuem relações positivas, porém muito fracas, com o endividamento SFN. Valores baixos ou negativos de R² indicam que as variáveis isoladamente não explicam bem o comportamento do endividamento. Isso sugere que outros fatores, como renda familiar, disponibilidade de crédito e condições macroeconômicas, devem ser considerados.
+Em síntese, os modelos indicam que as variáveis analisadas possuem relações positivas, porém muito fracas, com o nível de endividamento conforme medido pelo SFN. Valores baixos ou negativos de R² indicam que as variáveis isoladamente não explicam bem o comportamento do endividamento. Isso sugere que outros fatores, como renda familiar, disponibilidade de crédito e condições macroeconômicas, devem ser considerados.
 
 Portanto, embora a análise mostre uma influência limitada da Selic no endividamento, a resposta à questão da pesquisa requer um modelo mais robusto que inclua múltiplas variáveis simultaneamente. Isso permitirá entender melhor a relação entre a taxa Selic, a inflação e o endividamento das famílias.
 
@@ -208,12 +208,12 @@ A escolha do Random Forest como um modelo foi para analisar relações não-line
 
 A decisão em compilar os itens solicitados na parte da avaliação dos modelos foram: Começando pelas métricas onde foi usado a Mean Squared Error a MSE. Ela mede a média dos quadrados dos erros, que são as diferenças entre os valores previstos e os valores observados. Foi decidido a escolha do MSE, pois é uma métrica comum para problemas de regressão e é fácil de interpretar e também do R^2 Score. Ele representa a proporção da variância da variável dependente que é explicada pelas variáveis independentes no modelo. O R^2 também foi escolhido pois ele fornece uma medida de quão bem os valores previstos se ajustam aos dados reais.
 
-Agora será falado sobre os resultados obtidos. A Regressão Linear forneceu uma linha de base simples, mas completa para a análise dos dados. A MSE foi de de 13.91 indica que a média dos erros ao quadrado das previsões do modelo foi relativamente alta, mostrando que as previsões não estavam muito próximas dos valores reais. Além disso, o R^2 Score negativo de -0.06 nos diz que o modelo não foi capaz de capturar a variação nos dados de forma eficaz, o que significa que as previsões feitas pela regressão linear são menos confiáveis. Isto pode ser atribuído à simplicidade do modelo, que assume uma relação linear entre as variáveis, não capturando as complexidades e não linearidades presentes nos dados .
+Sobre os resultados obtidos: a Regressão Linear forneceu uma linha de base simples, mas completa para a análise dos dados. A MSE foi de de 13.91 indica que a média dos erros ao quadrado das previsões do modelo foi relativamente alta, mostrando que as previsões não estavam muito próximas dos valores reais. Além disso, o R^2 Score negativo de -0.06 nos diz que o modelo não foi capaz de capturar a variação nos dados de forma eficaz, o que significa que as previsões feitas pela regressão linear são menos confiáveis. Isto pode ser atribuído à simplicidade do modelo, que assume uma relação linear entre as variáveis, não capturando as complexidades e não linearidades presentes nos dados .
 
 ![image](https://github.com/user-attachments/assets/4f55d4fe-1134-407f-b425-fa1418bbaed4)
 
 
-Já no modelo de Random Forest em comparação à Regressão Linear. A MSE de 7.07, menor do que a da Regressão Linear, indica que o modelo de Random Forest fez previsões mais próximas dos valores reais. No entanto, o R^2 Score de -0.22 ainda sugere que tenha sido mais eficiente em explicar as variações dos dados. 
+Na comparação entre os modelos de Random Forest e Regressão Linear, conclui-se que o primeiro apresentou MSE de 7.07, menor do que a da Regressão Linear, ou seja, o modelo de Random Forest fez previsões mais próximas dos valores reais. No entanto, o R^2 Score de -0.22 sugere que a Regressão Linear tenha sido mais eficiente em explicar as variações dos dados. 
 
 ![image](https://github.com/user-attachments/assets/369cb0c0-dca6-4a96-9765-ad3327742d1f)
 
@@ -230,7 +230,8 @@ A análise de séries temporais é um método de estudar como uma variável muda
 
 Essa técnica se diferencia da análise de regressão em três pontos: 1) enquanto as séries temporais se concentram em como uma única variável muda ao longo do tempo, a regressão se concentra em como múltiplas variáveis interagem entre si; 2) análise de séries temporais presume que os dados são dependentes no tempo e têm autocorrelação, enquanto a análise de regressão assume que os dados são independentes e não têm multicolinearidade; 3) por fim, enquanto, os dados de séries temporais são organizados em ordem cronológica, os dados de regressão não são necessariamente ordenados. (SAMMARRAIE, 2024).
 
-O Prophet é um algoritmo desenvolvido pelo Facebook que trabalha com previsão de séries temporais. É baseado em um modelo aditivo em que tendências não-lineares são ajustadas com sazonalidade mensal, diária e anual, além dos efeitos dos feriados. (FACEBOOK, 2023). 
+O Prophet é um algoritmo desenvolvido pelo Facebook que trabalha com previsão de séries temporais. É baseado em um modelo aditivo em que tendências não-lineares são ajustadas com sazonalidade mensal, diária e anual, além dos efeitos dos feriados. (FACEBOOK, 2023). Visando um maior entendimento da inflência que os regressores tem nos resultados desse modelo, optamos por rodar um modelo em que o Prophet utiliziaria apenas a variação do nível de endividamento no período entre março de 2011 e maio de 2024 e outro em que são adicionados os regressores (variação do juros medidos pela Selic, o nível de confiança e a inflação mensal medida pelo IPCA) como variáveis externas que influenciam no comportamento da série temporal.
+
 
 
 ![image](https://github.com/user-attachments/assets/69821874-a52c-4e46-a299-381dd93244eb)
@@ -248,7 +249,7 @@ O Prophet é um algoritmo desenvolvido pelo Facebook que trabalha com previsão 
 
 # Modelo Sarima 
 
-O modelo SARIMA (Seasonal AutoRegressive Integrated Moving Average) é um modelo derivado do modelo ARIMA, que são técnicas cujo objetivo são a análise e previsão de dados em séries temporais. Este é um modelo utilizado em análises econômicas, pois seu diferencial é justamente a previsão das séries temporais em conjuntos de dados. 
+O modelo SARIMA (Seasonal AutoRegressive Integrated Moving Average) é um modelo derivado do modelo ARIMA, que são técnicas que êm como objetivos a análise e a previsão de dados em séries temporais. Este é um modelo utilizado em análises econômicas, pois seu diferencial é justamente a previsão das séries temporais em conjuntos de dados. 
 
 A implantação do modelo requer alguns passos, e os mais importantes serão detalhados a seguir:
 
@@ -329,13 +330,12 @@ Como resultado das predições, encontramos os seguintes resultados, já levados
 ## Avaliação do modelo
 
 Avaliar um modelo de predição é uma questão complicada, uma vez que, principalmente em relação a indicadores econômicos, existem inúmeros fatores externos que podem influenciar em movimentos de alta ou baixa de tais números.
-Sarima é um modelo capaz de realizar tais predições, mas devemos nos atentar para o tratamento da base de dados antes de aplicar o modelo. É preciso que os dados sejam organizados e que um índice de tempo seja definido, para que o modelo possa buscar por padrões de sazonalidade e realizar predições adequadamente.
-Alguns fatores externos podem influenciar o resultado dos indicadores no mundo real, o que torna difícil de uma predição próxima da realidade. 
-Como exemplo, o resultado apresentado no gráfico a seguir, demonstra que o modelo não foi capaz de se adaptar a uma situação específica, como uma pandemia. 
+O Prophet e o Sarima são os modelos mais capazes de realizar tais predições, mas devemos nos atentar para o tratamento da base de dados antes de aplicar o modelo. É preciso que os dados sejam organizados e que um índice de tempo seja definido, para que o modelo possa buscar por padrões de sazonalidade e realizar predições adequadamente.
+Alguns fatores externos podem influenciar o resultado dos indicadores no mundo real, o que torna difícil de uma predição próxima da realidade. Como exemplo, o resultado apresentado no gráfico a seguir, em que fica demononstrado que o modelo não foi capaz de se adaptar a uma situação inesperada com grande efeito sobre todo o cenário, como foi a pandemia da Covid-19. 
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/docs/img/Previs%C3%A3o%20Selic%2036m_Sarima.png)
 
-Por isso, é necessário que o analista de dados use a ferramenta para realizar as predições, mas também, utilize do conhecimento relacionado a área estudada e analizada pela série de dados.
+Por isso, é necessário que o analista de dados use a ferramenta para realizar as predições, mas também, utilize do conhecimento relacionado a área estudada e analisada pela série de dados.
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/docs/img/Resultado%20Selic_Sarima.png)
 
@@ -362,12 +362,12 @@ Além disso, deverá ser entregue um vídeo onde deverão ser descritas todas as
 
 # Pipeline
 
-Finalizando com a nossa pipeline, resolvemos fazer toda a seguencia de ações que fizemos para concluir a pesquisa e quem sabe no futuro ajudar quem também trabalhar com os dados da Selic. 
-Começamos o trabalho reunindo os dados históricos sobre o valor da Selic, representada na base de dados como Selic_Valor, a inflação acumulada, representada como Inflação_Acumulada, e a confiança do consumidor, representada como Confiança_Valor e a parte temporal representada pelo periodo.
+Finalizando com a nossa pipeline, resolvemos fazer toda a seguencia de ações que fizemos para concluir a pesquisa para ajudar quem pretende trabalhar com os dados macroeconômicos e aprendizado de máquina no futuro. 
+Começamos o trabalho reunindo os dados históricos sobre o valor da Selic, representada na base de dados como Selic_Valor, a inflação acumulada, representada como Inflação_Acumulada, e a confiança do consumidor, representada como Confiança_Valo. Além disso, organizamos a série histórica do período escolhido pegando os dados correspondentes ao dia primeiro de cada mês.
 
-Preparação dos Dados: Na preparação dos dados, realizamos a limpeza e formatação, convertendo datas, alterando a vírgula por ponto e separando e normalizando os dados selecionados. As variáveis foram mantidas na escala original para facilitar a interpretação direta, especialmente considerando o uso do Random Forest, que não é sensível a escalas.
+Preparação dos Dados: nessa etapa, realizamos a limpeza e formatação, convertendo datas, alterando a vírgula por ponto, separando e normalizando os dados selecionados. As variáveis foram mantidas na escala original para facilitar a interpretação direta, especialmente considerando o uso do Random Forest, que não é sensível a escalas.
 
-Manuseio de Dados Temporais: A coluna Período, que representa o tempo, foi convertida para o tipo datetime para garantir a manipulação e ordenação corretas dos dados. Ordenamos a coluna em ordem crescente para manter a sequência temporal e garantir uma visualização e análise consistentes ao longo do tempo.
+Manuseio de Dados Temporais: A coluna Período, que representa o tempo, foi convertida para o tipo datetime para garantir a manipulação e ordenação corretas dos dados. Ordenamos a coluna em ordem crescente para manter a sequência temporal e garantir a visualização e capacidade de análise consistentes ao longo do tempo.
 
 Separação dos Dados: Dividimos os dados em conjuntos de treino e teste na proporção de 70/30 para uma avaliação confiável dos modelos. O conjunto de treino foi usado para ajustar os modelos, enquanto o conjunto de teste ajudou a avaliar a performance em dados não vistos.
 
@@ -379,7 +379,7 @@ Já no modelo de Random Forest, a MSE de 7.07 foi menor, indicando previsões ma
 
 Criamos gráficos para comparar dados reais e previstos, a fim de tentar prever o endividamento das famílias. Esses gráficos ajudaram a ilustrar a performance dos modelos e a identificar possíveis áreas de melhoria. Analisamos os resultados no contexto dos objetivos do estudo, discutindo as limitações e pontos fortes de cada modelo. Esta etapa foi crucial para entender as limitações dos dados e dos modelos utilizados, além de apontar direções para futuras melhorias e ajustes.
 
-Foi muito engrandecedor conseguir avançar, aprender e concluir essa pesquisa. Espero que quem veja esse trabalho consiga aproveitar algo. Agradeço aos colegas de grupo pelo comprometimento na construção do projeto e à professora Luciana pelo suporte.
+Foi muito engrandecedor conseguir avançar, aprender e concluir essa pesquisa. Espero que quem veja esse trabalho consiga aproveitar algo. Agradeçemos à professora Luciana pelo suporte.
 
 # Vídeo Completo
 
