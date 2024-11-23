@@ -230,8 +230,12 @@ A análise de séries temporais é um método de estudar como uma variável muda
 
 Essa técnica se diferencia da análise de regressão em três pontos: 1) enquanto as séries temporais se concentram em como uma única variável muda ao longo do tempo, a regressão se concentra em como múltiplas variáveis interagem entre si; 2) análise de séries temporais presume que os dados são dependentes no tempo e têm autocorrelação, enquanto a análise de regressão assume que os dados são independentes e não têm multicolinearidade; 3) por fim, enquanto, os dados de séries temporais são organizados em ordem cronológica, os dados de regressão não são necessariamente ordenados. (SAMMARRAIE, 2024).
 
-O Prophet é um algoritmo desenvolvido pelo Facebook que trabalha com previsão de séries temporais. É baseado em um modelo aditivo em que tendências não-lineares são ajustadas com sazonalidade mensal, diária e anual, além dos efeitos dos feriados. (FACEBOOK, 2023). Visando um maior entendimento da inflência que os regressores tem nos resultados desse modelo, optamos por rodar um modelo em que o Prophet utiliziaria apenas a variação do nível de endividamento no período entre março de 2011 e maio de 2024 e outro em que são adicionados os regressores (variação do juros medidos pela Selic, o nível de confiança e a inflação mensal medida pelo IPCA) como variáveis externas que influenciam no comportamento da série temporal.
+O Prophet é um algoritmo desenvolvido pelo Facebook que trabalha com previsão de séries temporais. É baseado em um modelo aditivo em que tendências não-lineares são ajustadas com sazonalidade mensal, diária e anual, além dos efeitos dos feriados. (FACEBOOK, 2023). 
 
+Visando um maior entendimento do funcionamento do algoritmo do Prophet, optamos por gerar dois modelos: um em que o Prophet utiliziaria apenas a variação do nível de endividamento no período entre março de 2011 e maio de 2024 para gerar a previsão desse índice até 2030; e outro em que são adicionados os regressores (variação do juros medidos pela Selic, o nível de confiança e a inflação mensal medida pelo IPCA) como variáveis externas que influenciam no comportamento do nível de endividamento.
+
+Como se vê abaixo, os resultados gerados foram discrepantes na previsão até o ano de 2030: enquanto o modelo em que o Prophet usa apenas a variação do endividamento para previsão conclui que o nível de endividamento vai seguir uma tendência de crescimento até chegar 54% da população em 2030, o modelo que utiliza os regressores estima que o nível de endividamento chega a uma máxima em 2021 
+e deve seguir em queda até chegar em 42,5% no final do período.
 
 
 ![image](https://github.com/user-attachments/assets/69821874-a52c-4e46-a299-381dd93244eb)
