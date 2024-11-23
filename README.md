@@ -1,4 +1,4 @@
-# PREDIÇÃO DO ENDIVIDAMENTO DAS FAMÍLIAS 
+# PREVISÃO DO NÍVEL DE ENDIVIDAMENTO DAS FAMÍLIAS BRASILEIRAS 
 
 `CURSO: Sistemas de Informação`
 
@@ -6,7 +6,8 @@
 
 `SEMESTRE: 7º`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O projeto aqui apresentado tem como objetivo o desenvolvimento de modelos baseados em aprendizado de máquina treinados para prever o nível de endividamento das famílias brasileiras nos próximos anos. Para isso, optamos por utilizar cinco algoritmos diferentes para tratar o mesmo conjunto de dados, mais especificamente uma série temporal com quatro variáveis macroeconômicas medidas entre março de 2011 e maio de 2024.
+
 
 ## Integrantes
 
