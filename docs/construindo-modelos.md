@@ -343,7 +343,15 @@ print("R²:", r2)
 # Avaliação dos modelos criados
 
 Para avaliar os modelos de séries temporais usando o Prophet, a avaliação foi feita através do Erro Quadrático Médio (MSE em inglês) e do coeficiente de determinação (R²). Em primeiro lugar, os resultados da avaliação do modelo em que foram inseridos os regressores ao modelo: enquanto o MSE apresentou um resultado moderado no desempenho do modelo (0.6242514687584728), na avaliação através do R² os resultados obtidos foram mais satisfatórios (0.9593074801682949), indicando que o modelo explica quase totalmente a variabilidade dos dados.
+````
+MSE: 0.6242514687584728
+R²: 0.9593074801682949
+````
 Já no modelo em que o Prophet usou apenas a variação do endividamento para prever a série temporal, os resultados tiveram resultados piores, indicando que o modelo anterior captou melhor os ajustes de cada variável. Enquanto o MSE apresentou 2.2756528607697546, índice acima acima do 1, ou seja, os erros foram elevados ao quadrado individualmente, indicando um resultado ruim para explicar a variabilidade dos dados finais. Além disso, o R² também apresentou um resultado pior que no outro modelo (0.8516590608090697), mesmo que ainda satisfatório por estar próximo do 1.
+````
+MSE: 2.2756528607697546
+R²: 0.8516590608090697
+````
 
 
 # Experimento #4
