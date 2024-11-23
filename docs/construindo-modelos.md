@@ -236,14 +236,14 @@ Visando um maior entendimento do funcionamento do algoritmo do Prophet, optamos 
 
 Como se vê abaixo, os resultados gerados foram discrepantes na previsão até o ano de 2030: enquanto o modelo em que o Prophet usa apenas a variação do endividamento para previsão conclui que o nível de endividamento vai seguir uma tendência de crescimento até chegar 54% da população em 2030, o modelo que utiliza os regressores estima que o nível de endividamento chegou a uma máxima em 2021 e deve seguir em queda até chegar em 42,5% no final do período. Além dos resultados do nível de endividamento entre 2011 e 2030, através da plotagem de gráfico é possível estimar as oscilações mais frequentes em um determinado período (no caso do gráfico, na análise anual), e representar como um evento atípico impactou na variabilidade dos dados.
 
-Modelo de Series Temporais Prophet com os Regrassores
+Modelo de Séries Temporais Prophet com Regressores
 ![image](https://github.com/user-attachments/assets/cefcd216-3414-4fa8-8943-1869c816d593)
 ![image](https://github.com/user-attachments/assets/04e6a3e5-28c5-43d4-9bdb-618ebb625073)
 
 
 
 
-Moldelo de Series Temporais Prophet Baseado no Nível de Endividamento
+Modelo de Séries Temporais Prophet Baseado no Nível de Endividamento
 ![image](https://github.com/user-attachments/assets/cf3cbfa4-2dd0-4bf2-a94e-405f95905222)
 ![image](https://github.com/user-attachments/assets/d2f058d9-7838-4210-9d48-fd0322aa9c8a)
 
@@ -259,12 +259,12 @@ from sklearn.metrics import mean_absolute_error
 import pandas as pd
 from prophet import Prophet
 ```` 
-2.	A separação das colunas de dados (já anteriormente parametrizadas) entre a coluna ds (as séries de dados , que no caso seriam as datas separadas no modelo europeu, ou seja, aaaa-mm-dd) e a coluna y (que contem a variável dependente).
+2.	A separação das colunas de dados (já anteriormente parametrizadas) entre a coluna ds (as séries de dados, que no caso seriam as datas separadas no modelo europeu, ou seja, aaaa-mm-dd) e a coluna y (que contem a variável dependente).
   ````
 # Renomeia as colunas principais para o formato esperado pelo Prophet
 tabela.rename(columns={"data": "ds", "y": "y"}, inplace=True)
 ```` 	
-3.	O treinamento e configuração do modelo: as etapas de treinamento e teste dos dados já estão embutidas na implementação do algoritmo Prophet no código.
+3.	O treinamento e configuração do modelo: as etapas de treinamento e teste dos dados já estão embutidas na implementação do algoritmo Prophet.
   ````
 # Divida os dados para treino e teste
 train_size = int(0.6 * len(tabela))
