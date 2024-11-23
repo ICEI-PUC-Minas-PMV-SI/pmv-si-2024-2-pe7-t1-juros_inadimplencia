@@ -234,8 +234,7 @@ O Prophet é um algoritmo desenvolvido pelo Facebook que trabalha com previsão 
 
 Visando um maior entendimento do funcionamento do algoritmo do Prophet, optamos por gerar dois modelos: um em que o Prophet utiliziaria apenas a variação do nível de endividamento no período entre março de 2011 e maio de 2024 para gerar a previsão desse índice até 2030; e outro em que são adicionados os regressores (variação do juros medidos pela Selic, o nível de confiança e a inflação mensal medida pelo IPCA) como variáveis externas que influenciam no comportamento do nível de endividamento.
 
-Como se vê abaixo, os resultados gerados foram discrepantes na previsão até o ano de 2030: enquanto o modelo em que o Prophet usa apenas a variação do endividamento para previsão conclui que o nível de endividamento vai seguir uma tendência de crescimento até chegar 54% da população em 2030, o modelo que utiliza os regressores estima que o nível de endividamento chega a uma máxima em 2021 
-e deve seguir em queda até chegar em 42,5% no final do período.
+Como se vê abaixo, os resultados gerados foram discrepantes na previsão até o ano de 2030: enquanto o modelo em que o Prophet usa apenas a variação do endividamento para previsão conclui que o nível de endividamento vai seguir uma tendência de crescimento até chegar 54% da população em 2030, o modelo que utiliza os regressores estima que o nível de endividamento chegou a uma máxima em 2021 e deve seguir em queda até chegar em 42,5% no final do período.
 
 
 ![image](https://github.com/user-attachments/assets/69821874-a52c-4e46-a299-381dd93244eb)
@@ -244,13 +243,13 @@ e deve seguir em queda até chegar em 42,5% no final do período.
 
 ![image](https://github.com/user-attachments/assets/b584ca58-5e80-43bb-96da-7f8cc24169d7)
 
-# Implementação do modelo
+# Implementação dos modelos
 
 A implementação do modelo foi feita através dos seguintes passos:
 1.	A instalação da biblioteca Prophet.
 2.	A separação das colunas de dados (já anteriormente parametrizadas) entre a coluna ds (as séries de dados , que no caso seriam as datas separadas no modelo europeu, ou seja, aaaa-mm-dd) e a coluna y (que contem a variável dependente).
-3.	O treinamento e configuração do modelo .
-4.	A utilização do modelo para fazer previsões: usamos o ano de 2030 como ponto final das previsões do modelo.
+3.	O treinamento e configuração do modelo: as etapas de treinamento e teste dos dados já estão embutidas na implementação do algoritmo Prophet no código.
+4.	4.	A utilização do modelo para fazer previsões: usamos o ano de 2030 como ponto final das previsões do modelo, sendo possível estimar a variação do endividamento de 2024 até lá.
 5.	A visualização dos resultados através da plotagem de gráficos: os gráficos trazem algumas funções que auxiliam a entender os impactos da incorporação de regressores no modelo.
 6.	Avaliação do modelo: cálculo do R² e do MSE.
 
@@ -264,6 +263,11 @@ for regressor in ['y1', 'y2', 'y3']:
 
 > [!NOTE]
 > Para ver o código deste modelo clique no link 👉 [Prophet_LucasSantos_Vinicius.py](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/src/Prophet_LucasSantos_Vinicius.py).
+
+# Avaliação dos modelos criados
+
+Para avaliar os modelos de séries temporais usando o Prophet, a avaliação foi feita através do Erro Quadrático Médio (MSE em inglês) e do coeficiente de determinação (R²). Em primeiro lugar, os resultados da avaliação do modelo em que foram inseridos os regressores ao modelo: enquanto o MSE apresentou um resultado moderado no desempenho do modelo (0.6242514687584728), na avaliação através do R² os resultados obtidos foram mais satisfatórios (0.9593074801682949), indicando que o modelo explica quase totalmente a variabilidade dos dados.
+Já no modelo em que o Prophet usou apenas a variação do endividamento para prever a série temporal, os resultados tiveram resultados piores, indicando que o modelo anterior captou melhor os ajustes de cada variável. Enquanto o MSE apresentou 2.2756528607697546, índice acima acima do 1, ou seja, os erros foram elevados ao quadrado individualmente, indicando um resultado ruim para explicar a variabilidade dos dados finais. Além disso, o R² também apresentou um resultado pior que no outro modelo (0.8516590608090697), mesmo que ainda satisfatório por estar próximo do 1.
 
 
 # Experimento #4
@@ -360,7 +364,7 @@ Por isso, é necessário que o analista de dados use a ferramenta para realizar 
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/docs/img/Resultado%20Selic_Sarima.png)
 
-# Avaliação dos modelos criados
+# Avaliação do modelos criados
 
 ## Métricas utilizadas
 
@@ -397,6 +401,9 @@ Construção do Modelo: Implementamos os algoritmos de Regressão Linear e Rando
 Avaliação do Modelo: Utilizamos métricas como MSE (Mean Squared Error) e R^2 Score para avaliar o desempenho dos modelos. A Regressão Linear forneceu uma linha de base simples, mas completa para a análise dos dados. A MSE foi de 13.91, indicando que a média dos erros ao quadrado das previsões do modelo foi relativamente alta. O R^2 Score negativo de -0.06 mostrou que o modelo não capturou a variação nos dados de forma eficaz.
 
 Já no modelo de Random Forest, a MSE de 7.07 foi menor, indicando previsões mais próximas dos valores reais. O R^2 Score de -0.22 ainda sugere que há margem para melhorias, mas o modelo foi mais eficaz em explicar as variações dos dados.
+
+Nos modelos de séries temporais baseado no algoritmo Prophet, a avaliação também se deu através do Erro Quadrático Médio (MSE em inglês) e do coeficiente de determinação (R²). Em primeiro lugar, os resultados da avaliação do modelo em que foram inseridos os regressores ao modelo: enquanto o MSE apresentou um resultado modesto no desempenho do modelo (0.6242514687584728, longe do 0, que indica que o desemepnho não foi satisfatório), na avaliação através do R² os resultados obtidos foram bem-sucedidos (0.96, próximo ao 1), indicando que o modelo explica quase totalmente a variabilidade dos dados.
+Já no modelo em que o Prophet usou apenas a variação do endividamento para prever a série temporal, tanto MSE quanto R² indicaram resultados piores do que no outro modelo, indicando que a adição de regressores para treinamento do modelo pode servir como subsídio para melhor entendimento da variação do endividamento das famílias no Brasil.
 
 Criamos gráficos para comparar dados reais e previstos, a fim de tentar prever o endividamento das famílias. Esses gráficos ajudaram a ilustrar a performance dos modelos e a identificar possíveis áreas de melhoria. Analisamos os resultados no contexto dos objetivos do estudo, discutindo as limitações e pontos fortes de cada modelo. Esta etapa foi crucial para entender as limitações dos dados e dos modelos utilizados, além de apontar direções para futuras melhorias e ajustes.
 
