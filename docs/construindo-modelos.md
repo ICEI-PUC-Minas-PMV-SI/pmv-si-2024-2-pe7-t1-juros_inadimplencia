@@ -244,6 +244,23 @@ e deve seguir em queda até chegar em 42,5% no final do período.
 
 ![image](https://github.com/user-attachments/assets/b584ca58-5e80-43bb-96da-7f8cc24169d7)
 
+# Implementação do modelo
+
+A implementação do modelo foi feita através dos seguintes passos:
+1.	A instalação da biblioteca Prophet.
+2.	A separação das colunas de dados (já anteriormente parametrizadas) entre a coluna ds (as séries de dados , que no caso seriam as datas separadas no modelo europeu, ou seja, aaaa-mm-dd) e a coluna y (que contem a variável dependente).
+3.	O treinamento e configuração do modelo .
+4.	A utilização do modelo para fazer previsões: usamos o ano de 2030 como ponto final das previsões do modelo.
+5.	A visualização dos resultados através da plotagem de gráficos: os gráficos trazem algumas funções que auxiliam a entender os impactos da incorporação de regressores no modelo.
+6.	Avaliação do modelo: cálculo do R² e do MSE.
+
+Na implementação do modelo com regressores, adicionamos a função abaixo, em que cada coluna contida em y1, y2 e y3 trazia os dados da taxa Selic, de Confiança e da inflação mensal, respectivamente.
+
+for regressor in ['y1', 'y2', 'y3']:
+    if regressor in tabela.columns:
+        model.add_regressor(regressor)
+
+
 
 > [!NOTE]
 > Para ver o código deste modelo clique no link 👉 [Prophet_LucasSantos_Vinicius.py](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/src/Prophet_LucasSantos_Vinicius.py).
