@@ -236,33 +236,109 @@ Visando um maior entendimento do funcionamento do algoritmo do Prophet, optamos 
 
 Como se vê abaixo, os resultados gerados foram discrepantes na previsão até o ano de 2030: enquanto o modelo em que o Prophet usa apenas a variação do endividamento para previsão conclui que o nível de endividamento vai seguir uma tendência de crescimento até chegar 54% da população em 2030, o modelo que utiliza os regressores estima que o nível de endividamento chegou a uma máxima em 2021 e deve seguir em queda até chegar em 42,5% no final do período.
 
+Modelo de Series Temporais Prophet com os Regrassores
+![image](https://github.com/user-attachments/assets/cefcd216-3414-4fa8-8943-1869c816d593)
+![image](https://github.com/user-attachments/assets/04e6a3e5-28c5-43d4-9bdb-618ebb625073)
 
-![image](https://github.com/user-attachments/assets/69821874-a52c-4e46-a299-381dd93244eb)
 
 
 
-![image](https://github.com/user-attachments/assets/b584ca58-5e80-43bb-96da-7f8cc24169d7)
+Moldelo de Series Temporais Prophet Baseado no Nível de Endividamento
+![image](https://github.com/user-attachments/assets/cf3cbfa4-2dd0-4bf2-a94e-405f95905222)
+![image](https://github.com/user-attachments/assets/d2f058d9-7838-4210-9d48-fd0322aa9c8a)
+
+
 
 # Implementação dos modelos
 
 A implementação do modelo foi feita através dos seguintes passos:
 1.	A instalação da biblioteca Prophet.
+   ````
+# Importa as bibliotecas necessárias
+from sklearn.metrics import mean_absolute_error
+import pandas as pd
+from prophet import Prophet
+```` 
 2.	A separação das colunas de dados (já anteriormente parametrizadas) entre a coluna ds (as séries de dados , que no caso seriam as datas separadas no modelo europeu, ou seja, aaaa-mm-dd) e a coluna y (que contem a variável dependente).
+  ````
+# Renomeia as colunas principais para o formato esperado pelo Prophet
+tabela.rename(columns={"data": "ds", "y": "y"}, inplace=True)
+```` 	
 3.	O treinamento e configuração do modelo: as etapas de treinamento e teste dos dados já estão embutidas na implementação do algoritmo Prophet no código.
-4.	4.	A utilização do modelo para fazer previsões: usamos o ano de 2030 como ponto final das previsões do modelo, sendo possível estimar a variação do endividamento de 2024 até lá.
-5.	A visualização dos resultados através da plotagem de gráficos: os gráficos trazem algumas funções que auxiliam a entender os impactos da incorporação de regressores no modelo.
-6.	Avaliação do modelo: cálculo do R² e do MSE.
+  ````
+# Divida os dados para treino e teste
+train_size = int(0.6 * len(tabela))
+train, test = tabela[:train_size], tabela[train_size:]
+````	
+4.	A utilização do modelo para fazer previsões: usamos o ano de 2030 como ponto final das previsões do modelo, sendo possível estimar a variação do endividamento de 2024 até lá.
+  ````
+# Cria um dataframe para prever os próximos 60 meses
+future = model.make_future_dataframe(periods=60, freq='MS')
 
-Na implementação do modelo com regressores, adicionamos a função abaixo, em que cada coluna contida em y1, y2 e y3 trazia os dados da taxa Selic, de Confiança e da inflação mensal, respectivamente.
-
+# Adiciona os valores futuros para os regressores
 for regressor in ['y1', 'y2', 'y3']:
     if regressor in tabela.columns:
-        model.add_regressor(regressor)
+        # Aqui assumimos que os valores futuros sejam a média dos valores passados
+        # Ajuste isso com base em suas projeções ou dados específicos
+        future[regressor] = tabela[regressor].mean()
 
+# Realiza a previsão
+forecast = model.predict(future)
+````
+5.	A visualização dos resultados através da plotagem de gráficos: os gráficos trazem algumas funções que auxiliam a entender os impactos da incorporação de regressores no modelo.
+  ````
+# Exibe as previsões
+forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']]
+
+import matplotlib.pyplot as plt
+
+# Configura o gráfico
+plt.figure(figsize=(12, 6))
+
+# Plota os valores reais
+plt.plot(tabela['ds'], tabela['y'], label='Dados Reais', color='blue', marker='o')
+
+# Plota as previsões
+plt.plot(forecast['ds'], forecast['yhat'], label='Previsão', color='orange')
+
+# Plota os intervalos de confiança
+plt.fill_between(forecast['ds'], forecast['yhat_lower'], forecast['yhat_upper'], 
+                 color='orange', alpha=0.3, label='Intervalo de Confiança')
+
+# Adiciona títulos e legendas
+plt.title('Previsão de Séries Temporais com Prophet e Regressores')
+plt.xlabel('Data')
+plt.ylabel('Valor')
+plt.legend(loc='upper left')  # Posiciona a legenda
+plt.grid(True)
+plt.tight_layout()
+
+# Exibe o gráfico
+plt.show()
+
+# Plota os componentes sazonais
+fig2 = model.plot_components(forecast)
+````
+7.	Avaliação do modelo: cálculo do R² e do MSE.
+   ````
+from sklearn.metrics import mean_squared_error, r2_score
+
+# Previsões para o conjunto de teste
+forecast_test = model.predict(test)
+y_true = test['y']
+y_pred = forecast_test['yhat']
+
+# Calculando MSE e R²
+mse = mean_squared_error(y_true, y_pred)
+r2 = r2_score(y_true, y_pred)
+
+print("MSE:", mse)
+print("R²:", r2)
+````
 
 
 > [!NOTE]
-> Para ver o código deste modelo clique no link 👉 [Prophet_LucasSantos_Vinicius.py](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/src/Prophet_LucasSantos_Vinicius.py).
+> Para ver o código deste modelo clique no link 👉 [Prophet_LucasSantos_Vinicius.py](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/src/Prophet_LucasSantos_Vinicius_Endividamento_e_Regrassores.py).
 
 # Avaliação dos modelos criados
 
