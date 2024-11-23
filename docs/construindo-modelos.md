@@ -37,6 +37,8 @@ Como parte da comprovação de construção dos modelos, um vídeo de demonstra�
 # Avaliação dos modelos criados
 
 ## Métricas utilizadas
+https://colab.research.google.com/drive/1lh-3usPpI2JORRhggezHojZGjlMJk0zR#scrollTo=zsuf0WBbVCKF&line=1&uniqifier=1
+
 
 Nesta seção, as métricas utilizadas para avaliar os modelos desenvolvidos deverão ser apresentadas (p. ex.: acurácia, precisão, recall, F1-Score, MSE etc.). A escolha de cada métrica deverá ser justificada, pois esta escolha é essencial para avaliar de forma mais assertiva a qualidade do modelo construído. 
 
