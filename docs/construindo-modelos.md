@@ -1,48 +1,8 @@
 # Preparação dos dados
 
-Nesta etapa, deverão ser descritas todas as técnicas utilizadas para pré-processamento/tratamento dos dados. As informações de tratamento de dados aqui descritas foram utilizadas para o tratamento dos dados que foram utilizados para todos os modelos apresentados, para que fosse possível comparar os resultados dos modelos, sem que houvesse influência da base de dados.
+Na etapa de preparação de dados, começamos constatando que as bases selecionadas não apresentavam dados faltantes nem a necessidade de remoção de outliers. Prosseguindo com a transformação de Dados, foi verificado a escala das variáveis, especialmente para a Regressão Linear, pois os algoritmos de aprendizado se beneficiam de dados em uma mesma escala. Decidimos manter as variáveis na escala original devido ao uso de Random Forest, tendo em vista que este modelo não é sensível a escalas, e também para permitir uma interpretação direta dos coeficientes na Regressão Linear. A coluna Período, que representa o tempo, foi convertida para o tipo datetime para garantir a manipulação e ordenação corretas dos dados, uma vez que ela representa uma variável fundamental para o modelo.
 
-Algumas das etapas podem estar relacionadas à:
-
-* Limpeza de Dados: trate valores ausentes: decida como lidar com dados faltantes, seja removendo linhas, preenchendo com médias, medianas ou usando métodos mais avançados; remova _outliers_: identifique e trate valores que se desviam significativamente da maioria dos dados.
-
-* Transformação de Dados: normalize/padronize: torne os dados comparáveis, normalizando ou padronizando os valores para uma escala específica; codifique variáveis categóricas: converta variáveis categóricas em uma forma numérica, usando técnicas como _one-hot encoding_.
-
-* _Feature Engineering_: crie novos atributos que possam ser mais informativos para o modelo; selecione características relevantes e descarte as menos importantes.
-
-* Tratamento de dados desbalanceados: se as classes de interesse forem desbalanceadas, considere técnicas como _oversampling_, _undersampling_ ou o uso de algoritmos que lidam naturalmente com desbalanceamento.
-
-* Separação de dados: divida os dados em conjuntos de treinamento, validação e teste para avaliar o desempenho do modelo de maneira adequada.
-  
-* Manuseio de Dados Temporais: se lidar com dados temporais, considere a ordenação adequada e técnicas específicas para esse tipo de dado.
-  
-* Redução de Dimensionalidade: aplique técnicas como PCA (Análise de Componentes Principais) se a dimensionalidade dos dados for muito alta.
-
-* Validação Cruzada: utilize validação cruzada para avaliar o desempenho do modelo de forma mais robusta.
-
-* Monitoramento Contínuo: atualize e adapte o pré-processamento conforme necessário ao longo do tempo, especialmente se os dados ou as condições do problema mudarem.
-
-* Entre outras....
-
-Avalie quais etapas são importantes para o contexto dos dados que você está trabalhando, pois a qualidade dos dados e a eficácia do pré-processamento desempenham um papel fundamental no sucesso de modelo(s) de aprendizado de máquina. É importante entender o contexto do problema e ajustar as etapas de preparação de dados de acordo com as necessidades específicas de cada projeto.
-
-
-
-## Preparação dos dados
-
-Quanto à limpeza dos dados e remoção de outliers, as bases selecionadas não apresentavam dados faltantes nem a necessidade de remoção de outliers.
-Já na Transformação de Dados, foi verificado a escala das variáveis, especialmente para a Regressão Linear, pois os algoritmos de aprendizado se beneficiam de dados em
-uma mesma escala. Decidimos manter as variáveis na escala original devido ao uso de Random Forest, tendo qme vista que este modelo não é sensível a escalas, e yambém para permitir uma interpretação direta 
-dos coeficientes na Regressão Linear. A coluna Período, que representa o tempo, foi convertida para o tipo datetime para garantir a manipulação e ordenação corretas dos 
-dados, uma vez que ela representa uma variável temporal importante para o modelo.
-
-No Manuseio de Dados Temporais, foi essencial ordenar a coluna Período em ordem 
-crescente para manter a sequência temporal em visualização, possbilitando uma análise consistente ao longo do tempo. Essa ordenação permite observar melhor as tendências e relações 
-ao longo dos períodos. Quanto à Separação de Dados, dividimos os dados em conjuntos de treino e teste usando uma proporção de 70/30 para uma avaliação confiável do modelo. 
-O conjunto de treino foi utilizado para ajustar os modelos, enquanto o conjunto de teste ajudou a avaliar a performance dos mesmos em dados não vistos. Essas etapas de 
-preparação de dados foram fundamentais para garantir que os modelos tivessem uma base confiável e representativa dos dados reais, aumentando a precisão e a generalização
-dos modelos de predição. Na preparação dos dados buscamos assegurar que o aprendizado dos algoritmos capturasse padrões importantes, maximizando o desempenho e a validade das 
-previsões feitas para o endividamento das famílias.
+No Manuseio de Dados Temporais, foi essencial ordenar a coluna Período em ordem  crescente para manter a sequência temporal em visualização, possbilitando uma análise consistente ao longo do tempo. Essa ordenação permite observar melhor as tendências e relações ao longo do período trabalhado. Quanto à Separação de Dados, dividimos os dados em conjuntos de treino e teste usando uma proporção de 70/30 para uma avaliação confiável do modelo. O conjunto de treino foi utilizado para ajustar os modelos, enquanto o conjunto de teste ajudou a avaliar a performance dos mesmos em dados não vistos. Essas etapas de preparação de dados foram fundamentais para garantir que os modelos tivessem uma base confiável e representativa dos dados reais, aumentando a precisão e a generalização dos modelos de predição. Na preparação dos dados buscamos assegurar que o aprendizado dos algoritmos capturasse padrões importantes, maximizando o desempenho e a validade das previsões feitas para o endividamento das famílias.
 
 ![IMG 1](https://github.com/user-attachments/assets/cf9f418b-ec28-4473-a875-01738e19df1a)
 
@@ -50,21 +10,11 @@ Base utilizada para Regressão Linear, Random Forest e Prophet.(Arquivo presente
 
 # Descrição dos modelos
 
-Nesta seção, conhecendo os dados e a maneira que foram preparados, vamos descrever os algoritmos de aprendizado de máquina selecionados para a construção dos modelos propostos. Inclua informações abrangentes sobre cada algoritmo implementado, aborde conceitos fundamentais, princípios de funcionamento, vantagens/limitações e justifique a escolha de cada um dos algoritmos. 
-
-Explore aspectos específicos, como o ajuste dos parâmetros livres de cada algoritmo. Lembre-se de experimentar parâmetros diferentes e principalmente, de justificar as escolhas realizadas.
-
-Como parte da comprovação de construção dos modelos, um vídeo de demonstração com todas as etapas de pré-processamento e de execução dos modelos deverá ser entregue. Este vídeo poderá ser do tipo _screencast_ e é imprescindível a narração contemplando a demonstração de todas as etapas realizadas.
-
-## Descrição dos modelos
-
-
-Os modelos de predição cujos algoritmos baseados em aprendizado de máquina escolhidos foram: Regressão Linear, Random Forest e análise de séries temporais (Prophet). 
+Os modelos de predição baseados em algoritmos de aprendizado de máquina escolhidos foram: Regressão Linear, Random Forest e análise de séries temporais (Prophet). 
 Os algoritmos foram selecionados devido às suas características distintas e aos benefícios que ofereciam para entender e prever o comportamento dos dados em relação ao endividamento das famílias.
 
 Em cada modelo, foram testados diferentes configurações de parâmetros. Na Regressão Linear decidimos utilizar uma abordagem direta, sem regularização adicional. 
-No caso do Random Forest, experimentamos valores crescentes de n_estimators e diferentes profundidades máximas para garantir um equilíbrio entre precisão e performance. Já no Prophet, optamos por adicionar diferentes regressores (que se tratam de diversos índices macroeconômicos) para estimarmos a variação do endividamento das famílias no decorrer do tempo.
-Essas escolhas se justificam pela observação dos erros e pela variabilidade dos dados.
+No caso do Random Forest, experimentamos valores crescentes de n_estimators e diferentes profundidades máximas para garantir um equilíbrio entre precisão e performance. Já no Prophet, optamos por adicionar diferentes regressores (que se tratam de diversos índices macroeconômicos) para estimarmos a variação do endividamento das famílias no decorrer do tempo. Essas escolhas se justificam pela observação dos erros e pela variabilidade dos dados.
 
 # Experimento #1
 
@@ -218,9 +168,7 @@ Na comparação entre os modelos de Random Forest e Regressão Linear, conclui-s
 ![image](https://github.com/user-attachments/assets/369cb0c0-dca6-4a96-9765-ad3327742d1f)
 
 
-Ambos os modelos mostram a necessidade de uma análise mais profunda e possivelmente a integração de dos e metodos adicionais para demostrar melhor as variações nos dados de endividamento familiar. A Regressão Linear, apesar de ser uma boa linha de base, não é suficiente para este conjunto de dados, enquanto o Random Forest, mesmo sendo mais eficaz, ainda precisa ser ajustado para um desempenho superior.
-
-Estas análises e interpretações apesar de não retornarem o resultado desejado foram essenciais para entendermos as limitações dos modelos e dados utilizados e apontam para futuras melhorias e ajustes, visando previsões mais precisas e confiáveis.
+Os dois modelos mostram a necessidade de uma análise mais profunda e de integração de métodos adicionais para demonstrar com mais clareza a variação do nível de endividamento familiar. A Regressão Linear, apesar de ser uma boa linha de base, não é suficiente para este conjunto de dados, enquanto o Random Forest, mesmo sendo mais eficaz, ainda precisa ser ajustado para um desempenho superior. Apesar das análises e interpretações não retornarem o resultado desejado, o conjunto de descobertas foi essencial para entendermos as limitações dos modelos e dados utilizados, apontando para futuras melhorias e ajustes e visando previsões mais precisas e confiáveis.
 
 # Experimento #3
 
@@ -438,9 +386,7 @@ Como resultado das predições, encontramos os seguintes resultados, já levados
 
 ## Avaliação do modelo
 
-Avaliar um modelo de predição é uma questão complicada, uma vez que, principalmente em relação a indicadores econômicos, existem inúmeros fatores externos que podem influenciar em movimentos de alta ou baixa de tais números.
-O Prophet e o Sarima são os modelos mais capazes de realizar tais predições, mas devemos nos atentar para o tratamento da base de dados antes de aplicar o modelo. É preciso que os dados sejam organizados e que um índice de tempo seja definido, para que o modelo possa buscar por padrões de sazonalidade e realizar predições adequadamente.
-Alguns fatores externos podem influenciar o resultado dos indicadores no mundo real, o que torna difícil de uma predição próxima da realidade. Como exemplo, o resultado apresentado no gráfico a seguir, em que fica demononstrado que o modelo não foi capaz de se adaptar a uma situação inesperada com grande efeito sobre todo o cenário, como foi a pandemia da Covid-19. 
+Avaliar um modelo de predição pode ser uma tarefa complexa, uma vez que, principalmente em relação a indicadores econômicos, existem inúmeros fatores externos que podem influenciar em movimentos de alta ou baixa de tais números. O Prophet e o Sarima são os modelos mais capazes de realizar tais predições, mas devemos nos atentar para o tratamento da base de dados antes de aplicar o modelo. É preciso que os dados sejam organizados e que um índice de tempo seja definido, para que o modelo possa buscar por padrões de sazonalidade e realizar predições adequadamente. Alguns fatores externos podem influenciar o resultado dos indicadores no mundo real, o que torna difícil uma predição condinzente com a realidade. Como exemplo, o resultado apresentado no gráfico a seguir, em que fica demononstrado que o modelo não foi capaz de se adaptar a uma situação inesperada com grande efeito sobre todo o cenário, como foi a pandemia da Covid-19. 
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/docs/img/Previs%C3%A3o%20Selic%2036m_Sarima.png)
 
@@ -448,30 +394,10 @@ Por isso, é necessário que o analista de dados use a ferramenta para realizar 
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/docs/img/Resultado%20Selic_Sarima.png)
 
-# Avaliação do modelos criados
-
-## Métricas utilizadas
-
-Nesta seção, as métricas utilizadas para avaliar os modelos desenvolvidos deverão ser apresentadas (p. ex.: acurácia, precisão, recall, F1-Score, MSE etc.). A escolha de cada métrica deverá ser justificada, pois esta escolha é essencial para avaliar de forma mais assertiva a qualidade do modelo construído. 
-
-## Discussão dos resultados obtidos
-
-Nesta seção, discuta os resultados obtidos pelos modelos construídos, no contexto prático em que os dados se inserem, promovendo uma compreensão abrangente e aprofundada da qualidade de cada um deles. Lembre-se de relacionar os resultados obtidos ao problema identificado, a questão de pesquisa levantada e estabelecendo relação com os objetivos previamente propostos. 
-
-# Pipeline de pesquisa e análise de dados
-
-Em pesquisa e experimentação em sistemas de informação, um pipeline de pesquisa e análise de dados refere-se a um conjunto organizado de processos e etapas que um profissional segue para realizar a coleta, preparação, análise e interpretação de dados durante a fase de pesquisa e desenvolvimento de modelos. Esse pipeline é essencial para extrair _insights_ significativos, entender a natureza dos dados e, construir modelos de aprendizado de máquina eficazes. 
-
-## Observações importantes
-
-Todas as tarefas realizadas nesta etapa deverão ser registradas em formato de texto junto com suas explicações de forma a apresentar  os códigos desenvolvidos e também, o código deverá ser incluído, na íntegra, na pasta "src".
-
-Além disso, deverá ser entregue um vídeo onde deverão ser descritas todas as etapas realizadas. O vídeo, que não tem limite de tempo, deverá ser apresentado por **todos os integrantes da equipe**, de forma que, cada integrante tenha oportunidade de apresentar o que desenvolveu e as  percepções obtidas.
-
 
 # Pipeline
 
-Finalizando com a nossa pipeline, resolvemos fazer toda a seguencia de ações que fizemos para concluir a pesquisa para ajudar quem pretende trabalhar com os dados macroeconômicos e aprendizado de máquina no futuro. 
+Finalizando com a nossa pipeline, resolvemos fazer toda a sequência de ações tomadas para concluir a pesquisa para ajudar quem pretende trabalhar com os dados macroeconômicos e aprendizado de máquina no futuro. 
 Começamos o trabalho reunindo os dados históricos sobre o valor da Selic, representada na base de dados como Selic_Valor, a inflação acumulada, representada como Inflação_Acumulada, e a confiança do consumidor, representada como Confiança_Valo. Além disso, organizamos a série histórica do período escolhido pegando os dados correspondentes ao dia primeiro de cada mês.
 
 Preparação dos Dados: nessa etapa, realizamos a limpeza e formatação, convertendo datas, alterando a vírgula por ponto, separando e normalizando os dados selecionados. As variáveis foram mantidas na escala original para facilitar a interpretação direta, especialmente considerando o uso do Random Forest, que não é sensível a escalas.
