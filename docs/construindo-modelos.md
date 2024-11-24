@@ -2,7 +2,7 @@
 
 Na etapa de preparação de dados, começamos constatando que as bases selecionadas não apresentavam dados faltantes nem a necessidade de remoção de outliers. Prosseguindo com a transformação de Dados, analisamos a escala das variáveis, pois os algoritmos de aprendizado se beneficiam de dados em uma mesma escala - especialmente para a Regressão Linear, que foi um dos modelos escolhidos. Decidimos manter as variáveis na escala original devido ao uso de Random Forest, tendo em vista que este modelo não é sensível a escalas, e também para permitir uma interpretação direta dos coeficientes na Regressão Linear. A coluna Período, que representa o tempo, foi convertida para o tipo datetime para garantir a manipulação e ordenação corretas dos dados, uma vez que ela representa uma variável fundamental para todos os modelos.
 
-No Manuseio de Dados Temporais, foi essencial ordenar a coluna Período em ordem  crescente para manter a sequência temporal em visualização, possbilitando uma análise consistente ao longo do tempo. Essa ordenação permite observar melhor as tendências e relações ao longo do período trabalhado. Quanto à Separação de Dados, dividimos os dados em conjuntos de treino e teste usando uma proporção de 70/30 para uma avaliação confiável do modelo. O conjunto de treino foi utilizado para ajustar os modelos, enquanto o conjunto de teste ajudou a avaliar a performance dos mesmos em dados não vistos. Essas etapas de preparação de dados foram fundamentais para garantir que os modelos tivessem uma base confiável e representativa dos dados reais, aumentando a precisão e a generalização dos modelos de predição. Na preparação dos dados buscamos assegurar que o aprendizado dos algoritmos capturasse padrões importantes, maximizando o desempenho e a validade das previsões feitas para o endividamento das famílias.
+No Manuseio de Dados Temporais, foi essencial ordenar a coluna Período em ordem  crescente para manter a sequência temporal em visualização, possibilitando uma análise consistente ao longo do tempo. Essa ordenação permite observar melhor as tendências e relações ao longo do período trabalhado. Quanto à Separação de Dados, dividimos os dados em conjuntos de treino e teste usando uma proporção de 70/30 para uma avaliação confiável do modelo. O conjunto de treino foi utilizado para ajustar os modelos, enquanto o conjunto de teste ajudou a avaliar a performance dos mesmos em dados não vistos. Essas etapas de preparação de dados foram fundamentais para garantir que os modelos tivessem uma base confiável e representativa dos dados reais, aumentando a precisão e a generalização dos modelos de predição. Na preparação dos dados buscamos assegurar que o aprendizado dos algoritmos capturasse padrões importantes, maximizando o desempenho e a validade das previsões feitas para o endividamento das famílias.
 
 ![IMG 1](https://github.com/user-attachments/assets/cf9f418b-ec28-4473-a875-01738e19df1a)
 
@@ -10,7 +10,7 @@ Base utilizada para Regressão Linear, Random Forest e Prophet.(Arquivo presente
 
 # Descrição dos modelos
 
-Os modelos de predição baseados em algoritmos de aprendizado de máquina escolhidos foram: Regressão Linear, Random Forest e análise de séries temporais (Prophet). 
+Os modelos de predição baseados em algoritmos de aprendizado de máquina escolhidos foram: Regressão Linear, Random Forest, análise de séries temporais (Prophet) e SARIMA. 
 Os algoritmos foram selecionados devido às suas características distintas e aos benefícios que ofereciam para entender e prever o comportamento dos dados em relação ao endividamento das famílias.
 
 Em cada modelo, foram testados diferentes configurações de parâmetros. Na Regressão Linear (Experimento #1) decidimos utilizar uma abordagem direta, sem regularização adicional. No caso do Random Forest (Experimento #2), experimentamos valores crescentes de n_estimators e diferentes profundidades máximas para garantir um equilíbrio entre precisão e performance. Já no Prophet (Experimento #3), optamos por adicionar diferentes regressores (que se tratam de diversos índices macroeconômicos) para estimarmos a variação do endividamento das famílias no decorrer do tempo. Essas escolhas se justificam pela observação dos erros e pela variabilidade dos dados.
@@ -395,7 +395,14 @@ Por isso, é necessário que o analista de dados use a ferramenta para realizar 
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/docs/img/Resultado%20Selic_Sarima.png)
 
-Experimento 5#
+Os indicadores acima podem responder algumas questões, sobre o modelo Sarima aplicado, bem como os parâmetros aqui apresentados:
+- O MSE precisa retornar um valor baixo, para indicar que os erros de previção foram minimizados. 
+- O R2 é esperado um valor que supere 0,8 para indicar que o modelo explica bem a variação da série temporal.  
+
+Para o modelo, algumas informações podem justificar a disparidade dos resultados, principalmente levando em consideração que o intervalo de testes está justamente no período em que passamos pela crise proposta pela pandemia, o que pode explicar a disparidade entre os resultados propostos pelo modelo e número real (representado no teste), que "fogem" um pouco dos padrões esperados para o indicador aqui apresentado.  
+Para corrigir este problema, seria necessário que tivéssemos uma base um pouco maior, ou que os parâmetros aplicados fossem melhor ajustados, ou que não considerássemos este período atípico da pandemia do covid.
+
+# Experimento 5
 
 Regressão Linear Simples
 
