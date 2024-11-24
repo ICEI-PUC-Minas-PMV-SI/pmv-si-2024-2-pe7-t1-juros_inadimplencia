@@ -130,7 +130,7 @@ ponto de partida.
 > [!NOTE]
 > Para ver o código deste modelo clique no link 👉 [Regressao_Linear_LucasLima_Geraldo .py](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/src/Regressao_Linear_LucasLima_Geraldo%20.py).
 
-# Random Forest
+## Random Forest
 
 O Random Forest é um algoritmo de aprendizado de máquina baseado em conjuntos que constrói múltiplas árvores de decisão durante o treinamento e apresenta a média das previsões individuais das árvores para melhorar a precisão. Uma das vantagens é sua robustez em relação a outliers e sua capacidade de lidar bem com grandes conjuntos de dados por outro lado, pode ser complicado ter poder computacional suficiente para processar os dados e sua interpretação pode ser mais complicada.
 Com os parâmetros livres alteramos os:
@@ -153,7 +153,7 @@ A escolha do Random Forest como um modelo foi para analisar relações não-line
 > [!NOTE]
 > Para ver o código deste modelo clique no link 👉 [Random_Forest_LucasLima_Geraldo.py](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/src/Random_Forest_LucasLima_Geraldo.py).
 
-## Avaliação dos modelos criados
+### Avaliação dos modelos criados
 
 A decisão em compilar os itens solicitados na parte da avaliação dos modelos foram: Começando pelas métricas onde foi usado a Mean Squared Error a MSE. Ela mede a média dos quadrados dos erros, que são as diferenças entre os valores previstos e os valores observados. Foi decidido a escolha do MSE, pois é uma métrica comum para problemas de regressão e é fácil de interpretar e também do R^2 Score. Ele representa a proporção da variância da variável dependente que é explicada pelas variáveis independentes no modelo. O R^2 também foi escolhido pois ele fornece uma medida de quão bem os valores previstos se ajustam aos dados reais.
 
@@ -172,7 +172,7 @@ Os dois modelos mostram a necessidade de uma análise mais profunda e de integra
 
 # Experimento #3
 
-# Prophet
+## Prophet
 
 A análise de séries temporais é um método de estudar como uma variável muda ao longo do tempo, ajudando a identificar padrões, tendências, ciclos, sazonalidade e outliers em seus dados. Esse método também é utilizado para prever valores futuros de sua variável com base em dados históricos. 
 
@@ -196,7 +196,7 @@ Modelo de Séries Temporais Prophet Baseado no Nível de Endividamento
 ![image](https://github.com/user-attachments/assets/d2f058d9-7838-4210-9d48-fd0322aa9c8a)
 
 
-# Implementação dos modelos
+### Implementação dos modelos
 
 A implementação foi feita através dos seguintes passos:
 1.	A instalação da biblioteca Prophet.
@@ -287,7 +287,7 @@ print("R²:", r2)
 > [!NOTE]
 > Para ver o código deste modelo clique no link 👉 [Prophet_LucasSantos_Vinicius.py](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/src/Prophet_LucasSantos_Vinicius_Endividamento_e_Regrassores.py).
 
-# Avaliação dos modelos criados
+### Avaliação dos modelos criados
 
 Para avaliar os modelos de séries temporais usando o Prophet, escolhemos as seguintes medidas: o Erro Quadrático Médio (MSE em inglês) e o coeficiente de determinação (R²). Em primeiro lugar, os resultados da avaliação do modelo em que foram inseridos os regressores ao modelo: enquanto o MSE apresentou um resultado moderado no desempenho do modelo (0.6242514687584728), na avaliação através do R² os resultados obtidos foram mais satisfatórios (0.9593074801682949), indicando que o modelo explica quase totalmente a variabilidade dos dados.
 ````
@@ -304,13 +304,13 @@ Em suma, conclui-se que o modelo alimentado com regressores é mais robusto na s
 
 # Experimento #4
 
-# Modelo Sarima 
+## Modelo Sarima 
 
 O modelo SARIMA (Seasonal AutoRegressive Integrated Moving Average) é um modelo derivado do modelo ARIMA, que são técnicas que êm como objetivos a análise e a previsão de dados em séries temporais. Este é um modelo utilizado em análises econômicas, pois seu diferencial é justamente a previsão das séries temporais em conjuntos de dados. 
 
 A implantação do modelo requer alguns passos, e os mais importantes serão detalhados a seguir:
 
-## Carregamento e tratamento dos dados
+### Carregamento e tratamento dos dados
 
 As bibliotecas Python importadas para execução de todos os passos:
 ````
@@ -345,7 +345,7 @@ result = adfuller(dados_endiv)
 print("p-valor:", result[1])
 ````
 
-## Aplicando o modelo
+### Aplicando o modelo
 Este trecho de código é responsável pela aplicação do modelo Sarima no conjunto de dados. Vale ressaltar que os valores dentro das variáveis `order` e `seasonal_order` serão responsáveis pelos ajustes a serem realizados. Estas variáveis são definidas de acordo com as seguintes orientações:
 p: Ordem do componente autorregressivo (AR). 
 d: Ordem da diferenciação não sazonal. 
@@ -367,7 +367,7 @@ Para o modelo, utilizamos os seguintes valores:
 - q = 10: Permite capturar flutuações curtas com média móvel
 - s = 12: Mantido como padrão, caso sazonalidade residual seja detectada
 
-## Predição do modelo
+### Predição do modelo
 O modelo é aplicado em dois momentos, o primeiro, para a previsão com base no treinamento executado pelo algoritmo e validação com base nos dados de testes:
 ````
 # Predições do modelo
@@ -380,12 +380,12 @@ passos_futuros = 36 # Variável recebe a quantidade de meses que faremos a previ
 previsao = resultado.get_forecast(steps=passos_futuros)
 ````
 
-## Impressão dos resultados
+### Impressão dos resultados
 Como resultado das predições, encontramos os seguintes resultados, já levados para um gráfico agrupando os dados de treino, teste, predições realizadas para validação e predições para períodos futuros à série de dados fornecida para o modelo:
 ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/docs/img/Treinamento%20Selic_Sarima.png)
 
 
-## Avaliação do modelo
+### Avaliação do modelo
 
 Avaliar um modelo de predição pode ser uma tarefa complexa, uma vez que, principalmente em relação a indicadores econômicos, existem inúmeros fatores externos que podem influenciar em movimentos de alta ou baixa de tais números. O Prophet e o Sarima são os modelos mais capazes de realizar tais predições, mas devemos nos atentar para o tratamento da base de dados antes de aplicar o modelo. É preciso que os dados sejam organizados e que um índice de tempo seja definido, para que o modelo possa buscar por padrões de sazonalidade e realizar predições adequadamente. Alguns fatores externos podem influenciar o resultado dos indicadores no mundo real, o que torna difícil uma predição condinzente com a realidade. Como exemplo, o resultado apresentado no gráfico a seguir, em que fica demononstrado que o modelo não foi capaz de se adaptar a uma situação inesperada com grande efeito sobre todo o cenário, como foi a pandemia da Covid-19. 
 
@@ -404,7 +404,7 @@ Para corrigir este problema, seria necessário que tivéssemos uma base um pouco
 
 # Experimento 5
 
-Regressão Linear Simples
+## Regressão Linear Simples
 
 É um método estatístico usado para modelar a relação entre duas variáveis: uma variável dependente Y e uma variável independente X que tem como objetivo encontrar uma equação linear que descreva como Y varia em função de X.
 ![image](https://github.com/user-attachments/assets/4ba97464-bdc2-42f8-b7c1-d412e46444cb)
@@ -413,7 +413,7 @@ Regressão Linear Simples
 
 ![image](https://github.com/user-attachments/assets/cf63f01b-7672-4e61-856e-1b755ccc8adb)
 
-Random Forest
+## Random Forest
 
 É um método de aprendizado de máquinas baseado em um conjunto de árvores de decisão e é amplamente utilizado para tarefas de classificação e regressão devido à sua alta precisão, robustez e capacidade de lidar com grandes conjuntos de dados  múltiplas variáveis a idéia principal do random forest é construir árvores de decisão indenpendentes , cada uma treinada com uma amostra diferente do conjunto de dados original, e combinar suas previsões para obter um resultado final mais estável e confiável.
 
@@ -425,8 +425,8 @@ Random Forest
 
 O modelo Random Forest é uma excelente escolha, pois é poderoso e confiável, especialmente para tarefas de classificação ou regressaõ com muitas variáveis ou dados ruidosos.
 
-Conclusão dos modelos
->>> Regressão Linear
+## Conclusão dos modelos
+### Regressão Linear
 Para Endividamento_Total
 O modelo está explicando uma parte razoável da variabilidade sendo que o R^2 de 65.3% e o erro medio quadrado (MSE de 7.244) é moderado. O modelo tem um desempenho aceitável.
 Para o desempenho de Confiança_valor o modelo está tendo dificuldades significativas para prever, com um R^2 de 31.55 e um MSE de 341.068. isso sugere que a relação entre as variávei independentes e Confiança_valor não é bem capturada por uma regressão linear. 
@@ -435,7 +435,7 @@ o modelo de regressão linear tem um desempenho moderado para Endividamento_Tota
 ![image](https://github.com/user-attachments/assets/f19eee7e-7fd8-4091-84a9-de0fbffb8114)
 
 
->>Random Forest
+### Random Forest
 Para o Endividamento_Total
 
 Mean aquared Error (MSE):1.305
