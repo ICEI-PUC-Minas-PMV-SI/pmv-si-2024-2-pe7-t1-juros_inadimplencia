@@ -468,6 +468,13 @@ Foi utilizado o mesmo dataset (Período, Endividamento_Total, Confiança_valor, 
 
 # Vídeo Completo
 
-O vídeo contem toda a apresentação e explicação dos experimentos realizados. 
+Os vídeos contem toda a apresentação e explicação dos experimentos realizados. 
 
-Link: 
+Experimento #1: https://youtu.be/eBe3mz-w_k8
+
+Experimento #2: https://youtu.be/pKi9bV9tSVc
+
+Experimento #3: https://youtu.be/oCGKrDZ5g_c
+
+Experimento #4: https://youtu.be/8GNLOXusOK4
+
