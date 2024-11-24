@@ -395,6 +395,53 @@ Por isso, é necessário que o analista de dados use a ferramenta para realizar 
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe7-t1-juros_inadimplencia/blob/main/docs/img/Resultado%20Selic_Sarima.png)
 
+Experimento 5#
+
+Regressão Linear Simples
+
+É um método estatístico usado para modelar a relação entre duas variáveis: uma variável dependente Y e uma variável independente X que tem como objetivo encontrar uma equação linear que descreva como Y varia em função de X.
+![image](https://github.com/user-attachments/assets/4ba97464-bdc2-42f8-b7c1-d412e46444cb)
+
+![image](https://github.com/user-attachments/assets/d7197bd0-145a-481a-8208-33041336d1e5)
+
+![image](https://github.com/user-attachments/assets/cf63f01b-7672-4e61-856e-1b755ccc8adb)
+
+Random Forest
+
+É um método de aprendizado de máquinas baseado em um conjunto de árvores de decisão e é amplamente utilizado para tarefas de classificação e regressão devido à sua alta precisão, robustez e capacidade de lidar com grandes conjuntos de dados  múltiplas variáveis a idéia principal do random forest é construir árvores de decisão indenpendentes , cada uma treinada com uma amostra diferente do conjunto de dados original, e combinar suas previsões para obter um resultado final mais estável e confiável.
+
+![image](https://github.com/user-attachments/assets/d2751b88-2fde-44c7-acbd-0a1aecbef7fd)
+
+![image](https://github.com/user-attachments/assets/c8c67d69-b331-4f7f-a91a-295a01a0dd17)
+
+![image](https://github.com/user-attachments/assets/115f1420-d58a-45c9-a36a-27f567fdbc74)
+
+O modelo Random Forest é uma excelente escolha, pois é poderoso e confiável, especialmente para tarefas de classificação ou regressaõ com muitas variáveis ou dados ruidosos.
+
+Conclusão dos modelos
+>>> Regressão Linear
+Para Endividamento_Total
+O modelo está explicando uma parte razoável da variabilidade sendo que o R^2 de 65.3% e o erro medio quadrado (MSE de 7.244) é moderado. O modelo tem um desempenho aceitável.
+Para o desempenho de Confiança_valor o modelo está tendo dificuldades significativas para prever, com um R^2 de 31.55 e um MSE de 341.068. isso sugere que a relação entre as variávei independentes e Confiança_valor não é bem capturada por uma regressão linear. 
+o modelo de regressão linear tem um desempenho moderado para Endividamento_Total, mas precisa de melhorias para confiança_valor, onde o erroe a explicação de variabilidade são significativamente mais baixos. Fazer a revisão dos dados, explorar novas variáveis e tentar outros modelos podem ser caminhos úteis para melhorar a precisão do modelo.
+
+![image](https://github.com/user-attachments/assets/f19eee7e-7fd8-4091-84a9-de0fbffb8114)
+
+
+>>Random Forest
+Para o Endividamento_Total
+
+Mean aquared Error (MSE):1.305
+Como o MSE encontrado é 1.305, significa que a diferença média entre as previsões do modelo e os valores reais de Endividamento_Total é de aproximadamente 1.305 unidades ao quadrado.
+R^2 SCORE: 0.937
+O R^2 (R-Square) é uma métrica que indica a proporção da variabilidade dos dados que é explicada pelo modelo. Um valor de R^2 próximo de 1 significa que o modelo explicando quase toda a variabilidade dos dados.
+Este valor de 0.937 é considerado muito bom, indicando que o modelo consegue explicar 93.7% da variação nos dados de Endividamento_Total. Isso significa que o modelo tem um bom desempenho para prever essa variável.
+
+Para a Confiança_Valor, temos o MSE de 43.869, sendo que para a Confiança_valor é maior, indicando que as previsões do modelo para essa variável tem um erro médio quadrado maior, ou seja, as previsões podem ser menos precisas em comparação com as do Endividamento_Total.
+O R^2 Score: 0.912
+Apesar do MSE maior, o R^2 de 0.912 ainda é muito bom, isso significa que o modelo consegue explicar 91.2% da variabilidade nos dados d confiança_valor, o que é um bom desempenho.
+
+![image](https://github.com/user-attachments/assets/294b476e-ead5-43da-8487-f102d1c4deab)
 
 # Pipeline
 
@@ -416,6 +463,8 @@ Nos modelos de séries temporais baseado no algoritmo Prophet, a avaliação tam
 Já no modelo em que o Prophet usou apenas a variação do endividamento para prever a série temporal, tanto MSE quanto R² indicaram resultados piores do que no outro modelo, sinalizando que a adição de regressores para treinamento do modelo pode servir como subsídio para melhor entendimento da variação do endividamento das famílias no Brasil.
 
 Criamos gráficos para comparar dados reais e previstos, a fim de analisar o cenário de endividamento das famílias brasileiras. Esses gráficos ajudaram a ilustrar a performance dos modelos e a identificar possíveis áreas de melhoria. Analisamos os resultados no contexto dos objetivos do estudo, discutindo as limitações e pontos fortes de cada modelo. Esta etapa foi crucial para entender as vantagens e desvantagens dos algoritmos utilizados, além de apontar direções para futuras melhorias e ajustes.
+
+Foi utilizado o mesmo dataset (Período, Endividamento_Total, Confiança_valor, Selic_Valor e inflação_Acumulada) para análise dos modelos criados como regressão linear e random forest onde os dados são separados em conjuntos de treino e teste para avaliar o desempenho do modelo na divisão dos dados, sendo que a regressão linear é um modelo simples que ajusta uma linha para capturar a relação linear entre as variáveis e random forest usa o modelo baseado em múltiplas árvores de decisão, que combina previsões para maior precisão e robustez. 
 
 # Vídeo Completo
 
