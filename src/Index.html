@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Document</title>
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,500;0,700;0,800;1,600&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #202C33;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    padding: 10px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+header{
+    background-color: #364955;
+    font-weight: 700;
+    font-size: large;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.main{
+    /* background-color: brown; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px;
+    /* height: 80vh; */
+}
+
+.esquerda {
+    background-color: #364955;
+    width: 69%;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#dir-titulo{
+    height: 2%;
+}
+
+#graficos{
+    /* background-color: azure; */
+    border: solid 1px #586974;
+    border-radius: 5px;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.direita{
+    background-color: #364955;
+    width: 30%;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.dir-box {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#dir-topo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+#tituloDirTopo{
+    margin-bottom: 5px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.formBox{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    gap: 5px;
+}
+
+p{
+    font-size: small;
+    font-style: italic;
+    font-weight: 200;
+    color: #adb4b9;
+}
+
+
+#indice{
+    background-color: #586974;
+	color: inherit;
+    border-radius: 10px;
+    border: none;
+    padding: 8px;
+    font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+#indiceValor{
+    background-color: #586974;
+	color: inherit;
+    border-radius: 10px;
+    border: none;
+    padding: 8px;
+    font: inherit;
+	outline: inherit;
+    width: 100%;
+    
+}
+
+#btnSimular{
+    margin: 5px 0 15px 0 ;
+}
+
+#r2score{
+    background-color: black;
+    font-family: monospace;
+    color: #008000 ;
+    padding: 10px;
+    border-radius: 5px;
+    height: 100%;
+}
+
+.botao1 {
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+	background-color: #53ac66;
+	color: inherit;
+	border: none;
+	padding: 8px;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.botao1:hover{
+    background-color: #668a9e;
+    transition: .8s;
+}
+
+
+footer{
+    background-color: #364955;
+    color: rgba(255, 255, 255, 0.479);
+    padding: 10px;
+    font-weight: 300;
+    font-size: small;
+    border-radius: 5px;
+    text-align: center;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 576px) {
+
+    body{
+        padding: 10px 10px;
+    }
+
+    .esquerda {
+        width: 100%;
+    }
+
+    .direita {
+        width: 100%;
+        padding: 5px;
+    }
+
+    /* footer{
+        margin-top: 50px;
+    } */
+}
+
+@media screen and (max-width: 768px) {
+
+    body{
+        padding: 10px 10px;
+    }
+
+    .esquerda {
+        width: 100%;
+    }
+
+    .direita {
+        width: 100%;
+        padding: 5px;
+    }
+
+    /* footer{
+        margin-top: 50px;
+    } */
+}
+	</style>
+</head>
+<body>
+    <header>PREVISÃO DO NÍVEL DE ENDIVIDAMENTO DAS FAMÍLIAS BRASILEIRAS</header>
+    <div class="main">
+        <div class="esquerda">
+            <div id="titulo"><h3>Visualizar dados</h3></div>
+            <div id="graficos">grafico</div>
+        </div>
+        <div class="direita">
+            <div class="dir-box" id="dir-topo">
+                <div id="tituloDirTopo"><h3>Simular</h3><p>Selecione um prazo, informe os valores dos índices e clique em simular.</p></div>
+				<div class="form">
+    <div class="formBox">
+        <label for="prazo">Prazo:</label> 
+        <select id="prazo" name="prazo">
+            <option value="" selected disabled hidden>Escolha um prazo</option>
+            <option value="12m">12 meses</option>
+            <option value="24m">24 meses</option>
+            <option value="36m">36 meses</option>
+        </select>
+    </div>
+    <div class="formBox">  
+        <label for="ipca">IPCA:</label> 
+        <input type="text" id="ipca" name="ipca">
+        <label for="selic">Selic:</label> 
+        <input type="text" id="selic" name="selic">
+        <label for="conf">Índice de Confiança do Consumidor:</label> 
+        <input type="text" id="conf" name="conf">
+    </div>
+    <div class="formBox"> 
+        <button class="botao1" id="btnSimular">Simular</button>
+    </div>    
+</div>
+<div id="titulo"><h3>R2-Score</h3></div>
+                <div id="r2score">
+                    Mean Absolute Error 2.513171289925124 <br>
+                    Mean Squared Error: 8.717099884190315 <br>
+                    R2-Score: -0.049468720426556034 <br>
+                    Coeficiente: [0.12235752]
+                </div>
+            </div>
+            <div class="dir-box" id="dir-base">
+                <button class="botao1">Conheça as Políticas</button>
+                <button class="botao1">Reiniciar</button>
+            </div>
+        </div>
+    </div>
+    <footer>PUC Minas SI - Pesquisa e Experimentação em Sistemas de Informação 7º Semestre</footer>
+	
+	<script>
+    document.getElementById('btnSimular').addEventListener('click', async () => {
+        // Capturar os valores do formulário
+        const prazo = document.getElementById('prazo').value;
+        const ipca = document.getElementById('ipca').value;
+        const selic = document.getElementById('selic').value;
+        const conf = document.getElementById('conf').value;
+
+        // Validar os campos
+        if (!prazo || !ipca || !selic || !conf) {
+            alert("Por favor, preencha todos os campos antes de simular.");
+            return;
+        }
+
+        try {
+            // Realizar a requisição POST para o back-end
+            const response = await fetch('http://127.0.0.1:5000/simular', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    prazo: prazo,
+                    ipca: parseFloat(ipca),
+                    selic: parseFloat(selic),
+                    confianca: parseFloat(conf),
+                }),
+            });
+
+            // Verificar se a requisição foi bem-sucedida
+            if (!response.ok) {
+                throw new Error("Erro ao conectar com o servidor.");
+            }
+
+            // Processar a resposta
+            const result = await response.json();
+            console.log(result);
+
+            // Atualizar os resultados no front-end
+            document.getElementById('r2score').innerHTML = `
+                <strong>Resultados da Simulação:</strong><br>
+                Mean Absolute Error: ${result.mean_absolute_error}<br>
+                Mean Squared Error: ${result.mean_squared_error}<br>
+                R2-Score: ${result.r2_score}<br>
+                Coeficiente: ${JSON.stringify(result.coeficiente)}
+            `;
+        } catch (error) {
+            console.error(error);
+            alert("Erro ao processar a simulação. Tente novamente.");
+        }
+    });
+</script>
+	
+</body>
+</html>
