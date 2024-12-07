@@ -1,9 +1,5 @@
 # Implantação da solução
 
-Nesta seção, a implantação da solução proposta em nuvem deverá ser realizada e detalhadamente descrita. Além disso, deverá ser descrito também, o planejamento da capacidade operacional através da modelagem matemática e da simulação do sistema computacional.
-
-Após a implantação, realize testes que mostrem o correto funcionamento da aplicação.
-
 A previsão do nível de endividamento das famílias brasileiras nos próximos meses e anos, é muito importante para nos ajudar a entender melhor a saúde financeira dessas famílias e os impactos disso na economia nacional. Utilizando dados históricos de valor da taxa SELIC e Inflação e Valor de Confiança, conseguimos fazer algumas previsões do comportamento dos níveis de endividamento futuro. Essas previsões podem auxiliar na criação de políticas públicas, na gestão de riscos por instituições financeiras e no planejamento das próprias famílias.
 
 Com base no tema, desenvolvemos um sistema que utiliza técnicas de machine learning para prever os níveis de endividamento das famílias brasileiras. Esse sistema foi treinado com os dados históricos citados acima e que são fundamentais para compreender os fatores que influenciam o comportamento financeiro das famílias.
