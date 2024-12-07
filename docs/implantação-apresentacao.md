@@ -1,12 +1,10 @@
 # Implantação da solução
 
-A previsão do nível de endividamento das famílias brasileiras nos próximos meses e anos, é muito importante para nos ajudar a entender melhor a saúde financeira dessas famílias e os impactos disso na economia nacional. Utilizando dados históricos de valor da taxa SELIC e Inflação e Valor de Confiança, conseguimos fazer algumas previsões do comportamento dos níveis de endividamento futuro. Essas previsões podem auxiliar na criação de políticas públicas, na gestão de riscos por instituições financeiras e no planejamento das próprias famílias.
+A importância de poder prever o nível de endividamento das famílias brasileiras nos próximos anos vem do fato que isso nos ajuda a entender melhor a saúde financeira dessas famílias e os impactos disso na economia nacional. Utilizando dados históricos das taxas SELIC e de Inflação e do índice de Confiança do Consumidor conseguimos fazer algumas previsões do comportamento dos níveis de endividamento futuro. Essas previsões podem auxiliar na criação de políticas públicas, na gestão de riscos por instituições financeiras e no planejamento das próprias famílias.
 
-Com base no tema, desenvolvemos um sistema que utiliza técnicas de machine learning para prever os níveis de endividamento das famílias brasileiras. Esse sistema foi treinado com os dados históricos citados acima e que são fundamentais para compreender os fatores que influenciam o comportamento financeiro das famílias.
+Com base no tema, desenvolvemos um sistema que utiliza técnicas de machine learning para prever os níveis de endividamento das famílias brasileiras. Esse sistema foi treinado com os dados históricos começando em 2011 e é fundamental para compreender os fatores que influenciam o comportamento financeiro das famílias.
 
-A principal funcionalidade do sistema é projetar os níveis de endividamento nos próximos meses e anos, permitindo identificar possíveis tendências ou alertas precoces sobre cenários de risco. 
-
-Essas previsões podem ser utilizadas pelos consumidores para auxiliar em um melhor planejamento de suas finanças com o objetivo de contribuir para um ambiente econômico mais equilibrado.
+A principal funcionalidade do sistema é projetar os níveis de endividamento nos próximos meses e anos, permitindo identificar possíveis tendências ou alertas precoces sobre cenários de risco. Essa capacidade de identificar tendências pode ser fundamental na elaboração de políticas públicas e na adequação de estratégias entre as autoridades monetárias e fiscais do País. Além disso, essas previsões podem ser utilizadas pelos consumidores para auxiliar em um melhor planejamento de suas finanças com o objetivo de contribuir para um ambiente econômico mais equilibrado.
 
 
 ## Máquina Virtual
