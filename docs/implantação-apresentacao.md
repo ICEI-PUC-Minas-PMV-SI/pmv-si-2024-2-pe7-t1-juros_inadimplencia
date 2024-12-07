@@ -1,6 +1,6 @@
 # Implantação da solução
 
-A importância de poder prever o nível de endividamento das famílias brasileiras nos próximos anos vem do fato que isso nos ajuda a entender melhor a saúde financeira dessas famílias e os impactos disso na economia nacional. Utilizando dados históricos das taxas SELIC e de Inflação e do índice de Confiança do Consumidor conseguimos fazer algumas previsões do comportamento dos níveis de endividamento futuro. Essas previsões podem auxiliar na criação de políticas públicas, na gestão de riscos por instituições financeiras e no planejamento das próprias famílias.
+A importância de poder prever o nível de endividamento das famílias brasileiras nos próximos anos vem do fato que isso nos ajuda a entender melhor a saúde financeira dessas famílias e os impactos disso na economia nacional. Utilizando dados históricos das taxas SELIC e de Inflação e do índice de Confiança do Consumidor conseguimos fazer algumas previsões do comportamento dos níveis de endividamento futuros. Essas previsões podem auxiliar na criação de políticas públicas, na gestão de riscos por instituições financeiras e no planejamento das próprias famílias.
 
 Com base no tema, desenvolvemos um sistema que utiliza técnicas de machine learning para prever os níveis de endividamento das famílias brasileiras. Esse sistema foi treinado com os dados históricos começando em 2011 e é fundamental para compreender os fatores que influenciam o comportamento financeiro das famílias.
 
