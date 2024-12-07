@@ -6,6 +6,13 @@ Após a implantação, realize testes que mostrem o correto funcionamento da apl
 
 A previsão do nível de endividamento das famílias brasileiras nos próximos meses e anos, é muito importante para nos ajudar a entender melhor a saúde financeira dessas famílias e os impactos disso na economia nacional. Utilizando dados históricos de valor da taxa SELIC e Inflação e Valor de Confiança, conseguimos fazer algumas previsões do comportamento dos níveis de endividamento futuro. Essas previsões podem auxiliar na criação de políticas públicas, na gestão de riscos por instituições financeiras e no planejamento das próprias famílias.
 
+Com base no tema, desenvolvemos um sistema que utiliza técnicas de machine learning para prever os níveis de endividamento das famílias brasileiras. Esse sistema foi treinado com os dados históricos citados acima e que são fundamentais para compreender os fatores que influenciam o comportamento financeiro das famílias.
+
+A principal funcionalidade do sistema é projetar os níveis de endividamento nos próximos meses e anos, permitindo identificar possíveis tendências ou alertas precoces sobre cenários de risco. 
+
+Essas previsões podem ser utilizadas pelos consumidores para auxiliar em um melhor planejamento de suas finanças com o objetivo de contribuir para um ambiente econômico mais equilibrado.
+
+
 ## Máquina Virtual
 
 ![img 1](https://github.com/user-attachments/assets/dca358ab-857e-4558-b643-00bedb6d240b)
