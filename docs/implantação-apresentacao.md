@@ -4,6 +4,8 @@ Nesta seção, a implantação da solução proposta em nuvem deverá ser realiz
 
 Após a implantação, realize testes que mostrem o correto funcionamento da aplicação.
 
+A previsão do nível de endividamento das famílias brasileiras nos próximos meses e anos, é muito importante para nos ajudar a entender melhor a saúde financeira dessas famílias e os impactos disso na economia nacional. Utilizando dados históricos de valor da taxa SELIC e Inflação e Valor de Confiança, conseguimos fazer algumas previsões do comportamento dos níveis de endividamento futuro. Essas previsões podem auxiliar na criação de políticas públicas, na gestão de riscos por instituições financeiras e no planejamento das próprias famílias.
+
 ## Máquina Virtual
 
 ![img 1](https://github.com/user-attachments/assets/dca358ab-857e-4558-b643-00bedb6d240b)
