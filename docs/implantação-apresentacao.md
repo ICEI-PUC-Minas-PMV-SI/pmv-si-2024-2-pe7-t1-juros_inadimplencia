@@ -78,6 +78,11 @@ Para testar e hospedar, utilizei o endereço IP público da máquina virtual e c
 
 ## Testes de carga e stress
 
+Os testes de carga e stress são usados para avliar o desempenho e a estabilidade de um sistema, eles simulam condições específicas de uso para identificar limites, gargalos e possíveis falhas, sendo:
+Teste de carga  - Avalia o desempenho da VM sob carga realista ex. quantos usuários simultâneos  o sistema pode suportar antes da degradação.
+Teste de stress - Exceder os limites normais para verificar a estabilidade. ex. forçar uso de CPU, memória, ou disco acima da capacidade esperada.
+Segue abaixo a a aplicação dos testes.
+
 Optamos pelo Apache JMeter para simular a carga e stress na API. A ferramenta foi configurada em uma máquina local e direcionada ao IP público da VM com o monitoramento do Azure monitor.  
 Para o teste de Carga simulei 50, 100 e 200 usuários simultâneos enviando requisições para o endpoint. Onde cada usuário realizou 20 requisições consecutivas com diferentes combinações de dados de entrada.  
 Para o teste de stress simulei um aumento progressivo de usuários, começando com 50 e subindo até 500 em intervalos de 1 minuto onde monitoramos o tempo de resposta da API e o número de requisições que resultaram em erro (códigos 5xx).
