@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Previsão de Endividamento</title>
+</head>
+<body>
+    <header>PREVISÃO DO NÍVEL DE ENDIVIDAMENTO DAS FAMÍLIAS BRASILEIRAS</header>
+    <div class="main">
+        <div class="esquerda">
+            <div id="titulo"><h3>Visualizar Dados</h3></div>
+            <div id="graficos">
+                <h3>Previsão SARIMA</h3>
+                <img id="grafico-sarima" src="" alt="Gráfico de Previsão SARIMA" style="max-width: 100%;">
+            </div>
+            <div id="texto"><strong>Política de Simulação:</strong><br>
+                            O sistema irá realizar predições sobre os indicadores Selic, Inflação acumulada dos últimos 12 meses, Taxa de confiança e Endividamento das famílias, utilizando de uma base de dados pré estabelecida (janeiro de 2010 a maio de 2024), juntamente com uma série de dados inserida pelo usuário a partir dos campos disponíveis.
+            Além disso, o usuário irá definir o período para qual o modelo irá trazer a previsão dos indicadores (entre 1 e 36 meses). Observação: esta limitação será imposta para não gerar dados fora da realidade, e salvar recursos do servidor que irá processar as requisições.
+            Com a junção destes dados, os modelos serão executados, e com base no indicador “R2” (erro quadrático), será exibido a previsão do modelo melhor ranqueado.</div>
+        </div>
+        <div class="direita">
+            <div class="dir-box" id="dir-topo">
+                <div id="tituloDirTopo"><h3>Simular</h3>
+                    <p>Selecione um período e clique em simular.</p>
+                </div>
+                <div class="form">
+                    <form id="formPrevisao">
+                        <div class="formBox">
+                            <label for="periodo">Período de Previsão (meses):</label> 
+                            <select id="periodo" class="indiceValor" name="periodo" required>
+                                <option value="12">12 meses</option>
+                                <option value="24">24 meses</option>
+                                <option value="36">36 meses</option>
+                            </select>
+                        </div>
+                        <div class="formBox"> 
+                            <button type="submit" class="botao1" id="btnSimular">Simular</button>
+                        </div> 
+                    </form>       
+                </div>
+            </div>
+            <div class="dir-box" id="dir-base">
+                <p><strong>R²:</strong> <span id="r2"></span></p>
+                <p><strong>MSE:</strong> <span id="mse"></span></p>
+                <p><strong>Valores Previstos:</strong></p>
+                <ul id="valores-previstos"></ul>
+                <button class="botao1" onclick="reiniciarPagina()">Reiniciar</button>
+            </div>
+        </div>
+    </div>
+    <footer>PUC Minas SI - Pesquisa e Experimentação em Sistemas de Informação 7º Semestre</footer>
+    <script>
+             
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("formPrevisao").addEventListener("submit", async function (event) {
+                event.preventDefault();
+
+                const periodo = document.getElementById("periodo").value;
+
+                try {
+                    const resposta = await fetch("/predict", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({ periodo: periodo })
+                    });
+
+                    if (!resposta.ok) {
+                        throw new Error("Erro ao realizar a previsão. Tente novamente.");
+                    }
+
+                    const resultado = await resposta.json();
+
+                    // Atualizar o gráfico
+                    document.getElementById("grafico-sarima").src = resultado.grafico_sarima;
+
+                    // Atualizar a lista de valores previstos
+                    const lista = document.getElementById("valores-previstos");
+                    lista.innerHTML = "";
+                    resultado.previsoes.forEach((valor, index) => {
+                        const li = document.createElement("li");
+                        li.textContent = `Mês ${index + 1}: ${valor.toFixed(2)}`;
+                        lista.appendChild(li);
+                    });
+
+                    // Atualizar as métricas
+                    document.getElementById("r2").textContent = resultado.r2 !== "N/A" ? resultado.r2.toFixed(4) : "N/A";
+                    document.getElementById("mse").textContent = resultado.mse !== "N/A" ? resultado.mse.toFixed(4) : "N/A";
+                } catch (error) {
+                    alert(error.message);
+                }
+            });
+        });
+
+        
+
+        function reiniciarPagina() {
+            location.reload();
+        }
+    </script>
+</body>
+</html>

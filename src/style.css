@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,500;0,700;0,800;1,600&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #202C33;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    padding: 10px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+header{
+    background-color: #364955;
+    font-weight: 700;
+    font-size: large;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.main{
+    /* background-color: brown; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px;
+    /* height: 80vh; */
+}
+
+.esquerda {
+    background-color: #364955;
+    width: 69%;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#dir-titulo{
+    /* height: 2%; */
+}
+
+#graficos{
+    /* background-color: azure; */
+    border: solid 1px #586974;
+    border-radius: 5px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.direita{
+    background-color: #364955;
+    width: 30%;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+
+}
+
+.dir-box {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#dir-topo{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    height: 100%;
+}
+
+#dir-base{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+
+#tituloDirTopo{
+    margin-bottom: 5px;
+}
+
+#texto{
+    font-size: small;
+    color: #adb4b9;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.formBox{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    gap: 5px;
+}
+
+p{
+    font-size: small;
+    font-style: italic;
+    font-weight: 200;
+    color: #adb4b9;
+}
+
+
+#indice{
+    background-color: #586974;
+	color: inherit;
+    border-radius: 10px;
+    border: none;
+    padding: 8px;
+    font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.indiceValor{
+    background-color: #586974;
+	color: inherit;
+    border-radius: 10px;
+    border: none;
+    padding: 8px;
+    font: inherit;
+	outline: inherit;
+    width: 100%;
+    
+}
+
+#btnSimular{
+    margin: 5px 0 15px 0 ;
+}
+
+#r2score{
+    background-color: black;
+    font-family: monospace;
+    color: #008000 ;
+    padding: 10px;
+    border-radius: 5px;
+    height: 100%;
+}
+
+.botao1 {
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+	background-color: #53ac66;
+	color: inherit;
+	border: none;
+	padding: 8px;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.botao1:hover{
+    background-color: #668a9e;
+    transition: .8s;
+}
+
+
+footer{
+    background-color: #364955;
+    color: rgba(255, 255, 255, 0.479);
+    padding: 10px;
+    font-weight: 300;
+    font-size: small;
+    border-radius: 5px;
+    text-align: center;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 576px) {
+
+    body{
+        padding: 10px 10px;
+    }
+
+    .esquerda {
+        width: 100%;
+    }
+
+    .direita {
+        width: 100%;
+        padding: 5px;
+    }
+
+    /* footer{
+        margin-top: 50px;
+    } */
+}
+
+@media screen and (max-width: 768px) {
+
+    body{
+        padding: 10px 10px;
+    }
+
+    .esquerda {
+        width: 100%;
+    }
+
+    .direita {
+        width: 100%;
+        padding: 5px;
+    }
+
+    /* footer{
+        margin-top: 50px;
+    } */
+}
