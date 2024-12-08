@@ -118,4 +118,4 @@ Nesta seção, um vídeo de, no máximo, 5 minutos onde deverá ser descrito o e
 
 Segue o link para o vídeo da solução 
 
-Link: 
+Link: https://www.youtube.com/watch?v=vz1am5Su-l8
