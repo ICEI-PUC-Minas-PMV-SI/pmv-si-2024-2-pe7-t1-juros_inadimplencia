@@ -16,6 +16,12 @@ Com base no tema, desenvolvemos um sistema que utiliza técnicas de machine lear
 
 A principal funcionalidade do sistema é projetar os níveis de endividamento nos próximos meses e anos, permitindo identificar possíveis tendências ou alertas precoces sobre cenários de risco. Essa capacidade de identificar tendências pode ser fundamental na elaboração de políticas públicas e na adequação de estratégias entre as autoridades monetárias e fiscais do País. Além disso, essas previsões podem ser utilizadas pelos consumidores para auxiliar em um melhor planejamento de suas finanças com o objetivo de contribuir para um ambiente econômico mais equilibrado.
 
+## Política
+
+Para que o sistema proposto gere o valor para qual foi desenvolvido, é necessário o estabelecimento de uma política para aquilo que ele se propõe a entrega.
+O sistema, para que realize predições sobre os indicadores referentes ao Endividamento das famílias brasilieiras, utilizará de uma base de dados pré estabelecida (janeiro de 2010 a maio de 2024), juntamente com o período que será designado pelo usuário a partir do campo disponível para tal. O período para qual o modelo irá trazer a previsão dos indicadores (entre as opoções 12, 24 e 36 meses), esta limitação que será imposta tem como objetivo salvar recursos do servidor que irá processar as requisições e também, para não gerar dados fora da realidade, uma vez que quanto maior o prazo estabelecido para a predição, menor é a capacidade de acerto dos modelos, exemplificada pela taxa de confiança.
+
+Com a junção destas informações, os modelos serão executados, e com base no indicador “R2” (erro quadrático), os modelos serão ranqueados para que o sistema demonstre o modelo com maior probabilidade de acerto ao usuário.
 
 ## Máquina Virtual
 
