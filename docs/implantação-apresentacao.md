@@ -85,7 +85,7 @@ O frontend foi desenvolvido para oferecer uma interface simples e funcional, pri
 
 A estrutura do frontend é composta por um único arquivo HTML que organiza as seções e interage com a API via JavaScript. Ele está hospedado na mesma máquina virtual que a API, e o acesso é feito através de um servidor web Apache, configurado para servir o frontend na porta padrão 8000.
 Toda comunicação entre o frontend e o backend acontece via requisições AJAX, realizadas com fetch() em JavaScript. Foi configurado o CORS no Flask para permitir o consumo da API a partir do domínio do frontend.
-Para testar e hospedar, utilizei o endereço IP público da máquina virtual e configurei o Apache para servir o frontend na URL(http://20.195.168.9). Assim, o usuário pode acessar o frontend diretamente.
+Para testar e hospedar, utilizamos o endereço IP público da máquina virtual e configuramos o Apache para servir o frontend na URL(http://20.195.168.9). Assim, o usuário pode acessar o frontend diretamente.
 
 ![img 7](https://github.com/user-attachments/assets/06d727ac-2f28-4f9b-8035-ebebb2e3d1e5)
 
